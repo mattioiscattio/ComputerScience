@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Homework_4._1
+namespace Homework_4._3
 {
     static class Program
     {
@@ -17,7 +17,7 @@ namespace Homework_4._1
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Homework4b());
+            Application.Run(new Form1());
         }
     }
 }

@@ -1,0 +1,9 @@
+C:\Temporary Workspace\VisualBasic\Homework 3.3\Homework 3.3\obj\Debug\Homework 3.3.csproj.AssemblyReference.cache
+C:\Temporary Workspace\VisualBasic\Homework 3.3\Homework 3.3\obj\Debug\Homework_3._3.Homework3c.resources
+C:\Temporary Workspace\VisualBasic\Homework 3.3\Homework 3.3\obj\Debug\Homework_3._3.Properties.Resources.resources
+C:\Temporary Workspace\VisualBasic\Homework 3.3\Homework 3.3\obj\Debug\Homework 3.3.csproj.GenerateResource.cache
+C:\Temporary Workspace\VisualBasic\Homework 3.3\Homework 3.3\obj\Debug\Homework 3.3.csproj.CoreCompileInputs.cache
+C:\Temporary Workspace\VisualBasic\Homework 3.3\Homework 3.3\bin\Debug\Homework 3.3.exe
+C:\Temporary Workspace\VisualBasic\Homework 3.3\Homework 3.3\bin\Debug\Homework 3.3.pdb
+C:\Temporary Workspace\VisualBasic\Homework 3.3\Homework 3.3\obj\Debug\Homework 3.3.exe
+C:\Temporary Workspace\VisualBasic\Homework 3.3\Homework 3.3\obj\Debug\Homework 3.3.pdb

@@ -1,0 +1,17 @@
+C:\Temporary Workspace\VisualBasic\Homework Week2 Partb\Homework Week2 Partb\obj\Debug\Homework_Week2_Partb.Form1.resources
+C:\Temporary Workspace\VisualBasic\Homework Week2 Partb\Homework Week2 Partb\obj\Debug\Homework_Week2_Partb.Properties.Resources.resources
+C:\Temporary Workspace\VisualBasic\Homework Week2 Partb\Homework Week2 Partb\obj\Debug\Homework Week2 Partb.csproj.GenerateResource.cache
+C:\Temporary Workspace\VisualBasic\Homework Week2 Partb\Homework Week2 Partb\obj\Debug\Homework Week2 Partb.csproj.CoreCompileInputs.cache
+C:\Temporary Workspace\VisualBasic\Homework Week2 Partb\Homework Week2 Partb\bin\Debug\Homework Week2 Partb.exe
+C:\Temporary Workspace\VisualBasic\Homework Week2 Partb\Homework Week2 Partb\bin\Debug\Homework Week2 Partb.pdb
+C:\Temporary Workspace\VisualBasic\Homework Week2 Partb\Homework Week2 Partb\obj\Debug\Homework Week2 Partb.exe
+C:\Temporary Workspace\VisualBasic\Homework Week2 Partb\Homework Week2 Partb\obj\Debug\Homework Week2 Partb.pdb
+C:\Temporary Workspace\VisualBasic\Homework Week2.2\Homework Week2 Partb\bin\Debug\Homework Week2 Partb.exe
+C:\Temporary Workspace\VisualBasic\Homework Week2.2\Homework Week2 Partb\bin\Debug\Homework Week2 Partb.pdb
+C:\Temporary Workspace\VisualBasic\Homework Week2.2\Homework Week2 Partb\obj\Debug\Homework Week2 Partb.csproj.AssemblyReference.cache
+C:\Temporary Workspace\VisualBasic\Homework Week2.2\Homework Week2 Partb\obj\Debug\Homework_Week2_Partb.Form1.resources
+C:\Temporary Workspace\VisualBasic\Homework Week2.2\Homework Week2 Partb\obj\Debug\Homework_Week2_Partb.Properties.Resources.resources
+C:\Temporary Workspace\VisualBasic\Homework Week2.2\Homework Week2 Partb\obj\Debug\Homework Week2 Partb.csproj.GenerateResource.cache
+C:\Temporary Workspace\VisualBasic\Homework Week2.2\Homework Week2 Partb\obj\Debug\Homework Week2 Partb.csproj.CoreCompileInputs.cache
+C:\Temporary Workspace\VisualBasic\Homework Week2.2\Homework Week2 Partb\obj\Debug\Homework Week2 Partb.exe
+C:\Temporary Workspace\VisualBasic\Homework Week2.2\Homework Week2 Partb\obj\Debug\Homework Week2 Partb.pdb

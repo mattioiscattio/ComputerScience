@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace Homework_3._4
 {
-    public partial class Form1 : Form
+    public partial class HW3D : Form
     {
-        public Form1()
+        public HW3D()
         {
             InitializeComponent();
         }

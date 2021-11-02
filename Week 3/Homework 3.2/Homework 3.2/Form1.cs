@@ -29,16 +29,16 @@ namespace Homework_3._2
         {
             if ((Convert.ToInt32(TBInputHours.Text) < 60) && (Convert.ToInt32(TBInputHours.Text)) > 0)
             {
-                int grossPay = 0;
+                Double grossPay = 0;
                 if (Convert.ToInt32(TBInputHours.Text) > 40)
                 {
-                    grossPay += (Convert.ToInt32(TBInputHours.Text) - 40) * Convert.ToInt32(TBInputRate.Text);
-                    grossPay += 40 * Convert.ToInt32(TBInputRate.Text);
+                    grossPay += (Convert.ToDouble(TBInputHours.Text) - 40) * Convert.ToDouble(TBInputRate.Text);
+                    grossPay += 40 * Convert.ToDouble(TBInputRate.Text);
                     LBLOutput.Text = grossPay.ToString();
                 }
                 else
                 {
-                    grossPay += Convert.ToInt32(TBInputHours.Text) * Convert.ToInt32(TBInputRate.Text);
+                    grossPay += Convert.ToDouble(TBInputHours.Text) * Convert.ToDouble(TBInputRate.Text);
                     LBLOutput.Text = grossPay.ToString();
                 }
             }

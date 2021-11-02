@@ -14,7 +14,7 @@ namespace Homework_3._4
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new HW3D());
         }
     }
 }

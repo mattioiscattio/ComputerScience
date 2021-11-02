@@ -1,7 +1,7 @@
 ﻿
 namespace Homework_3._4
 {
-    partial class Form1
+    partial class HW3D
     {
         /// <summary>
         /// Required designer variable.
@@ -78,7 +78,7 @@ namespace Homework_3._4
             this.TBMonthNum.Size = new System.Drawing.Size(100, 20);
             this.TBMonthNum.TabIndex = 4;
             // 
-            // Form1
+            // HW3D
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -88,7 +88,7 @@ namespace Homework_3._4
             this.Controls.Add(this.LBLYearOutput);
             this.Controls.Add(this.LBLMonthOutput);
             this.Controls.Add(this.BTNRun);
-            this.Name = "Form1";
+            this.Name = "HW3D";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();

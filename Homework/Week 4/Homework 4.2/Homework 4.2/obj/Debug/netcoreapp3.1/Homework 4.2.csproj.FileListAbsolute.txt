@@ -1,0 +1,16 @@
+E:\Documents\school\College\Courses\Computer Science\Homework\Week 4\Homework 4.2\Homework 4.2\obj\Debug\netcoreapp3.1\Homework_4._2.Heomwork4b.resources
+E:\Documents\school\College\Courses\Computer Science\Homework\Week 4\Homework 4.2\Homework 4.2\obj\Debug\netcoreapp3.1\Homework 4.2.csproj.GenerateResource.cache
+E:\Documents\school\College\Courses\Computer Science\Homework\Week 4\Homework 4.2\Homework 4.2\obj\Debug\netcoreapp3.1\Homework 4.2.GeneratedMSBuildEditorConfig.editorconfig
+E:\Documents\school\College\Courses\Computer Science\Homework\Week 4\Homework 4.2\Homework 4.2\obj\Debug\netcoreapp3.1\Homework 4.2.AssemblyInfoInputs.cache
+E:\Documents\school\College\Courses\Computer Science\Homework\Week 4\Homework 4.2\Homework 4.2\obj\Debug\netcoreapp3.1\Homework 4.2.AssemblyInfo.cs
+E:\Documents\school\College\Courses\Computer Science\Homework\Week 4\Homework 4.2\Homework 4.2\obj\Debug\netcoreapp3.1\Homework 4.2.csproj.CoreCompileInputs.cache
+E:\Documents\school\College\Courses\Computer Science\Homework\Week 4\Homework 4.2\Homework 4.2\bin\Debug\netcoreapp3.1\Homework 4.2.exe
+E:\Documents\school\College\Courses\Computer Science\Homework\Week 4\Homework 4.2\Homework 4.2\bin\Debug\netcoreapp3.1\Homework 4.2.deps.json
+E:\Documents\school\College\Courses\Computer Science\Homework\Week 4\Homework 4.2\Homework 4.2\bin\Debug\netcoreapp3.1\Homework 4.2.runtimeconfig.json
+E:\Documents\school\College\Courses\Computer Science\Homework\Week 4\Homework 4.2\Homework 4.2\bin\Debug\netcoreapp3.1\Homework 4.2.runtimeconfig.dev.json
+E:\Documents\school\College\Courses\Computer Science\Homework\Week 4\Homework 4.2\Homework 4.2\bin\Debug\netcoreapp3.1\Homework 4.2.dll
+E:\Documents\school\College\Courses\Computer Science\Homework\Week 4\Homework 4.2\Homework 4.2\bin\Debug\netcoreapp3.1\Homework 4.2.pdb
+E:\Documents\school\College\Courses\Computer Science\Homework\Week 4\Homework 4.2\Homework 4.2\obj\Debug\netcoreapp3.1\Homework 4.2.csproj.AssemblyReference.cache
+E:\Documents\school\College\Courses\Computer Science\Homework\Week 4\Homework 4.2\Homework 4.2\obj\Debug\netcoreapp3.1\Homework 4.2.dll
+E:\Documents\school\College\Courses\Computer Science\Homework\Week 4\Homework 4.2\Homework 4.2\obj\Debug\netcoreapp3.1\Homework 4.2.pdb
+E:\Documents\school\College\Courses\Computer Science\Homework\Week 4\Homework 4.2\Homework 4.2\obj\Debug\netcoreapp3.1\Homework 4.2.genruntimeconfig.cache

@@ -1,0 +1,18 @@
+C:\Temporary Workspace\VisualBasic\Homework 3.5\Homework 3.5\bin\Debug\Homework 3.5.exe
+C:\Temporary Workspace\VisualBasic\Homework 3.5\Homework 3.5\bin\Debug\Homework 3.5.pdb
+C:\Temporary Workspace\VisualBasic\Homework 3.5\Homework 3.5\obj\Debug\Homework 3.5.csproj.AssemblyReference.cache
+C:\Temporary Workspace\VisualBasic\Homework 3.5\Homework 3.5\obj\Debug\Homework_3._5.Form1.resources
+C:\Temporary Workspace\VisualBasic\Homework 3.5\Homework 3.5\obj\Debug\Homework_3._5.Properties.Resources.resources
+C:\Temporary Workspace\VisualBasic\Homework 3.5\Homework 3.5\obj\Debug\Homework 3.5.csproj.GenerateResource.cache
+C:\Temporary Workspace\VisualBasic\Homework 3.5\Homework 3.5\obj\Debug\Homework 3.5.csproj.CoreCompileInputs.cache
+C:\Temporary Workspace\VisualBasic\Homework 3.5\Homework 3.5\obj\Debug\Homework 3.5.exe
+C:\Temporary Workspace\VisualBasic\Homework 3.5\Homework 3.5\obj\Debug\Homework 3.5.pdb
+C:\Users\matti\Downloads\Homework 3.5-20211012T153156Z-001\Homework 3.5\Homework 3.5\bin\Debug\Homework 3.5.exe
+C:\Users\matti\Downloads\Homework 3.5-20211012T153156Z-001\Homework 3.5\Homework 3.5\bin\Debug\Homework 3.5.pdb
+C:\Users\matti\Downloads\Homework 3.5-20211012T153156Z-001\Homework 3.5\Homework 3.5\obj\Debug\Homework 3.5.csproj.AssemblyReference.cache
+C:\Users\matti\Downloads\Homework 3.5-20211012T153156Z-001\Homework 3.5\Homework 3.5\obj\Debug\Homework_3._5.Form1.resources
+C:\Users\matti\Downloads\Homework 3.5-20211012T153156Z-001\Homework 3.5\Homework 3.5\obj\Debug\Homework_3._5.Properties.Resources.resources
+C:\Users\matti\Downloads\Homework 3.5-20211012T153156Z-001\Homework 3.5\Homework 3.5\obj\Debug\Homework 3.5.csproj.GenerateResource.cache
+C:\Users\matti\Downloads\Homework 3.5-20211012T153156Z-001\Homework 3.5\Homework 3.5\obj\Debug\Homework 3.5.csproj.CoreCompileInputs.cache
+C:\Users\matti\Downloads\Homework 3.5-20211012T153156Z-001\Homework 3.5\Homework 3.5\obj\Debug\Homework 3.5.exe
+C:\Users\matti\Downloads\Homework 3.5-20211012T153156Z-001\Homework 3.5\Homework 3.5\obj\Debug\Homework 3.5.pdb

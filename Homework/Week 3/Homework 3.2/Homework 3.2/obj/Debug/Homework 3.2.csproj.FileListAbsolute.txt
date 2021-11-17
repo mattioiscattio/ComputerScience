@@ -1,0 +1,18 @@
+C:\Temporary Workspace\VisualBasic\Homework 3.2\Homework 3.2\obj\Debug\Homework 3.2.csproj.AssemblyReference.cache
+C:\Temporary Workspace\VisualBasic\Homework 3.2\Homework 3.2\obj\Debug\Homework_3._2.Properties.Resources.resources
+C:\Temporary Workspace\VisualBasic\Homework 3.2\Homework 3.2\obj\Debug\Homework 3.2.csproj.GenerateResource.cache
+C:\Temporary Workspace\VisualBasic\Homework 3.2\Homework 3.2\obj\Debug\Homework 3.2.csproj.CoreCompileInputs.cache
+C:\Temporary Workspace\VisualBasic\Homework 3.2\Homework 3.2\bin\Debug\Homework 3.2.exe
+C:\Temporary Workspace\VisualBasic\Homework 3.2\Homework 3.2\bin\Debug\Homework 3.2.pdb
+C:\Temporary Workspace\VisualBasic\Homework 3.2\Homework 3.2\obj\Debug\Homework 3.2.exe
+C:\Temporary Workspace\VisualBasic\Homework 3.2\Homework 3.2\obj\Debug\Homework 3.2.pdb
+C:\Temporary Workspace\VisualBasic\Homework 3.2\Homework 3.2\obj\Debug\Homework_3._2.Homework3b.resources
+E:\Documents\school\College\Courses\Computer Science\Homework\Week 3\Homework 3.2\Homework 3.2\bin\Debug\Homework 3.2.exe
+E:\Documents\school\College\Courses\Computer Science\Homework\Week 3\Homework 3.2\Homework 3.2\bin\Debug\Homework 3.2.pdb
+E:\Documents\school\College\Courses\Computer Science\Homework\Week 3\Homework 3.2\Homework 3.2\obj\Debug\Homework 3.2.csproj.AssemblyReference.cache
+E:\Documents\school\College\Courses\Computer Science\Homework\Week 3\Homework 3.2\Homework 3.2\obj\Debug\Homework_3._2.Homework3b.resources
+E:\Documents\school\College\Courses\Computer Science\Homework\Week 3\Homework 3.2\Homework 3.2\obj\Debug\Homework_3._2.Properties.Resources.resources
+E:\Documents\school\College\Courses\Computer Science\Homework\Week 3\Homework 3.2\Homework 3.2\obj\Debug\Homework 3.2.csproj.GenerateResource.cache
+E:\Documents\school\College\Courses\Computer Science\Homework\Week 3\Homework 3.2\Homework 3.2\obj\Debug\Homework 3.2.csproj.CoreCompileInputs.cache
+E:\Documents\school\College\Courses\Computer Science\Homework\Week 3\Homework 3.2\Homework 3.2\obj\Debug\Homework 3.2.exe
+E:\Documents\school\College\Courses\Computer Science\Homework\Week 3\Homework 3.2\Homework 3.2\obj\Debug\Homework 3.2.pdb

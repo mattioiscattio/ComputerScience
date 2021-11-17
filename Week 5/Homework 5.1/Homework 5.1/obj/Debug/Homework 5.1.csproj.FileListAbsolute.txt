@@ -1,9 +1,0 @@
-C:\Temporary Workspace\VisualBasic\Homework 5.1\Homework 5.1\obj\Debug\Homework 5.1.csproj.AssemblyReference.cache
-C:\Temporary Workspace\VisualBasic\Homework 5.1\Homework 5.1\obj\Debug\Homework_5._1.HW5A.resources
-C:\Temporary Workspace\VisualBasic\Homework 5.1\Homework 5.1\obj\Debug\Homework_5._1.Properties.Resources.resources
-C:\Temporary Workspace\VisualBasic\Homework 5.1\Homework 5.1\obj\Debug\Homework 5.1.csproj.GenerateResource.cache
-C:\Temporary Workspace\VisualBasic\Homework 5.1\Homework 5.1\obj\Debug\Homework 5.1.csproj.CoreCompileInputs.cache
-C:\Temporary Workspace\VisualBasic\Homework 5.1\Homework 5.1\bin\Debug\Homework 5.1.exe
-C:\Temporary Workspace\VisualBasic\Homework 5.1\Homework 5.1\bin\Debug\Homework 5.1.pdb
-C:\Temporary Workspace\VisualBasic\Homework 5.1\Homework 5.1\obj\Debug\Homework 5.1.exe
-C:\Temporary Workspace\VisualBasic\Homework 5.1\Homework 5.1\obj\Debug\Homework 5.1.pdb

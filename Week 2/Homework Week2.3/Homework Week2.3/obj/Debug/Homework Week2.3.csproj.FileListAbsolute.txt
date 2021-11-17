@@ -1,9 +1,0 @@
-C:\Temporary Workspace\VisualBasic\Homework Week2.3\Homework Week2.3\obj\Debug\Homework Week2.3.csproj.AssemblyReference.cache
-C:\Temporary Workspace\VisualBasic\Homework Week2.3\Homework Week2.3\obj\Debug\Homework_Week2._3.Form1.resources
-C:\Temporary Workspace\VisualBasic\Homework Week2.3\Homework Week2.3\obj\Debug\Homework_Week2._3.Properties.Resources.resources
-C:\Temporary Workspace\VisualBasic\Homework Week2.3\Homework Week2.3\obj\Debug\Homework Week2.3.csproj.GenerateResource.cache
-C:\Temporary Workspace\VisualBasic\Homework Week2.3\Homework Week2.3\obj\Debug\Homework Week2.3.csproj.CoreCompileInputs.cache
-C:\Temporary Workspace\VisualBasic\Homework Week2.3\Homework Week2.3\bin\Debug\Homework Week2.3.exe
-C:\Temporary Workspace\VisualBasic\Homework Week2.3\Homework Week2.3\bin\Debug\Homework Week2.3.pdb
-C:\Temporary Workspace\VisualBasic\Homework Week2.3\Homework Week2.3\obj\Debug\Homework Week2.3.exe
-C:\Temporary Workspace\VisualBasic\Homework Week2.3\Homework Week2.3\obj\Debug\Homework Week2.3.pdb

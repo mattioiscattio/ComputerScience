@@ -62,17 +62,14 @@ namespace LinearSearchUnsorted
         private void BTNLinearSearch_Click(object sender, EventArgs e)
         {
             LBLSearchOutput.Visible = true;
-            for (int i = 0; i < (Convert.ToInt32(DGVOutput.RowCount) - 1); i++)
+            for (int i = 0; i < (Convert.ToInt32(DGVOutput.RowCount)); i++)
             {
                 if (Convert.ToInt32(DGVOutput[0, i].Value) == Convert.ToInt32(TBsearchNum.Text)) //if the item on row i in randomised column = search time then state that.
                 {
                     LBLSearchOutput.Text = "Search item found at row: " + i;
                 }
-                else
-                {
-                    LBLSearchOutput.Text = "Search item not found.";
-                }
             }
+            LBLSearchOutput.Text = "Search item not found.";
         }
 
 
@@ -125,5 +122,31 @@ namespace LinearSearchUnsorted
             TBRandomNum.Text = "";
         }
 
+        private void BTNBinarySearch_Click(object sender, EventArgs e)
+        {
+            BTNinsertionSort_Click(sender, e);
+            int searchNum = Convert.ToInt32(TBsearchNum.Text);
+            bool searchItemFound = false;
+            int listLength = DGVOutput.RowCount;
+            while (searchItemFound == false)
+            {
+                listLength = listLength / 2;
+                if (searchNum > Convert.ToInt32(DGVOutput[2, listLength].Value))
+                {
+                    listLength = DGVOutput.RowCount - (listLength / 2);
+                }
+                else if (searchNum < Convert.ToInt32(DGVOutput[2, listLength].Value))
+                {
+                    listLength = listLength / 2;
+                }
+                else if (searchNum == Convert.ToInt32(DGVOutput[2, listLength].Value))
+                {
+                    searchItemFound = true;
+                }
+            }
+
+            LBLSearchOutput.Text = "search item found at index: " + listLength;
+
+        }
     }
 }

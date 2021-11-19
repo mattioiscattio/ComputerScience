@@ -29,12 +29,20 @@ namespace MultiFormProject
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.BTNLoginExit = new System.Windows.Forms.Button();
             this.BTNEnter = new System.Windows.Forms.Button();
             this.TBUsername = new System.Windows.Forms.TextBox();
             this.TBPasswd = new System.Windows.Forms.TextBox();
             this.LBLUsername = new System.Windows.Forms.Label();
             this.LBLPasswd = new System.Windows.Forms.Label();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dSDB = new MultiFormProject.DSDB();
+            this.table1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.table1TableAdapter = new MultiFormProject.DSDBTableAdapters.Table1TableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSDB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.table1BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // BTNLoginExit
@@ -88,6 +96,20 @@ namespace MultiFormProject
             this.LBLPasswd.TabIndex = 5;
             this.LBLPasswd.Text = "Password";
             // 
+            // dSDB
+            // 
+            this.dSDB.DataSetName = "DSDB";
+            this.dSDB.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // table1BindingSource
+            // 
+            this.table1BindingSource.DataMember = "Table1";
+            this.table1BindingSource.DataSource = this.dSDB;
+            // 
+            // table1TableAdapter
+            // 
+            this.table1TableAdapter.ClearBeforeFill = true;
+            // 
             // FRMLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -109,6 +131,9 @@ namespace MultiFormProject
             this.Text = "Login";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.FRMLogin_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSDB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.table1BindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -122,5 +147,9 @@ namespace MultiFormProject
         private System.Windows.Forms.TextBox TBPasswd;
         private System.Windows.Forms.Label LBLUsername;
         private System.Windows.Forms.Label LBLPasswd;
+        private System.Windows.Forms.BindingSource bindingSource1;
+        private DSDB dSDB;
+        private System.Windows.Forms.BindingSource table1BindingSource;
+        private DSDBTableAdapters.Table1TableAdapter table1TableAdapter;
     }
 }

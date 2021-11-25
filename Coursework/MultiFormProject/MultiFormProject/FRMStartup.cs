@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 namespace MultiFormProject
 {
@@ -19,11 +20,12 @@ namespace MultiFormProject
 
         private void FRMStartup_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'dSDB.Table1' table. You can move, or remove it, as needed.
-            this.table1TableAdapter.Fill(this.dSDB.Table1);
+           
             FRMLogin f2 = new FRMLogin();
             f2.ShowDialog();
 
+
         }
+
     }
 }

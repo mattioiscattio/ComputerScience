@@ -33,14 +33,14 @@ namespace MultiFormProject
             this.dSDB = new MultiFormProject.DSDB();
             this.dSDBBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.table1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.table1TableAdapter = new MultiFormProject.DSDBTableAdapters.Table1TableAdapter();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fullNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.accessLevelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dOBDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateAddedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.table1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.table1TableAdapter = new MultiFormProject.DSDBTableAdapters.Table1TableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dSDB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSDBBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -73,15 +73,6 @@ namespace MultiFormProject
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(240, 150);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // table1BindingSource
-            // 
-            this.table1BindingSource.DataMember = "Table1";
-            this.table1BindingSource.DataSource = this.dSDBBindingSource;
-            // 
-            // table1TableAdapter
-            // 
-            this.table1TableAdapter.ClearBeforeFill = true;
             // 
             // iDDataGridViewTextBoxColumn
             // 
@@ -118,6 +109,15 @@ namespace MultiFormProject
             this.Column1.DataPropertyName = "ID";
             this.Column1.HeaderText = "Column1";
             this.Column1.Name = "Column1";
+            // 
+            // table1BindingSource
+            // 
+            this.table1BindingSource.DataMember = "Table1";
+            this.table1BindingSource.DataSource = this.dSDBBindingSource;
+            // 
+            // table1TableAdapter
+            // 
+            this.table1TableAdapter.ClearBeforeFill = true;
             // 
             // FRMStartup
             // 

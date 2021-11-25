@@ -40,6 +40,7 @@ namespace MultiFormProject
             this.dSDB = new MultiFormProject.DSDB();
             this.table1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.table1TableAdapter = new MultiFormProject.DSDBTableAdapters.Table1TableAdapter();
+            this.LBLDebug = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSDB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.table1BindingSource)).BeginInit();
@@ -63,6 +64,7 @@ namespace MultiFormProject
             this.BTNEnter.TabIndex = 1;
             this.BTNEnter.Text = "Enter";
             this.BTNEnter.UseVisualStyleBackColor = true;
+            this.BTNEnter.Click += new System.EventHandler(this.BTNEnter_Click);
             // 
             // TBUsername
             // 
@@ -110,12 +112,22 @@ namespace MultiFormProject
             // 
             this.table1TableAdapter.ClearBeforeFill = true;
             // 
+            // LBLDebug
+            // 
+            this.LBLDebug.AutoSize = true;
+            this.LBLDebug.Location = new System.Drawing.Point(113, 179);
+            this.LBLDebug.Name = "LBLDebug";
+            this.LBLDebug.Size = new System.Drawing.Size(39, 13);
+            this.LBLDebug.TabIndex = 6;
+            this.LBLDebug.Text = "Debug";
+            // 
             // FRMLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(271, 271);
             this.ControlBox = false;
+            this.Controls.Add(this.LBLDebug);
             this.Controls.Add(this.LBLPasswd);
             this.Controls.Add(this.LBLUsername);
             this.Controls.Add(this.TBPasswd);
@@ -151,5 +163,6 @@ namespace MultiFormProject
         private DSDB dSDB;
         private System.Windows.Forms.BindingSource table1BindingSource;
         private DSDBTableAdapters.Table1TableAdapter table1TableAdapter;
+        private System.Windows.Forms.Label LBLDebug;
     }
 }

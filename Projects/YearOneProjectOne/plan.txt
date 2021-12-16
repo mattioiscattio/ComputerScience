@@ -23,3 +23,4 @@ variable points value
 custom encryption
 		decrypt on entering valid username (not guest/root)
 intergrate csv's over txt for efficiency
+save past transactions in a reversible (by admin) way

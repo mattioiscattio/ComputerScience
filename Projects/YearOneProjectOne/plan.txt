@@ -1,10 +1,11 @@
 userTable - used for login, searching for students etc.
 studentData - contains student information, pulled from userTable, i.e., points, class tags
 teacherData - i.e., class tags, points history, timetable, etc.
+		-teacher not in class, use name instead of class code. net points = awarded-deducted
 timeTable - timeTable containing every class, class codes on each day link to student/teacher
 
 
-StartupScreen(winxp), login{guest, admin, student, teacher}
+StartupScreen(win), login{guest, admin, student, teacher}
 autoGenerate user information, (id, points, tags, etc)
 txt file logs in /userData/, read to find point history, etc.
 
@@ -15,4 +16,10 @@ txt file logs in /userData/, read to find point history, etc.
 
 
 
-cmd integration + email + plex + variable points value
+cmd integration
+email
+plex 
+variable points value
+custom encryption
+		decrypt on entering valid username (not guest/root)
+intergrate csv's over txt for efficiency

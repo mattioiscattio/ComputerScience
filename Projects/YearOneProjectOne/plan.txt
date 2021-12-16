@@ -1,0 +1,4 @@
+userTable - used for login, searching for students etc.
+studentData - contains student information, pulled from userTable, i.e., points, class tags
+teacherData - i.e., class tags, points history, timetable, etc.
+timeTable - timeTable containing every class, class codes on each day link to student/teacher

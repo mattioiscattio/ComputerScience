@@ -1,0 +1,6 @@
+sessionID{
+moved to pagex
+viewed pagey
+etc
+edited user x
+}

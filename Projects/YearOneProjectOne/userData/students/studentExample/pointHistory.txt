@@ -1,0 +1,2 @@
+recieved x points from teacher on xx/yy/zz aa:bb Reason: ""
+spent x points on {itemID} on xx/yy/zz aa:bb

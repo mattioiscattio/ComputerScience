@@ -1,0 +1,26 @@
+C:\Temporary Workspace\VisualBasic\Homework Week2\Homework Week2\bin\Debug\Homework Week2.exe
+C:\Temporary Workspace\VisualBasic\Homework Week2\Homework Week2\bin\Debug\Homework Week2.pdb
+C:\Temporary Workspace\VisualBasic\Homework Week2\Homework Week2\obj\Debug\Homework_Week2.Form1.resources
+C:\Temporary Workspace\VisualBasic\Homework Week2\Homework Week2\obj\Debug\Homework_Week2.Properties.Resources.resources
+C:\Temporary Workspace\VisualBasic\Homework Week2\Homework Week2\obj\Debug\Homework Week2.csproj.GenerateResource.cache
+C:\Temporary Workspace\VisualBasic\Homework Week2\Homework Week2\obj\Debug\Homework Week2.csproj.CoreCompileInputs.cache
+C:\Temporary Workspace\VisualBasic\Homework Week2\Homework Week2\obj\Debug\Homework Week2.exe
+C:\Temporary Workspace\VisualBasic\Homework Week2\Homework Week2\obj\Debug\Homework Week2.pdb
+\\truro.local\truro\Students3\ml331961\Documents\Courses\Computer Science\Homework\Homework Week2.1\Homework Week2\bin\Debug\Homework Week2.exe
+\\truro.local\truro\Students3\ml331961\Documents\Courses\Computer Science\Homework\Homework Week2.1\Homework Week2\bin\Debug\Homework Week2.pdb
+\\truro.local\truro\Students3\ml331961\Documents\Courses\Computer Science\Homework\Homework Week2.1\Homework Week2\obj\Debug\Homework Week2.csproj.AssemblyReference.cache
+\\truro.local\truro\Students3\ml331961\Documents\Courses\Computer Science\Homework\Homework Week2.1\Homework Week2\obj\Debug\Homework_Week2.Form1.resources
+\\truro.local\truro\Students3\ml331961\Documents\Courses\Computer Science\Homework\Homework Week2.1\Homework Week2\obj\Debug\Homework_Week2.Properties.Resources.resources
+\\truro.local\truro\Students3\ml331961\Documents\Courses\Computer Science\Homework\Homework Week2.1\Homework Week2\obj\Debug\Homework Week2.csproj.GenerateResource.cache
+\\truro.local\truro\Students3\ml331961\Documents\Courses\Computer Science\Homework\Homework Week2.1\Homework Week2\obj\Debug\Homework Week2.csproj.CoreCompileInputs.cache
+\\truro.local\truro\Students3\ml331961\Documents\Courses\Computer Science\Homework\Homework Week2.1\Homework Week2\obj\Debug\Homework Week2.exe
+\\truro.local\truro\Students3\ml331961\Documents\Courses\Computer Science\Homework\Homework Week2.1\Homework Week2\obj\Debug\Homework Week2.pdb
+E:\Documents\school\College\Courses\Computer Science\Homework\Term 1\Week 2\Homework Week2.1\Homework Week2\bin\Debug\Homework Week2.exe
+E:\Documents\school\College\Courses\Computer Science\Homework\Term 1\Week 2\Homework Week2.1\Homework Week2\bin\Debug\Homework Week2.pdb
+E:\Documents\school\College\Courses\Computer Science\Homework\Term 1\Week 2\Homework Week2.1\Homework Week2\obj\Debug\Homework Week2.csproj.AssemblyReference.cache
+E:\Documents\school\College\Courses\Computer Science\Homework\Term 1\Week 2\Homework Week2.1\Homework Week2\obj\Debug\Homework_Week2.Form1.resources
+E:\Documents\school\College\Courses\Computer Science\Homework\Term 1\Week 2\Homework Week2.1\Homework Week2\obj\Debug\Homework_Week2.Properties.Resources.resources
+E:\Documents\school\College\Courses\Computer Science\Homework\Term 1\Week 2\Homework Week2.1\Homework Week2\obj\Debug\Homework Week2.csproj.GenerateResource.cache
+E:\Documents\school\College\Courses\Computer Science\Homework\Term 1\Week 2\Homework Week2.1\Homework Week2\obj\Debug\Homework Week2.csproj.CoreCompileInputs.cache
+E:\Documents\school\College\Courses\Computer Science\Homework\Term 1\Week 2\Homework Week2.1\Homework Week2\obj\Debug\Homework Week2.exe
+E:\Documents\school\College\Courses\Computer Science\Homework\Term 1\Week 2\Homework Week2.1\Homework Week2\obj\Debug\Homework Week2.pdb

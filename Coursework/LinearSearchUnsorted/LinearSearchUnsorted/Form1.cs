@@ -61,15 +61,23 @@ namespace LinearSearchUnsorted
 
         private void BTNLinearSearch_Click(object sender, EventArgs e)
         {
+            Stopwatch stopWatch = new Stopwatch();
+            stopWatch.Start();
             LBLSearchOutput.Visible = true;
             for (int i = 0; i < (Convert.ToInt32(DGVOutput.RowCount)); i++)
             {
                 if (Convert.ToInt32(DGVOutput[0, i].Value) == Convert.ToInt32(TBsearchNum.Text)) //if the item on row i in randomised column = search time then state that.
                 {
-                    LBLSearchOutput.Text = "Search item found at row: " + i;
+                    LBLSearchOutput.Text = "Search item found at row: " + i + " in randomised table";
+                    break;
                 }
+                else
+                {
+                    LBLSearchOutput.Text = "Search item not found.";
+                }
+                TimeSpan ts = stopWatch.Elapsed;
+                LBLDebug.Text = String.Format("{0:00}:{1:00}:{2:00}.{3:00}", ts.Hours, ts.Minutes, ts.Seconds, ts.Milliseconds / 10);
             }
-            LBLSearchOutput.Text = "Search item not found.";
         }
 
 
@@ -124,29 +132,33 @@ namespace LinearSearchUnsorted
 
         private void BTNBinarySearch_Click(object sender, EventArgs e)
         {
-            BTNinsertionSort_Click(sender, e);
+            Stopwatch stopWatch = new Stopwatch();
+            stopWatch.Start();
+            BTNinsertionSort_Click(sender, e);//creates sorted list using insertion sort for binary search to use.
             int searchNum = Convert.ToInt32(TBsearchNum.Text);
+            int startPoint = 0;//defines start and end pointers to control range of search
+            int endPoint = DGVOutput.RowCount;
             bool searchItemFound = false;
-            int listLength = DGVOutput.RowCount;
-            while (searchItemFound == false)
+            while (startPoint!=endPoint & searchItemFound == false)//runs until the pointers values are the same (searched whole list) or the item is stated to be found.
             {
-                listLength = listLength / 2;
-                if (searchNum > Convert.ToInt32(DGVOutput[2, listLength].Value))
-                {
-                    listLength = DGVOutput.RowCount - (listLength / 2);
-                }
-                else if (searchNum < Convert.ToInt32(DGVOutput[2, listLength].Value))
-                {
-                    listLength = listLength / 2;
-                }
-                else if (searchNum == Convert.ToInt32(DGVOutput[2, listLength].Value))
+                if (searchNum == Convert.ToInt32(DGVOutput[2,(startPoint+endPoint)/2].Value))//if the item is found then exits the loop and provides an output.
                 {
                     searchItemFound = true;
+                    int foundRow = ((startPoint + endPoint) / 2) + 1;
+                    LBLSearchOutput.Text = "search item found at row: " + foundRow + " in insertion sort table.";
+                    break;
+                }
+                else if (searchNum > Convert.ToInt32(DGVOutput[2, (startPoint + endPoint) / 2].Value))//if the search item is greater than the midpoint of the pointers then the items to the left of that midpoint are discarded
+                {
+                    startPoint = (startPoint + endPoint) / 2;
+                }
+                else if (searchNum < Convert.ToInt32(DGVOutput[2, (startPoint + endPoint) / 2].Value))//if the search item is less than the midpoint of the pointers then the items to the right of that midpoint are discarded.
+                {
+                    endPoint = (startPoint + endPoint) / 2;
                 }
             }
-
-            LBLSearchOutput.Text = "search item found at index: " + listLength;
-
+            TimeSpan ts = stopWatch.Elapsed;//used to time searches/sorts/etc and provides output in debut label
+            LBLDebug.Text = String.Format("{0:00}:{1:00}:{2:00}.{3:00}", ts.Hours, ts.Minutes, ts.Seconds, ts.Milliseconds / 10);
         }
     }
 }

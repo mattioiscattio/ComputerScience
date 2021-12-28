@@ -1,0 +1,16 @@
+E:\Documents\school\College\Courses\Computer Science\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\bin\Debug\YearOneProjectOne.exe.config
+E:\Documents\school\College\Courses\Computer Science\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\bin\Debug\YearOneProjectOne.exe
+E:\Documents\school\College\Courses\Computer Science\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\bin\Debug\YearOneProjectOne.pdb
+E:\Documents\school\College\Courses\Computer Science\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\obj\Debug\YearOneProjectOne.csproj.AssemblyReference.cache
+E:\Documents\school\College\Courses\Computer Science\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\obj\Debug\YearOneProjectOne.guestView.resources
+E:\Documents\school\College\Courses\Computer Science\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\obj\Debug\YearOneProjectOne.Startup.resources
+E:\Documents\school\College\Courses\Computer Science\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\obj\Debug\YearOneProjectOne.Properties.Resources.resources
+E:\Documents\school\College\Courses\Computer Science\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\obj\Debug\YearOneProjectOne.csproj.GenerateResource.cache
+E:\Documents\school\College\Courses\Computer Science\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\obj\Debug\YearOneProjectOne.csproj.CoreCompileInputs.cache
+E:\Documents\school\College\Courses\Computer Science\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\obj\Debug\YearOneProjectOne.exe
+E:\Documents\school\College\Courses\Computer Science\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\obj\Debug\YearOneProjectOne.pdb
+E:\Documents\school\College\Courses\Computer Science\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\bin\Debug\Interop.WMPLib.dll
+E:\Documents\school\College\Courses\Computer Science\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\bin\Debug\AxInterop.WMPLib.dll
+E:\Documents\school\College\Courses\Computer Science\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\obj\Debug\Interop.WMPLib.dll
+E:\Documents\school\College\Courses\Computer Science\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\obj\Debug\AxInterop.WMPLib.dll
+E:\Documents\school\College\Courses\Computer Science\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\obj\Debug\YearOneProjectOne.csproj.ResolveComReference.cache

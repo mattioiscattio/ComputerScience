@@ -16,5 +16,10 @@ namespace YearOneProjectOne
         {
             InitializeComponent();
         }
+
+        private void guestView_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

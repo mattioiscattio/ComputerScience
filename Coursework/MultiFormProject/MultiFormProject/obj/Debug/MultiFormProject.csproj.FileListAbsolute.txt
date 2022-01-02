@@ -12,3 +12,17 @@ C:\Temporary Workspace\MultiFormProject\MultiFormProject\obj\Debug\MultiFormProj
 C:\Temporary Workspace\MultiFormProject\MultiFormProject\obj\Debug\MultiFormProject.FRMAdmin.resources
 C:\Temporary Workspace\MultiFormProject\MultiFormProject\obj\Debug\MultiFormProject.FRMManager.resources
 C:\Temporary Workspace\MultiFormProject\MultiFormProject\obj\Debug\MultiFormProject.FRMUser.resources
+E:\Documents\school\College\Courses\Computer Science\Coursework\MultiFormProject\MultiFormProject\obj\Debug\MultiFormProject.csproj.AssemblyReference.cache
+E:\Documents\school\College\Courses\Computer Science\Coursework\MultiFormProject\MultiFormProject\obj\Debug\MultiFormProject.FRMStartup.resources
+E:\Documents\school\College\Courses\Computer Science\Coursework\MultiFormProject\MultiFormProject\obj\Debug\MultiFormProject.FRMLogin.resources
+E:\Documents\school\College\Courses\Computer Science\Coursework\MultiFormProject\MultiFormProject\obj\Debug\MultiFormProject.FRMAdmin.resources
+E:\Documents\school\College\Courses\Computer Science\Coursework\MultiFormProject\MultiFormProject\obj\Debug\MultiFormProject.FRMManager.resources
+E:\Documents\school\College\Courses\Computer Science\Coursework\MultiFormProject\MultiFormProject\obj\Debug\MultiFormProject.FRMUser.resources
+E:\Documents\school\College\Courses\Computer Science\Coursework\MultiFormProject\MultiFormProject\obj\Debug\MultiFormProject.Properties.Resources.resources
+E:\Documents\school\College\Courses\Computer Science\Coursework\MultiFormProject\MultiFormProject\obj\Debug\MultiFormProject.csproj.GenerateResource.cache
+E:\Documents\school\College\Courses\Computer Science\Coursework\MultiFormProject\MultiFormProject\obj\Debug\MultiFormProject.csproj.CoreCompileInputs.cache
+E:\Documents\school\College\Courses\Computer Science\Coursework\MultiFormProject\MultiFormProject\obj\Debug\MultiFormProject.exe
+E:\Documents\school\College\Courses\Computer Science\Coursework\MultiFormProject\MultiFormProject\obj\Debug\MultiFormProject.pdb
+E:\Documents\school\College\Courses\Computer Science\Coursework\MultiFormProject\MultiFormProject\bin\Debug\MultiFormProject.exe.config
+E:\Documents\school\College\Courses\Computer Science\Coursework\MultiFormProject\MultiFormProject\bin\Debug\MultiFormProject.exe
+E:\Documents\school\College\Courses\Computer Science\Coursework\MultiFormProject\MultiFormProject\bin\Debug\MultiFormProject.pdb

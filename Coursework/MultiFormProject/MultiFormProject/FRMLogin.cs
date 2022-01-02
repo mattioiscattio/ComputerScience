@@ -16,7 +16,7 @@ namespace MultiFormProject
 
         private void FRMLogin_Load(object sender, EventArgs e)
         {
-            //dataBaseInteraction(); 
+            dataBaseInteraction(); 
         }
 
         private DataSet dataBaseInteraction()
@@ -50,8 +50,8 @@ namespace MultiFormProject
 
         private void BTNEnter_Click(object sender, EventArgs e)
         {
-            dataSetUsers = dataBaseInteraction();
-            LBLDebug.Text = 
+            //dataSetUsers = dataBaseInteraction();
+            //LBLDebug.Text = "";
         }
     }
 }

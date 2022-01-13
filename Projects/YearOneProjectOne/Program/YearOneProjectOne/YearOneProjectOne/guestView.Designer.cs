@@ -38,7 +38,6 @@ namespace YearOneProjectOne
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Name = "guestView";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.guestView_Load);
             this.ResumeLayout(false);
 
         }

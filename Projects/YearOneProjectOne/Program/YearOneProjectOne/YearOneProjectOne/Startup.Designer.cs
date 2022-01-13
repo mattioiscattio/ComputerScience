@@ -36,8 +36,12 @@ namespace YearOneProjectOne
             this.TBPassword = new System.Windows.Forms.TextBox();
             this.TBUsername = new System.Windows.Forms.TextBox();
             this.WMPScreensaver = new AxWMPLib.AxWindowsMediaPlayer();
+            this.mainDatabase1 = new YearOneProjectOne.MainDatabase();
+            this.TBDebug = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.WMPStartup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.WMPScreensaver)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mainDatabase1)).BeginInit();
             this.SuspendLayout();
             // 
             // WMPStartup
@@ -92,20 +96,42 @@ namespace YearOneProjectOne
             this.WMPScreensaver.TabIndex = 7;
             this.WMPScreensaver.Visible = false;
             // 
+            // mainDatabase1
+            // 
+            this.mainDatabase1.DataSetName = "MainDatabase";
+            this.mainDatabase1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // TBDebug
+            // 
+            this.TBDebug.Location = new System.Drawing.Point(665, 363);
+            this.TBDebug.Name = "TBDebug";
+            this.TBDebug.Size = new System.Drawing.Size(100, 20);
+            this.TBDebug.TabIndex = 8;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(0, 13);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 9;
+            // 
             // Startup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.WMPStartup);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TBDebug);
             this.Controls.Add(this.TBUsername);
             this.Controls.Add(this.TBPassword);
             this.Controls.Add(this.BTNLogIn);
             this.Controls.Add(this.WMPScreensaver);
+            this.Controls.Add(this.WMPStartup);
             this.Name = "Startup";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.WMPStartup)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.WMPScreensaver)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mainDatabase1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -118,6 +144,9 @@ namespace YearOneProjectOne
         private System.Windows.Forms.TextBox TBPassword;
         private System.Windows.Forms.TextBox TBUsername;
         private AxWMPLib.AxWindowsMediaPlayer WMPScreensaver;
+        private MainDatabase mainDatabase1;
+        private System.Windows.Forms.TextBox TBDebug;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

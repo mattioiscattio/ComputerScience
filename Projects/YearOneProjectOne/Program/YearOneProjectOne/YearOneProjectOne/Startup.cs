@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Data.OleDb;
+using System.Data.SqlClient;
+
+
 
 namespace YearOneProjectOne
 {
@@ -18,32 +21,6 @@ namespace YearOneProjectOne
         {
             InitializeComponent();
         }
-        private DataSet dataBaseInteraction()
-        {
-            OleDbConnection connection;
-            OleDbDataAdapter oledbAdapter;
-            DataSet ds = new DataSet();
-            string connetionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=E:\\Documents\\school\\College\\Courses\\Computer Science\\Projects\\YearOneProjectOne\\Databases\\yearOneProjectDatabase.mdb.accdb;";
-            string mySql = "SELECT * FROM studentData";
-
-            connection = new OleDbConnection(connetionString);
-            try
-            {
-                connection.Open();
-                oledbAdapter = new OleDbDataAdapter(mySql, connection);
-                oledbAdapter.Fill(ds);
-                oledbAdapter.Dispose();
-                connection.Close();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Can not open connection!");
-            }
-            return ds;
-        }
-       
-
-
 
         private void axWindowsMediaPlayer1_Enter(object sender, EventArgs e)
         {
@@ -61,10 +38,10 @@ namespace YearOneProjectOne
                 WMPScreensaver.URL = Path.GetFullPath(Path.Combine(@"..\..\..\..\..\", @"Data\pipesScreensaver.mp4"));
             }
         }
-
         private void BTNLogIn_Click(object sender, EventArgs e)
         {
-            new guestView().ShowDialog();
+           
+            new adminView().ShowDialog();
 
         }
 
@@ -77,5 +54,6 @@ namespace YearOneProjectOne
         {
             TBUsername.Text = "";
         }
+
     }
 }

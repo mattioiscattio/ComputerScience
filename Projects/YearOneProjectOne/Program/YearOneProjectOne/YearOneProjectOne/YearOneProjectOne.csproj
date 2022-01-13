@@ -58,6 +58,14 @@
     <Compile Include="guestView.Designer.cs">
       <DependentUpon>guestView.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainDatabase.cs">
+      <DependentUpon>MainDatabase.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MainDatabase.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MainDatabase.xsd</DependentUpon>
+    </Compile>
     <Compile Include="teacherView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +86,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="adminView.resx">
+      <DependentUpon>adminView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="guestView.resx">
       <DependentUpon>guestView.cs</DependentUpon>
     </EmbeddedResource>
@@ -93,6 +104,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="MainDatabase.xsc">
+      <DependentUpon>MainDatabase.xsd</DependentUpon>
+    </None>
+    <None Include="MainDatabase.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MainDatabase.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MainDatabase.xss">
+      <DependentUpon>MainDatabase.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

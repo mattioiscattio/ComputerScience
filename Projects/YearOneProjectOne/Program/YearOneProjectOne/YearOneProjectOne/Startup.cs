@@ -42,7 +42,8 @@ namespace YearOneProjectOne
         {
            
             new adminView().ShowDialog();
-
+            TBUsername.Text = "Username";
+            TBPassword.Text = "Password";
         }
 
         private void TBPassword_Click(object sender, EventArgs e)
@@ -53,6 +54,11 @@ namespace YearOneProjectOne
         private void TBUsername_Click(object sender, EventArgs e)
         {
             TBUsername.Text = "";
+        }
+
+        private void Startup_Load(object sender, EventArgs e)
+        {
+            this.userTableTableAdapter.Fill(this.mainDatabase1.userTable);
         }
 
     }

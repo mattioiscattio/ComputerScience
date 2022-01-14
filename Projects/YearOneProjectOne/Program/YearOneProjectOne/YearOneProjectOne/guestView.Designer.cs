@@ -37,7 +37,7 @@ namespace YearOneProjectOne
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Name = "guestView";
-            this.Text = "Form1";
+            this.Text = "Currently viewing as guest";
             this.ResumeLayout(false);
 
         }

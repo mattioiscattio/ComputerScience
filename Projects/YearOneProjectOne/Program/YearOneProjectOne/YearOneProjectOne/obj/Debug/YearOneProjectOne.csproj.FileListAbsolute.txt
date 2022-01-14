@@ -31,3 +31,5 @@ C:\Temporary Workspace\Projects\YearOneProjectOne\Program\YearOneProjectOne\Year
 C:\Temporary Workspace\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\obj\Debug\YearOneProjectOne.exe
 C:\Temporary Workspace\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\obj\Debug\YearOneProjectOne.pdb
 C:\Temporary Workspace\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\obj\Debug\YearOneProjectOne.adminView.resources
+C:\Temporary Workspace\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\obj\Debug\YearOneProjectOne.studentView.resources
+C:\Temporary Workspace\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\obj\Debug\YearOneProjectOne.teacherView.resources

@@ -29,19 +29,28 @@ namespace YearOneProjectOne
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Startup));
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.WMPStartup = new AxWMPLib.AxWindowsMediaPlayer();
             this.BTNLogIn = new System.Windows.Forms.Button();
             this.TBPassword = new System.Windows.Forms.TextBox();
             this.TBUsername = new System.Windows.Forms.TextBox();
             this.WMPScreensaver = new AxWMPLib.AxWindowsMediaPlayer();
-            this.mainDatabase1 = new YearOneProjectOne.MainDatabase();
             this.TBDebug = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.mainDatabase1 = new YearOneProjectOne.mainDatabase();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.userTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.userTableTableAdapter = new YearOneProjectOne.mainDatabaseTableAdapters.userTableTableAdapter();
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.schoolIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.WMPStartup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.WMPScreensaver)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainDatabase1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userTableBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // WMPStartup
@@ -96,11 +105,6 @@ namespace YearOneProjectOne
             this.WMPScreensaver.TabIndex = 7;
             this.WMPScreensaver.Visible = false;
             // 
-            // mainDatabase1
-            // 
-            this.mainDatabase1.DataSetName = "MainDatabase";
-            this.mainDatabase1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // TBDebug
             // 
             this.TBDebug.Location = new System.Drawing.Point(665, 363);
@@ -108,19 +112,66 @@ namespace YearOneProjectOne
             this.TBDebug.Size = new System.Drawing.Size(100, 20);
             this.TBDebug.TabIndex = 8;
             // 
-            // textBox1
+            // mainDatabase1
             // 
-            this.textBox1.Location = new System.Drawing.Point(0, 13);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 9;
+            this.mainDatabase1.DataSetName = "mainDatabase";
+            this.mainDatabase1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDDataGridViewTextBoxColumn,
+            this.schoolIDDataGridViewTextBoxColumn,
+            this.passwordDataGridViewTextBoxColumn,
+            this.userTypeDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.userTableBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(13, 13);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.TabIndex = 9;
+            this.dataGridView1.Visible = false;
+            // 
+            // userTableBindingSource
+            // 
+            this.userTableBindingSource.DataMember = "userTable";
+            this.userTableBindingSource.DataSource = this.mainDatabase1;
+            // 
+            // userTableTableAdapter
+            // 
+            this.userTableTableAdapter.ClearBeforeFill = true;
+            // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            // 
+            // schoolIDDataGridViewTextBoxColumn
+            // 
+            this.schoolIDDataGridViewTextBoxColumn.DataPropertyName = "SchoolID";
+            this.schoolIDDataGridViewTextBoxColumn.HeaderText = "SchoolID";
+            this.schoolIDDataGridViewTextBoxColumn.Name = "schoolIDDataGridViewTextBoxColumn";
+            // 
+            // passwordDataGridViewTextBoxColumn
+            // 
+            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "Password";
+            this.passwordDataGridViewTextBoxColumn.HeaderText = "Password";
+            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
+            // 
+            // userTypeDataGridViewTextBoxColumn
+            // 
+            this.userTypeDataGridViewTextBoxColumn.DataPropertyName = "UserType";
+            this.userTypeDataGridViewTextBoxColumn.HeaderText = "UserType";
+            this.userTypeDataGridViewTextBoxColumn.Name = "userTypeDataGridViewTextBoxColumn";
             // 
             // Startup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.TBDebug);
             this.Controls.Add(this.TBUsername);
             this.Controls.Add(this.TBPassword);
@@ -128,25 +179,34 @@ namespace YearOneProjectOne
             this.Controls.Add(this.WMPScreensaver);
             this.Controls.Add(this.WMPStartup);
             this.Name = "Startup";
-            this.Text = "Form1";
+            this.Text = "Login To Continue";
+            this.Load += new System.EventHandler(this.Startup_Load);
             ((System.ComponentModel.ISupportInitialize)(this.WMPStartup)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.WMPScreensaver)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainDatabase1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userTableBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private AxWMPLib.AxWindowsMediaPlayer WMPStartup;
         private System.Windows.Forms.Button BTNLogIn;
         private System.Windows.Forms.TextBox TBPassword;
         private System.Windows.Forms.TextBox TBUsername;
         private AxWMPLib.AxWindowsMediaPlayer WMPScreensaver;
-        private MainDatabase mainDatabase1;
         private System.Windows.Forms.TextBox TBDebug;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private mainDatabase mainDatabase1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.BindingSource userTableBindingSource;
+        private mainDatabaseTableAdapters.userTableTableAdapter userTableTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn schoolIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn userTypeDataGridViewTextBoxColumn;
     }
 }
 

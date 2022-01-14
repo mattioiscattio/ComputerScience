@@ -9,7 +9,7 @@ StartupScreen(win), login{guest, admin, student, teacher}
 autoGenerate user information, (id, points, tags, etc)
 txt file logs in /userData/, read to find point history, etc.
 
-
+Images on contextmenustrip, option to save changes on exit.
 
 
 

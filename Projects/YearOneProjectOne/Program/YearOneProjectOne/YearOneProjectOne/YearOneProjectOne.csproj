@@ -58,13 +58,10 @@
     <Compile Include="guestView.Designer.cs">
       <DependentUpon>guestView.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainDatabase.cs">
-      <DependentUpon>MainDatabase.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="MainDatabase.Designer.cs">
+    <Compile Include="mainDatabase.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>MainDatabase.xsd</DependentUpon>
+      <DependentUpon>mainDatabase.xsd</DependentUpon>
     </Compile>
     <Compile Include="teacherView.cs">
       <SubType>Form</SubType>
@@ -104,16 +101,22 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="MainDatabase.xsc">
-      <DependentUpon>MainDatabase.xsd</DependentUpon>
+    <EmbeddedResource Include="studentView.resx">
+      <DependentUpon>studentView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="teacherView.resx">
+      <DependentUpon>teacherView.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="mainDatabase.xsc">
+      <DependentUpon>mainDatabase.xsd</DependentUpon>
     </None>
-    <None Include="MainDatabase.xsd">
+    <None Include="mainDatabase.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>MainDatabase.Designer.cs</LastGenOutput>
+      <LastGenOutput>mainDatabase.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="MainDatabase.xss">
-      <DependentUpon>MainDatabase.xsd</DependentUpon>
+    <None Include="mainDatabase.xss">
+      <DependentUpon>mainDatabase.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

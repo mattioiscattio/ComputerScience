@@ -38,12 +38,39 @@ namespace YearOneProjectOne
                 WMPScreensaver.URL = Path.GetFullPath(Path.Combine(@"..\..\..\..\..\", @"Data\pipesScreensaver.mp4"));
             }
         }
+
+        private void credentialsValidation()
+        {
+            for (int i = 0; i < DGVUserTable.RowCount; i++)
+            {
+                if (TBUsername.Text == DGVUserTable.Rows[1].Cells[0].Value.ToString())
+                {
+                    TBDebug.Text = "fd";
+                }
+                else
+                {
+                    TBDebug.Text = "asdf";
+                }
+            }
+        }
+
+
+
+
         private void BTNLogIn_Click(object sender, EventArgs e)
         {
-           
-            new adminView().ShowDialog();
-            TBUsername.Text = "Username";
-            TBPassword.Text = "Password";
+            //login system here
+            if (credentialsValidation() == true)
+            {
+                TBUsername.Text = "Username";
+                TBPassword.Text = "Password";
+                new adminView().ShowDialog();
+            }
+            else
+            {
+                TBPassword.Text = "";
+                
+            }
         }
 
         private void TBPassword_Click(object sender, EventArgs e)

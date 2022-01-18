@@ -34,10 +34,6 @@ namespace YearOneProjectOne
             Environment.Exit(1);
         }
 
-        private void guestToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            new guestView().ShowDialog();
-        }
 
     }
 }

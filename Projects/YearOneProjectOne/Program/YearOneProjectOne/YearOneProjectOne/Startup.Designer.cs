@@ -39,17 +39,17 @@ namespace YearOneProjectOne
             this.TBDebug = new System.Windows.Forms.TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.mainDatabase1 = new YearOneProjectOne.mainDatabase();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.userTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.userTableTableAdapter = new YearOneProjectOne.mainDatabaseTableAdapters.userTableTableAdapter();
+            this.DGVUserTable = new System.Windows.Forms.DataGridView();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.schoolIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.userTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.userTableTableAdapter = new YearOneProjectOne.mainDatabaseTableAdapters.userTableTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.WMPStartup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.WMPScreensaver)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainDatabase1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVUserTable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userTableBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -117,30 +117,21 @@ namespace YearOneProjectOne
             this.mainDatabase1.DataSetName = "mainDatabase";
             this.mainDatabase1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // dataGridView1
+            // DGVUserTable
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DGVUserTable.AutoGenerateColumns = false;
+            this.DGVUserTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGVUserTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iDDataGridViewTextBoxColumn,
             this.schoolIDDataGridViewTextBoxColumn,
             this.passwordDataGridViewTextBoxColumn,
             this.userTypeDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.userTableBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 13);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
-            this.dataGridView1.TabIndex = 9;
-            this.dataGridView1.Visible = false;
-            // 
-            // userTableBindingSource
-            // 
-            this.userTableBindingSource.DataMember = "userTable";
-            this.userTableBindingSource.DataSource = this.mainDatabase1;
-            // 
-            // userTableTableAdapter
-            // 
-            this.userTableTableAdapter.ClearBeforeFill = true;
+            this.DGVUserTable.DataSource = this.userTableBindingSource;
+            this.DGVUserTable.Location = new System.Drawing.Point(13, 13);
+            this.DGVUserTable.Name = "DGVUserTable";
+            this.DGVUserTable.Size = new System.Drawing.Size(240, 150);
+            this.DGVUserTable.TabIndex = 9;
+            this.DGVUserTable.Visible = false;
             // 
             // iDDataGridViewTextBoxColumn
             // 
@@ -166,12 +157,21 @@ namespace YearOneProjectOne
             this.userTypeDataGridViewTextBoxColumn.HeaderText = "UserType";
             this.userTypeDataGridViewTextBoxColumn.Name = "userTypeDataGridViewTextBoxColumn";
             // 
+            // userTableBindingSource
+            // 
+            this.userTableBindingSource.DataMember = "userTable";
+            this.userTableBindingSource.DataSource = this.mainDatabase1;
+            // 
+            // userTableTableAdapter
+            // 
+            this.userTableTableAdapter.ClearBeforeFill = true;
+            // 
             // Startup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.DGVUserTable);
             this.Controls.Add(this.TBDebug);
             this.Controls.Add(this.TBUsername);
             this.Controls.Add(this.TBPassword);
@@ -184,7 +184,7 @@ namespace YearOneProjectOne
             ((System.ComponentModel.ISupportInitialize)(this.WMPStartup)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.WMPScreensaver)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainDatabase1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVUserTable)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userTableBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -200,7 +200,7 @@ namespace YearOneProjectOne
         private System.Windows.Forms.TextBox TBDebug;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private mainDatabase mainDatabase1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DGVUserTable;
         private System.Windows.Forms.BindingSource userTableBindingSource;
         private mainDatabaseTableAdapters.userTableTableAdapter userTableTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;

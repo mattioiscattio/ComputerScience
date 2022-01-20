@@ -38,19 +38,19 @@ namespace YearOneProjectOne
             this.WMPScreensaver = new AxWMPLib.AxWindowsMediaPlayer();
             this.TBDebug = new System.Windows.Forms.TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.mainDatabase1 = new YearOneProjectOne.mainDatabase();
             this.DGVUserTable = new System.Windows.Forms.DataGridView();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.schoolIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userLevelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.userTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mainDatabase1 = new YearOneProjectOne.mainDatabase();
             this.userTableTableAdapter = new YearOneProjectOne.mainDatabaseTableAdapters.userTableTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.WMPStartup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.WMPScreensaver)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mainDatabase1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVUserTable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userTableBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mainDatabase1)).BeginInit();
             this.SuspendLayout();
             // 
             // WMPStartup
@@ -112,11 +112,6 @@ namespace YearOneProjectOne
             this.TBDebug.Size = new System.Drawing.Size(100, 20);
             this.TBDebug.TabIndex = 8;
             // 
-            // mainDatabase1
-            // 
-            this.mainDatabase1.DataSetName = "mainDatabase";
-            this.mainDatabase1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // DGVUserTable
             // 
             this.DGVUserTable.AutoGenerateColumns = false;
@@ -125,13 +120,12 @@ namespace YearOneProjectOne
             this.iDDataGridViewTextBoxColumn,
             this.schoolIDDataGridViewTextBoxColumn,
             this.passwordDataGridViewTextBoxColumn,
-            this.userTypeDataGridViewTextBoxColumn});
+            this.userLevelDataGridViewTextBoxColumn});
             this.DGVUserTable.DataSource = this.userTableBindingSource;
-            this.DGVUserTable.Location = new System.Drawing.Point(13, 13);
+            this.DGVUserTable.Location = new System.Drawing.Point(12, 12);
             this.DGVUserTable.Name = "DGVUserTable";
             this.DGVUserTable.Size = new System.Drawing.Size(240, 150);
             this.DGVUserTable.TabIndex = 9;
-            this.DGVUserTable.Visible = false;
             // 
             // iDDataGridViewTextBoxColumn
             // 
@@ -151,16 +145,21 @@ namespace YearOneProjectOne
             this.passwordDataGridViewTextBoxColumn.HeaderText = "Password";
             this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
             // 
-            // userTypeDataGridViewTextBoxColumn
+            // userLevelDataGridViewTextBoxColumn
             // 
-            this.userTypeDataGridViewTextBoxColumn.DataPropertyName = "UserType";
-            this.userTypeDataGridViewTextBoxColumn.HeaderText = "UserType";
-            this.userTypeDataGridViewTextBoxColumn.Name = "userTypeDataGridViewTextBoxColumn";
+            this.userLevelDataGridViewTextBoxColumn.DataPropertyName = "UserLevel";
+            this.userLevelDataGridViewTextBoxColumn.HeaderText = "UserLevel";
+            this.userLevelDataGridViewTextBoxColumn.Name = "userLevelDataGridViewTextBoxColumn";
             // 
             // userTableBindingSource
             // 
             this.userTableBindingSource.DataMember = "userTable";
             this.userTableBindingSource.DataSource = this.mainDatabase1;
+            // 
+            // mainDatabase1
+            // 
+            this.mainDatabase1.DataSetName = "mainDatabase";
+            this.mainDatabase1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // userTableTableAdapter
             // 
@@ -183,9 +182,9 @@ namespace YearOneProjectOne
             this.Load += new System.EventHandler(this.Startup_Load);
             ((System.ComponentModel.ISupportInitialize)(this.WMPStartup)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.WMPScreensaver)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mainDatabase1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVUserTable)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userTableBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mainDatabase1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -207,6 +206,7 @@ namespace YearOneProjectOne
         private System.Windows.Forms.DataGridViewTextBoxColumn schoolIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn userTypeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn userLevelDataGridViewTextBoxColumn;
     }
 }
 

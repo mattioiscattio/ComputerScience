@@ -39,19 +39,21 @@ namespace YearOneProjectOne
             }
         }
 
-        private void credentialsValidation()
+        private bool credentialsValidation()
         {
             for (int i = 0; i < DGVUserTable.RowCount; i++)
             {
-                if (TBUsername.Text == DGVUserTable.Rows[1].Cells[0].Value.ToString())
+                if (TBUsername.Text == DGVUserTable.Rows[i].Cells[1].Value.ToString())/* && (TBPassword.Text == DGVUserTable.Rows[i].Cells[2].Value.ToString())*/
                 {
-                    TBDebug.Text = "fd";
+                    return true;
+                    TBDebug.Text = DGVUserTable.Rows[i].Cells[2].Value.ToString();
                 }
                 else
                 {
-                    TBDebug.Text = "asdf";
+                    return false;
                 }
             }
+            return
         }
 
 
@@ -85,8 +87,9 @@ namespace YearOneProjectOne
 
         private void Startup_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'mainDatabase1.userTable' table. You can move, or remove it, as needed.
             this.userTableTableAdapter.Fill(this.mainDatabase1.userTable);
-        }
 
+        }
     }
 }

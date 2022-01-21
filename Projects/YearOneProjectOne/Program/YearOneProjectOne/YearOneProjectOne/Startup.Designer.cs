@@ -31,7 +31,6 @@ namespace YearOneProjectOne
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Startup));
-            this.WMPStartup = new AxWMPLib.AxWindowsMediaPlayer();
             this.BTNLogIn = new System.Windows.Forms.Button();
             this.TBPassword = new System.Windows.Forms.TextBox();
             this.TBUsername = new System.Windows.Forms.TextBox();
@@ -46,28 +45,16 @@ namespace YearOneProjectOne
             this.userTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mainDatabase1 = new YearOneProjectOne.mainDatabase();
             this.userTableTableAdapter = new YearOneProjectOne.mainDatabaseTableAdapters.userTableTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.WMPStartup)).BeginInit();
+            this.BTNGuestLogin = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.WMPScreensaver)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVUserTable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainDatabase1)).BeginInit();
             this.SuspendLayout();
             // 
-            // WMPStartup
-            // 
-            this.WMPStartup.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.WMPStartup.Enabled = true;
-            this.WMPStartup.Location = new System.Drawing.Point(0, 0);
-            this.WMPStartup.Name = "WMPStartup";
-            this.WMPStartup.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("WMPStartup.OcxState")));
-            this.WMPStartup.Size = new System.Drawing.Size(800, 450);
-            this.WMPStartup.TabIndex = 1;
-            this.WMPStartup.PlayStateChange += new AxWMPLib._WMPOCXEvents_PlayStateChangeEventHandler(this.axWindowsMediaPlayer1_PlayStateChange);
-            this.WMPStartup.Enter += new System.EventHandler(this.axWindowsMediaPlayer1_Enter);
-            // 
             // BTNLogIn
             // 
-            this.BTNLogIn.Location = new System.Drawing.Point(360, 415);
+            this.BTNLogIn.Location = new System.Drawing.Point(359, 379);
             this.BTNLogIn.Name = "BTNLogIn";
             this.BTNLogIn.Size = new System.Drawing.Size(75, 23);
             this.BTNLogIn.TabIndex = 2;
@@ -77,7 +64,7 @@ namespace YearOneProjectOne
             // 
             // TBPassword
             // 
-            this.TBPassword.Location = new System.Drawing.Point(346, 389);
+            this.TBPassword.Location = new System.Drawing.Point(346, 353);
             this.TBPassword.Name = "TBPassword";
             this.TBPassword.Size = new System.Drawing.Size(100, 20);
             this.TBPassword.TabIndex = 3;
@@ -87,7 +74,7 @@ namespace YearOneProjectOne
             // 
             // TBUsername
             // 
-            this.TBUsername.Location = new System.Drawing.Point(346, 363);
+            this.TBUsername.Location = new System.Drawing.Point(346, 327);
             this.TBUsername.Name = "TBUsername";
             this.TBUsername.Size = new System.Drawing.Size(100, 20);
             this.TBUsername.TabIndex = 4;
@@ -103,7 +90,6 @@ namespace YearOneProjectOne
             this.WMPScreensaver.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("WMPScreensaver.OcxState")));
             this.WMPScreensaver.Size = new System.Drawing.Size(800, 450);
             this.WMPScreensaver.TabIndex = 7;
-            this.WMPScreensaver.Visible = false;
             // 
             // TBDebug
             // 
@@ -165,22 +151,31 @@ namespace YearOneProjectOne
             // 
             this.userTableTableAdapter.ClearBeforeFill = true;
             // 
+            // BTNGuestLogin
+            // 
+            this.BTNGuestLogin.Location = new System.Drawing.Point(346, 408);
+            this.BTNGuestLogin.Name = "BTNGuestLogin";
+            this.BTNGuestLogin.Size = new System.Drawing.Size(102, 23);
+            this.BTNGuestLogin.TabIndex = 10;
+            this.BTNGuestLogin.Text = "Login As Guest";
+            this.BTNGuestLogin.UseVisualStyleBackColor = true;
+            this.BTNGuestLogin.Click += new System.EventHandler(this.BTNGuestLogin_Click);
+            // 
             // Startup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.BTNGuestLogin);
             this.Controls.Add(this.DGVUserTable);
             this.Controls.Add(this.TBDebug);
             this.Controls.Add(this.TBUsername);
             this.Controls.Add(this.TBPassword);
             this.Controls.Add(this.BTNLogIn);
             this.Controls.Add(this.WMPScreensaver);
-            this.Controls.Add(this.WMPStartup);
             this.Name = "Startup";
             this.Text = "Login To Continue";
             this.Load += new System.EventHandler(this.Startup_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.WMPStartup)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.WMPScreensaver)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVUserTable)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userTableBindingSource)).EndInit();
@@ -191,7 +186,6 @@ namespace YearOneProjectOne
         }
 
         #endregion
-        private AxWMPLib.AxWindowsMediaPlayer WMPStartup;
         private System.Windows.Forms.Button BTNLogIn;
         private System.Windows.Forms.TextBox TBPassword;
         private System.Windows.Forms.TextBox TBUsername;
@@ -207,6 +201,7 @@ namespace YearOneProjectOne
         private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn userTypeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn userLevelDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button BTNGuestLogin;
     }
 }
 

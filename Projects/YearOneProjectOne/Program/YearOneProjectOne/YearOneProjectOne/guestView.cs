@@ -27,7 +27,7 @@ namespace YearOneProjectOne
             double originalPointValue = 0.25;
             double variablePointValue = (originalPointValue*(netAwardedPoints/netDockedPoints));
             //use teacher data and combine all points docked/awarded to get total points, use to find value of points.
-            guestViewPointsPieGraph.Series[0].ChartType = SeriesChartType.Pie;
+            //guestViewPointsPieGraph.Series[0].ChartType = SeriesChartType.Pie;
 
 
 

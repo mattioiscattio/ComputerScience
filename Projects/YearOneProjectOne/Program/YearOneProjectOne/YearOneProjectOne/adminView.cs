@@ -34,6 +34,10 @@ namespace YearOneProjectOne
             Environment.Exit(1);
         }
 
-
+        private void adminView_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Close();
+            
+        }
     }
 }

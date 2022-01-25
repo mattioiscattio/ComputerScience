@@ -54,31 +54,41 @@ namespace YearOneProjectOne
             // 
             // BTNLogIn
             // 
-            this.BTNLogIn.Location = new System.Drawing.Point(359, 379);
+            this.BTNLogIn.BackColor = System.Drawing.Color.LawnGreen;
+            this.BTNLogIn.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNLogIn.Location = new System.Drawing.Point(532, 518);
             this.BTNLogIn.Name = "BTNLogIn";
-            this.BTNLogIn.Size = new System.Drawing.Size(75, 23);
+            this.BTNLogIn.Size = new System.Drawing.Size(206, 37);
             this.BTNLogIn.TabIndex = 2;
             this.BTNLogIn.Text = "Log In";
-            this.BTNLogIn.UseVisualStyleBackColor = true;
+            this.BTNLogIn.UseVisualStyleBackColor = false;
             this.BTNLogIn.Click += new System.EventHandler(this.BTNLogIn_Click);
             // 
             // TBPassword
             // 
-            this.TBPassword.Location = new System.Drawing.Point(346, 353);
+            this.TBPassword.AcceptsTab = true;
+            this.TBPassword.BackColor = System.Drawing.Color.PowderBlue;
+            this.TBPassword.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TBPassword.Location = new System.Drawing.Point(532, 475);
             this.TBPassword.Name = "TBPassword";
-            this.TBPassword.Size = new System.Drawing.Size(100, 20);
+            this.TBPassword.Size = new System.Drawing.Size(206, 37);
             this.TBPassword.TabIndex = 3;
             this.TBPassword.Text = "Password";
+            this.TBPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.TBPassword.UseSystemPasswordChar = true;
             this.TBPassword.Click += new System.EventHandler(this.TBPassword_Click);
             // 
             // TBUsername
             // 
-            this.TBUsername.Location = new System.Drawing.Point(346, 327);
+            this.TBUsername.AcceptsTab = true;
+            this.TBUsername.BackColor = System.Drawing.Color.PowderBlue;
+            this.TBUsername.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TBUsername.Location = new System.Drawing.Point(532, 432);
             this.TBUsername.Name = "TBUsername";
-            this.TBUsername.Size = new System.Drawing.Size(100, 20);
+            this.TBUsername.Size = new System.Drawing.Size(206, 37);
             this.TBUsername.TabIndex = 4;
             this.TBUsername.Text = "Username";
+            this.TBUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.TBUsername.Click += new System.EventHandler(this.TBUsername_Click);
             // 
             // WMPScreensaver
@@ -88,12 +98,12 @@ namespace YearOneProjectOne
             this.WMPScreensaver.Location = new System.Drawing.Point(0, 0);
             this.WMPScreensaver.Name = "WMPScreensaver";
             this.WMPScreensaver.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("WMPScreensaver.OcxState")));
-            this.WMPScreensaver.Size = new System.Drawing.Size(800, 450);
+            this.WMPScreensaver.Size = new System.Drawing.Size(1264, 681);
             this.WMPScreensaver.TabIndex = 7;
             // 
             // TBDebug
             // 
-            this.TBDebug.Location = new System.Drawing.Point(665, 363);
+            this.TBDebug.Location = new System.Drawing.Point(1101, 578);
             this.TBDebug.Name = "TBDebug";
             this.TBDebug.Size = new System.Drawing.Size(100, 20);
             this.TBDebug.TabIndex = 8;
@@ -112,6 +122,7 @@ namespace YearOneProjectOne
             this.DGVUserTable.Name = "DGVUserTable";
             this.DGVUserTable.Size = new System.Drawing.Size(240, 150);
             this.DGVUserTable.TabIndex = 9;
+            this.DGVUserTable.Visible = false;
             // 
             // iDDataGridViewTextBoxColumn
             // 
@@ -153,19 +164,21 @@ namespace YearOneProjectOne
             // 
             // BTNGuestLogin
             // 
-            this.BTNGuestLogin.Location = new System.Drawing.Point(346, 408);
+            this.BTNGuestLogin.BackColor = System.Drawing.Color.MediumOrchid;
+            this.BTNGuestLogin.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNGuestLogin.Location = new System.Drawing.Point(515, 561);
             this.BTNGuestLogin.Name = "BTNGuestLogin";
-            this.BTNGuestLogin.Size = new System.Drawing.Size(102, 23);
+            this.BTNGuestLogin.Size = new System.Drawing.Size(235, 52);
             this.BTNGuestLogin.TabIndex = 10;
             this.BTNGuestLogin.Text = "Login As Guest";
-            this.BTNGuestLogin.UseVisualStyleBackColor = true;
+            this.BTNGuestLogin.UseVisualStyleBackColor = false;
             this.BTNGuestLogin.Click += new System.EventHandler(this.BTNGuestLogin_Click);
             // 
             // Startup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.BTNGuestLogin);
             this.Controls.Add(this.DGVUserTable);
             this.Controls.Add(this.TBDebug);

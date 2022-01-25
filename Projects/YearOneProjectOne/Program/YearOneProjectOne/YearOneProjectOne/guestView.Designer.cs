@@ -69,7 +69,7 @@ namespace YearOneProjectOne
             this.guestViewPointsPieGraph.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.guestViewPointsPieGraph.Legends.Add(legend1);
-            this.guestViewPointsPieGraph.Location = new System.Drawing.Point(296, 99);
+            this.guestViewPointsPieGraph.Location = new System.Drawing.Point(377, 66);
             this.guestViewPointsPieGraph.Name = "guestViewPointsPieGraph";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";

@@ -31,12 +31,15 @@ namespace YearOneProjectOne
                     switch (DGVUserTable.Rows[i].Cells[3].Value.ToString())
                     {
                         case "0" :
+                            this.Hide();
                             new studentView().ShowDialog();
                             return true;
                         case "1" :
+                            this.Hide();
                             new teacherView().ShowDialog();
                             return true;
                         case "2" :
+                            this.Hide();
                             new adminView().ShowDialog();
                             return true;
                     }
@@ -87,6 +90,7 @@ namespace YearOneProjectOne
 
         private void BTNGuestLogin_Click(object sender, EventArgs e)
         {
+            this.Hide();
             new guestView().ShowDialog();
         }
     }

@@ -34,34 +34,19 @@ namespace YearOneProjectOne
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.mainDatabase = new YearOneProjectOne.mainDatabase();
-            this.pointValueTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pointValueTableTableAdapter = new YearOneProjectOne.mainDatabaseTableAdapters.pointValueTableTableAdapter();
-            this.pointValueTableBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.guestViewPointsPieGraph = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.pointValueTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pointValueTableBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.mainDatabase)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guestViewPointsPieGraph)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pointValueTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pointValueTableBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guestViewPointsPieGraph)).BeginInit();
             this.SuspendLayout();
             // 
             // mainDatabase
             // 
             this.mainDatabase.DataSetName = "mainDatabase";
             this.mainDatabase.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // pointValueTableBindingSource
-            // 
-            this.pointValueTableBindingSource.DataMember = "pointValueTable";
-            this.pointValueTableBindingSource.DataSource = this.mainDatabase;
-            // 
-            // pointValueTableTableAdapter
-            // 
-            this.pointValueTableTableAdapter.ClearBeforeFill = true;
-            // 
-            // pointValueTableBindingSource1
-            // 
-            this.pointValueTableBindingSource1.DataMember = "pointValueTable";
-            this.pointValueTableBindingSource1.DataSource = this.mainDatabase;
             // 
             // guestViewPointsPieGraph
             // 
@@ -79,6 +64,16 @@ namespace YearOneProjectOne
             this.guestViewPointsPieGraph.TabIndex = 0;
             this.guestViewPointsPieGraph.Text = "chart1";
             // 
+            // pointValueTableBindingSource
+            // 
+            this.pointValueTableBindingSource.DataMember = "pointValueTable";
+            this.pointValueTableBindingSource.DataSource = this.mainDatabase;
+            // 
+            // pointValueTableBindingSource1
+            // 
+            this.pointValueTableBindingSource1.DataMember = "pointValueTable";
+            this.pointValueTableBindingSource1.DataSource = this.mainDatabase;
+            // 
             // guestView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -91,9 +86,9 @@ namespace YearOneProjectOne
             this.Text = "Currently viewing as guest";
             this.Load += new System.EventHandler(this.guestView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.mainDatabase)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guestViewPointsPieGraph)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pointValueTableBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pointValueTableBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guestViewPointsPieGraph)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -101,7 +96,6 @@ namespace YearOneProjectOne
         #endregion
         private mainDatabase mainDatabase;
         private System.Windows.Forms.BindingSource pointValueTableBindingSource;
-        private mainDatabaseTableAdapters.pointValueTableTableAdapter pointValueTableTableAdapter;
         private System.Windows.Forms.BindingSource pointValueTableBindingSource1;
         private System.Windows.Forms.DataVisualization.Charting.Chart guestViewPointsPieGraph;
     }

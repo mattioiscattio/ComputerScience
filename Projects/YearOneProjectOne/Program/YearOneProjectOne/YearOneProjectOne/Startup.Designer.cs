@@ -44,12 +44,22 @@ namespace YearOneProjectOne
             this.userLevelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.userTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mainDatabase1 = new YearOneProjectOne.mainDatabase();
-            this.userTableTableAdapter = new YearOneProjectOne.mainDatabaseTableAdapters.userTableTableAdapter();
             this.BTNGuestLogin = new System.Windows.Forms.Button();
+            this.userTableTableAdapter = new YearOneProjectOne.mainDatabaseTableAdapters.userTableTableAdapter();
+            this.teacherDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.DGVteacherData = new System.Windows.Forms.DataGridView();
+            this.iDDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.teacherNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.teacherDOBDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pointsAwardedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pointsDockedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.teacherDataTableAdapter = new YearOneProjectOne.mainDatabaseTableAdapters.teacherDataTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.WMPScreensaver)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVUserTable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainDatabase1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teacherDataBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVteacherData)).BeginInit();
             this.SuspendLayout();
             // 
             // BTNLogIn
@@ -158,10 +168,6 @@ namespace YearOneProjectOne
             this.mainDatabase1.DataSetName = "mainDatabase";
             this.mainDatabase1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // userTableTableAdapter
-            // 
-            this.userTableTableAdapter.ClearBeforeFill = true;
-            // 
             // BTNGuestLogin
             // 
             this.BTNGuestLogin.BackColor = System.Drawing.Color.MediumOrchid;
@@ -174,11 +180,71 @@ namespace YearOneProjectOne
             this.BTNGuestLogin.UseVisualStyleBackColor = false;
             this.BTNGuestLogin.Click += new System.EventHandler(this.BTNGuestLogin_Click);
             // 
+            // userTableTableAdapter
+            // 
+            this.userTableTableAdapter.ClearBeforeFill = true;
+            // 
+            // teacherDataBindingSource
+            // 
+            this.teacherDataBindingSource.DataMember = "teacherData";
+            this.teacherDataBindingSource.DataSource = this.mainDatabase1;
+            // 
+            // DGVteacherData
+            // 
+            this.DGVteacherData.AutoGenerateColumns = false;
+            this.DGVteacherData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGVteacherData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDDataGridViewTextBoxColumn2,
+            this.teacherNameDataGridViewTextBoxColumn,
+            this.teacherDOBDataGridViewTextBoxColumn,
+            this.pointsAwardedDataGridViewTextBoxColumn,
+            this.pointsDockedDataGridViewTextBoxColumn});
+            this.DGVteacherData.DataSource = this.teacherDataBindingSource;
+            this.DGVteacherData.Location = new System.Drawing.Point(506, 13);
+            this.DGVteacherData.Name = "DGVteacherData";
+            this.DGVteacherData.Size = new System.Drawing.Size(240, 150);
+            this.DGVteacherData.TabIndex = 12;
+            // 
+            // iDDataGridViewTextBoxColumn2
+            // 
+            this.iDDataGridViewTextBoxColumn2.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn2.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn2.Name = "iDDataGridViewTextBoxColumn2";
+            // 
+            // teacherNameDataGridViewTextBoxColumn
+            // 
+            this.teacherNameDataGridViewTextBoxColumn.DataPropertyName = "teacherName";
+            this.teacherNameDataGridViewTextBoxColumn.HeaderText = "teacherName";
+            this.teacherNameDataGridViewTextBoxColumn.Name = "teacherNameDataGridViewTextBoxColumn";
+            // 
+            // teacherDOBDataGridViewTextBoxColumn
+            // 
+            this.teacherDOBDataGridViewTextBoxColumn.DataPropertyName = "teacherDOB";
+            this.teacherDOBDataGridViewTextBoxColumn.HeaderText = "teacherDOB";
+            this.teacherDOBDataGridViewTextBoxColumn.Name = "teacherDOBDataGridViewTextBoxColumn";
+            // 
+            // pointsAwardedDataGridViewTextBoxColumn
+            // 
+            this.pointsAwardedDataGridViewTextBoxColumn.DataPropertyName = "Points Awarded";
+            this.pointsAwardedDataGridViewTextBoxColumn.HeaderText = "Points Awarded";
+            this.pointsAwardedDataGridViewTextBoxColumn.Name = "pointsAwardedDataGridViewTextBoxColumn";
+            // 
+            // pointsDockedDataGridViewTextBoxColumn
+            // 
+            this.pointsDockedDataGridViewTextBoxColumn.DataPropertyName = "Points Docked";
+            this.pointsDockedDataGridViewTextBoxColumn.HeaderText = "Points Docked";
+            this.pointsDockedDataGridViewTextBoxColumn.Name = "pointsDockedDataGridViewTextBoxColumn";
+            // 
+            // teacherDataTableAdapter
+            // 
+            this.teacherDataTableAdapter.ClearBeforeFill = true;
+            // 
             // Startup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.DGVteacherData);
             this.Controls.Add(this.BTNGuestLogin);
             this.Controls.Add(this.DGVUserTable);
             this.Controls.Add(this.TBDebug);
@@ -193,6 +259,8 @@ namespace YearOneProjectOne
             ((System.ComponentModel.ISupportInitialize)(this.DGVUserTable)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userTableBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainDatabase1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teacherDataBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVteacherData)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -215,6 +283,16 @@ namespace YearOneProjectOne
         private System.Windows.Forms.DataGridViewTextBoxColumn userTypeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn userLevelDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button BTNGuestLogin;
+        private System.Windows.Forms.DataGridView DGVteacherData;
+        private System.Windows.Forms.BindingSource teacherDataBindingSource;
+        private mainDatabaseTableAdapters.teacherDataTableAdapter teacherDataTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn teacherNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn teacherDOBDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn netPointsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pointRatioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pointsAwardedDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pointsDockedDataGridViewTextBoxColumn;
     }
 }
 

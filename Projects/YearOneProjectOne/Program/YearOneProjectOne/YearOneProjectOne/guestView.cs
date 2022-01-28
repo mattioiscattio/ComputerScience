@@ -21,7 +21,6 @@ namespace YearOneProjectOne
         private void guestView_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'mainDatabase.pointValueTable' table. You can move, or remove it, as needed.
-            this.pointValueTableTableAdapter.Fill(this.mainDatabase.pointValueTable);
             //temp values, implement with values from teacherdata in future when data is in place.
             int netAwardedPoints = 432;
             int netDockedPoints = 96;

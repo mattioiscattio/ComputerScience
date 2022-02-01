@@ -22,12 +22,18 @@ namespace YearOneProjectOne
             InitializeComponent();
         }
 
+        public string loggedInUser
+        {
+            set { LBLloggedInUser.Text = value; }
+        }
+
         private bool credentialsValidation()
         {
             for (int i = 0; i < DGVUserTable.RowCount - 1; i++)//loops through userTable for credentials
             {
                 if (TBUsername.Text == DGVUserTable.Rows[i].Cells[1].Value.ToString() && TBPassword.Text == DGVUserTable.Rows[i].Cells[2].Value.ToString())
                 {
+                    LBLloggedInUser.Text = TBUsername.Text;
                     switch (DGVUserTable.Rows[i].Cells[3].Value.ToString())//checks userTable data for inputted credentials, then uses case switch to find the login hierarchy to find the target page.
                     {
                         case "0":
@@ -69,11 +75,6 @@ namespace YearOneProjectOne
             }
         }
 
-
-
-
-
-
         private void TBPassword_Click(object sender, EventArgs e)
         {
             TBPassword.Text = "";//empties password textbox when clicked, allows for inital text
@@ -112,12 +113,12 @@ namespace YearOneProjectOne
                 netDockedPoints += Convert.ToInt32(DGVteacherData.Rows[i].Cells[3].Value);
                 netAwardedPoints += Convert.ToInt32(DGVteacherData.Rows[i].Cells[4].Value);
                 TBDebug.Text = netDockedPoints.ToString();
-                //double newPointValue = 5*Math.Abs(netAwardedPoints-netDockedPoints;
+                double newPointValue = 5*Math.Abs(netAwardedPoints-netDockedPoints);
                 string path = Path.Combine(@"..\..\..\..\..\", @"userData\pointValueHistory.txt");
-             //   using (StreamWriter sw = File.AppendText(path))
-               // {
-                 //   sw.WriteLine(Math.Round(newPointValue, 1).ToString());
-                //}
+                using (StreamWriter sw = File.AppendText(path))
+                {
+                    sw.WriteLine(Math.Round(newPointValue, 1).ToString());
+                }
             }
         }
 

@@ -54,6 +54,7 @@ namespace YearOneProjectOne
             this.pointsAwardedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pointsDockedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.teacherDataTableAdapter = new YearOneProjectOne.mainDatabaseTableAdapters.teacherDataTableAdapter();
+            this.LBLloggedInUser = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.WMPScreensaver)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVUserTable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userTableBindingSource)).BeginInit();
@@ -239,11 +240,21 @@ namespace YearOneProjectOne
             // 
             this.teacherDataTableAdapter.ClearBeforeFill = true;
             // 
+            // LBLloggedInUser
+            // 
+            this.LBLloggedInUser.AutoSize = true;
+            this.LBLloggedInUser.Location = new System.Drawing.Point(13, 169);
+            this.LBLloggedInUser.Name = "LBLloggedInUser";
+            this.LBLloggedInUser.Size = new System.Drawing.Size(0, 13);
+            this.LBLloggedInUser.TabIndex = 13;
+            this.LBLloggedInUser.Visible = false;
+            // 
             // Startup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.LBLloggedInUser);
             this.Controls.Add(this.DGVteacherData);
             this.Controls.Add(this.BTNGuestLogin);
             this.Controls.Add(this.DGVUserTable);
@@ -280,7 +291,6 @@ namespace YearOneProjectOne
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn schoolIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn userTypeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn userLevelDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button BTNGuestLogin;
         private System.Windows.Forms.DataGridView DGVteacherData;
@@ -289,10 +299,9 @@ namespace YearOneProjectOne
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn teacherNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn teacherDOBDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn netPointsDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pointRatioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pointsAwardedDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pointsDockedDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label LBLloggedInUser;
     }
 }
 

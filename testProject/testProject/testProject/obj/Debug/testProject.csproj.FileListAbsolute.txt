@@ -1,0 +1,9 @@
+C:\Temporary Workspace\testProject\testProject\testProject\bin\Debug\testProject.exe.config
+C:\Temporary Workspace\testProject\testProject\testProject\bin\Debug\testProject.exe
+C:\Temporary Workspace\testProject\testProject\testProject\bin\Debug\testProject.pdb
+C:\Temporary Workspace\testProject\testProject\testProject\obj\Debug\testProject.Form1.resources
+C:\Temporary Workspace\testProject\testProject\testProject\obj\Debug\testProject.Properties.Resources.resources
+C:\Temporary Workspace\testProject\testProject\testProject\obj\Debug\testProject.csproj.GenerateResource.cache
+C:\Temporary Workspace\testProject\testProject\testProject\obj\Debug\testProject.csproj.CoreCompileInputs.cache
+C:\Temporary Workspace\testProject\testProject\testProject\obj\Debug\testProject.exe
+C:\Temporary Workspace\testProject\testProject\testProject\obj\Debug\testProject.pdb

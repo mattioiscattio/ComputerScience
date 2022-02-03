@@ -19,17 +19,11 @@ namespace YearOneProjectOne
             InitializeComponent();
         }
 
-        public string loggedInUserLink
-        {
-            get { return LBLloggedInUser.Text; }
-        }
-
         public void adminView_Load(object sender, EventArgs e)
         {
             Startup frm = new Startup();
-            string loggedInUser = loggedInUserLink;
             frm.Show();
-            string var1 = "Logged in as" + loggedInUser + "at: " + DateTime.Now;//string to be written to logs, datetime.now gives current time and date
+            string var1 = "Logged in as" + "user" + "at: " + DateTime.Now;//string to be written to logs, datetime.now gives current time and date
             appendLoginData(var1);
         }
     

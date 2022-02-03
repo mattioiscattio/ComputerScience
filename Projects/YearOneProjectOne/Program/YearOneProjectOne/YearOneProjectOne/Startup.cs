@@ -22,11 +22,6 @@ namespace YearOneProjectOne
             InitializeComponent();
         }
 
-        public string loggedInUser
-        {
-            set { LBLloggedInUser.Text = value; }
-        }
-
         private bool credentialsValidation()
         {
             for (int i = 0; i < DGVUserTable.RowCount - 1; i++)//loops through userTable for credentials
@@ -95,6 +90,7 @@ namespace YearOneProjectOne
             logWrite(var1);
             pointValueUpdater();
         }
+
         private void logWrite(string var1)//writes startup info logs to logDump.txt
         {
             string path = Path.Combine(@"..\..\..\..\..\", @"userData\logDump.txt");//merges path of logDump.txt with updirectory path.

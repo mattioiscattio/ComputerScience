@@ -24,12 +24,12 @@ namespace YearOneProjectOne
 
         private bool credentialsValidation()
         {
-            for (int i = 0; i < DGVUserTable.RowCount - 1; i++)//loops through userTable for credentials
+            for (int i = 0; i < dSDB.userTable.Rows.Count - 1; i++)//loops through userTable for credentials
             {
-                if (TBUsername.Text == DGVUserTable.Rows[i].Cells[1].Value.ToString() && TBPassword.Text == DGVUserTable.Rows[i].Cells[2].Value.ToString())
+                if (TBUsername.Text == dSDB.userTable.Rows[i][1].ToString() && TBPassword.Text == dSDB.userTable.Rows[i][2].ToString())
                 {
                     LBLloggedInUser.Text = TBUsername.Text;
-                    switch (DGVUserTable.Rows[i].Cells[3].Value.ToString())//checks userTable data for inputted credentials, then uses case switch to find the login hierarchy to find the target page.
+                    switch (dSDB.userTable.Rows[i][3].ToString())//checks userTable data for inputted credentials, then uses case switch to find the login hierarchy to find the target page.
                     {
                         case "0":
                             this.Hide();
@@ -47,7 +47,6 @@ namespace YearOneProjectOne
 
                 }
             }
-            TBDebug.Text = "test";
             return false;
         }
 
@@ -82,8 +81,10 @@ namespace YearOneProjectOne
 
         private void Startup_Load(object sender, EventArgs e)
         {
-            this.teacherDataTableAdapter.Fill(this.mainDatabase1.teacherData);
-            this.userTableTableAdapter.Fill(this.mainDatabase1.userTable);
+            // TODO: This line of code loads data into the 'dSDB.teacherData' table. You can move, or remove it, as needed.
+            this.teacherDataTableAdapter.Fill(this.dSDB.teacherData);
+            // TODO: This line of code loads data into the 'dSDB.userTable' table. You can move, or remove it, as needed.
+            this.userTableTableAdapter.Fill(this.dSDB.userTable);
             WMPScreensaver.uiMode = "None";//removes ui from media player
             WMPScreensaver.URL = Path.GetFullPath(Path.Combine(@"..\..\..\..\..\", @"Data\pipesScreensaver.mp4"));
             string var1 = "Program Started At: " + DateTime.Now;//string to be written to logs, datetime.now gives current time and date
@@ -104,10 +105,16 @@ namespace YearOneProjectOne
         {
             int netDockedPoints = 0;
             int netAwardedPoints = 0;
-            for (int i = 0; i < DGVteacherData.RowCount - 1; i++)
+            for (int i = 0; i < dSDB.teacherData.Rows.Count - 1; i++)
             {
-                netDockedPoints += Convert.ToInt32(DGVteacherData.Rows[i].Cells[3].Value);
-                netAwardedPoints += Convert.ToInt32(DGVteacherData.Rows[i].Cells[4].Value);
+                netDockedPoints += Convert.ToInt32(dSDB.teacherData.Rows[i][3]);
+                netAwardedPoints += Convert.ToInt32(dSDB.teacherData.Rows[i][4]);
+
+
+
+
+                //netDockedPoints += Convert.ToInt32(DGVteacherData.Rows[i].Cells[3].Value);// i, 3
+                //netAwardedPoints += Convert.ToInt32(DGVteacherData.Rows[i].Cells[4].Value);
                 TBDebug.Text = netDockedPoints.ToString();
                 double newPointValue = 5*Math.Abs(netAwardedPoints-netDockedPoints);
                 string path = Path.Combine(@"..\..\..\..\..\", @"userData\pointValueHistory.txt");
@@ -120,8 +127,18 @@ namespace YearOneProjectOne
 
         private void BTNGuestLogin_Click(object sender, EventArgs e)
         {
-            this.Hide();//hides startup.cs and then opens guestview
+            this.Close();//hides startup.cs and then opens guestview
             new guestView().ShowDialog();
+        }
+
+        private void WMPScreensaver_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void Startup_FormClosing(object sender, FormClosingEventArgs e)
+        {
         }
     }
 }

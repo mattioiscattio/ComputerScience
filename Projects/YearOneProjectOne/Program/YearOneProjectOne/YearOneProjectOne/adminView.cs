@@ -21,10 +21,13 @@ namespace YearOneProjectOne
 
         public void adminView_Load(object sender, EventArgs e)
         {
-            Startup frm = new Startup();
-            frm.Show();
+            // TODO: This line of code loads data into the 'dSDB.studentData' table. You can move, or remove it, as needed.
+            this.studentDataTableAdapter.Fill(this.dSDB.studentData);
+
             string var1 = "Logged in as" + "user" + "at: " + DateTime.Now;//string to be written to logs, datetime.now gives current time and date
             appendLoginData(var1);
+            pointsChart1.
+
         }
     
 
@@ -51,8 +54,9 @@ namespace YearOneProjectOne
 
         private void adminView_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Close();
-            
+            this.Close();
+
+            this.Show();
         }
     }
 }

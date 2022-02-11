@@ -33,3 +33,4 @@ C:\Temporary Workspace\Projects\YearOneProjectOne\Program\YearOneProjectOne\Year
 C:\Temporary Workspace\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\obj\Debug\YearOneProjectOne.adminView.resources
 C:\Temporary Workspace\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\obj\Debug\YearOneProjectOne.studentView.resources
 C:\Temporary Workspace\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\obj\Debug\YearOneProjectOne.teacherView.resources
+C:\Temporary Workspace\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\bin\Debug\yearOneProjectDatabase.accdb

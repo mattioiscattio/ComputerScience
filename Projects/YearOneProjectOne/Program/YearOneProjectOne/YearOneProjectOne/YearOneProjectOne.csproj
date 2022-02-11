@@ -54,11 +54,19 @@
     <Compile Include="adminView.Designer.cs">
       <DependentUpon>adminView.cs</DependentUpon>
     </Compile>
+    <Compile Include="DSDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSDB.xsd</DependentUpon>
+    </Compile>
     <Compile Include="guestView.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="guestView.Designer.cs">
       <DependentUpon>guestView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainDatabase.cs">
+      <DependentUpon>mainDatabase.xsd</DependentUpon>
     </Compile>
     <Compile Include="mainDatabase.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -85,6 +93,16 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="yearOneProjectDatabaseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>yearOneProjectDatabaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="yearOneProjectDatabaseDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>yearOneProjectDatabaseDataSet1.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="adminView.resx">
       <DependentUpon>adminView.cs</DependentUpon>
     </EmbeddedResource>
@@ -110,6 +128,17 @@
     <EmbeddedResource Include="teacherView.resx">
       <DependentUpon>teacherView.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DSDB.xsc">
+      <DependentUpon>DSDB.xsd</DependentUpon>
+    </None>
+    <None Include="DSDB.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSDB.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSDB.xss">
+      <DependentUpon>DSDB.xsd</DependentUpon>
+    </None>
     <None Include="mainDatabase.xsc">
       <DependentUpon>mainDatabase.xsd</DependentUpon>
     </None>
@@ -130,6 +159,28 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="yearOneProjectDatabaseDataSet.xsc">
+      <DependentUpon>yearOneProjectDatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="yearOneProjectDatabaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>yearOneProjectDatabaseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="yearOneProjectDatabaseDataSet.xss">
+      <DependentUpon>yearOneProjectDatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="yearOneProjectDatabaseDataSet1.xsc">
+      <DependentUpon>yearOneProjectDatabaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="yearOneProjectDatabaseDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>yearOneProjectDatabaseDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="yearOneProjectDatabaseDataSet1.xss">
+      <DependentUpon>yearOneProjectDatabaseDataSet1.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -158,6 +209,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\guestViewBackgroundMain.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="yearOneProjectDatabase.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

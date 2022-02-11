@@ -20,6 +20,15 @@ namespace YearOneProjectOne
 
         private void guestView_Load(object sender, EventArgs e)
         {
+         
+        }
+
+        private void guestView_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Close();
+            new Startup().ShowDialog();
+
+
         }
     }
 }

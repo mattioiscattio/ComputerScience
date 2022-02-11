@@ -62,6 +62,7 @@ namespace YearOneProjectOne
             this.Controls.Add(this.guestViewPointsPieGraph);
             this.Name = "guestView";
             this.Text = "Currently viewing as guest";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.guestView_FormClosing);
             this.Load += new System.EventHandler(this.guestView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guestViewPointsPieGraph)).EndInit();
             this.ResumeLayout(false);

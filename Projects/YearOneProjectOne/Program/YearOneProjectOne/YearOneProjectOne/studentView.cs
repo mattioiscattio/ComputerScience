@@ -16,5 +16,11 @@ namespace YearOneProjectOne
         {
             InitializeComponent();
         }
+
+        private void studentView_Load(object sender, EventArgs e)
+        {
+
+
+        }
     }
 }

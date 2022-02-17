@@ -25,7 +25,7 @@ namespace YearOneProjectOne
         {
             // TODO: This line of code loads data into the 'dSDB.studentData' table. You can move, or remove it, as needed.
             this.studentDataTableAdapter.Fill(this.dSDB.studentData);
-            loadPointsChart();
+            loadPointsChart();//use total points awarded/docked, not specific users.
             
         }
 

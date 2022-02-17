@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.IO;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -39,7 +40,6 @@ namespace YearOneProjectOne
                 }
             }
             return 0;
-            label1.Text = File.ReadAllText(Path.Combine(@"..\..\..\..\..\", @"userData\tempDataFile.txt")).ToString();
         }
     }
 }

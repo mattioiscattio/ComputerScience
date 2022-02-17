@@ -42,6 +42,7 @@ namespace YearOneProjectOne
             this.studentDataTableAdapter = new YearOneProjectOne.DSDBTableAdapters.studentDataTableAdapter();
             this.studentPointsChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label1 = new System.Windows.Forms.Label();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.studentDataBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSDB)).BeginInit();
@@ -156,5 +157,6 @@ namespace YearOneProjectOne
         private DSDBTableAdapters.studentDataTableAdapter studentDataTableAdapter;
         private System.Windows.Forms.DataVisualization.Charting.Chart studentPointsChart;
         private System.Windows.Forms.Label label1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

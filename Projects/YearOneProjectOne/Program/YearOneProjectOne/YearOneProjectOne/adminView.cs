@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
-
+using System.Configuration;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace YearOneProjectOne
 {
@@ -23,40 +25,28 @@ namespace YearOneProjectOne
         {
             // TODO: This line of code loads data into the 'dSDB.studentData' table. You can move, or remove it, as needed.
             this.studentDataTableAdapter.Fill(this.dSDB.studentData);
-
-            string var1 = "Logged in as" + "user" + "at: " + DateTime.Now;//string to be written to logs, datetime.now gives current time and date
-            appendLoginData(var1);
-            pointsChart1.
-
+            loadPointsChart();
+            
         }
-    
 
-    private void appendLoginData(string var1)//writes startup info logs to logDump.txt
-    {
-        string path = Path.Combine(@"..\..\..\..\..\", @"userData\logDump.txt");//merges path of logDump.txt with updirectory path.
-        using (StreamWriter sw = File.AppendText(path))
+    private void loadPointsChart()
         {
-            sw.WriteLine(var1);
+            studentPointsChart.Legends.Add("Negative Points");
+            studentPointsChart.Legends[0].Title = "Negative Points";
+            string Negative = "negativePoints";
+            studentPointsChart.Series.Add(Negative);
+            studentPointsChart.Series[Negative].ChartType = SeriesChartType.Doughnut;
         }
-    }
-
     private void logoutToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             //run save function 
             Close();
         }
 
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        private void adminView_FormClosing_1(object sender, FormClosingEventArgs e)
         {
-            //run save function
-            Environment.Exit(1);
-        }
-
-        private void adminView_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            this.Close();
-
-            this.Show();
+            Startup frmMain = new Startup();
+            frmMain.Show();
         }
     }
 }

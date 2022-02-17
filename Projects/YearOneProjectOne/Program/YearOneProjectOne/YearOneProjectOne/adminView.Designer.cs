@@ -37,14 +37,15 @@ namespace YearOneProjectOne
             this.SessionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pointsChart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.dSDB = new YearOneProjectOne.DSDB();
             this.studentDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dSDB = new YearOneProjectOne.DSDB();
             this.studentDataTableAdapter = new YearOneProjectOne.DSDBTableAdapters.studentDataTableAdapter();
+            this.studentPointsChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pointsChart1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dSDB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentDataBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSDB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentPointsChart)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -69,70 +70,76 @@ namespace YearOneProjectOne
             // logoutToolStripMenuItem1
             // 
             this.logoutToolStripMenuItem1.Name = "logoutToolStripMenuItem1";
-            this.logoutToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.logoutToolStripMenuItem1.Size = new System.Drawing.Size(112, 22);
             this.logoutToolStripMenuItem1.Text = "Logout";
             this.logoutToolStripMenuItem1.Click += new System.EventHandler(this.logoutToolStripMenuItem1_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
-            // 
-            // pointsChart1
-            // 
-            chartArea1.Name = "ChartArea1";
-            this.pointsChart1.ChartAreas.Add(chartArea1);
-            this.pointsChart1.DataSource = this.studentDataBindingSource;
-            legend1.Name = "Legend1";
-            this.pointsChart1.Legends.Add(legend1);
-            this.pointsChart1.Location = new System.Drawing.Point(336, 80);
-            this.pointsChart1.Name = "pointsChart1";
-            this.pointsChart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            this.pointsChart1.PaletteCustomColors = new System.Drawing.Color[] {
-        System.Drawing.Color.Red,
-        System.Drawing.Color.Lime};
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.pointsChart1.Series.Add(series1);
-            this.pointsChart1.Size = new System.Drawing.Size(300, 300);
-            this.pointsChart1.TabIndex = 2;
-            this.pointsChart1.Text = "chart1";
-            // 
-            // dSDB
-            // 
-            this.dSDB.DataSetName = "DSDB";
-            this.dSDB.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // studentDataBindingSource
             // 
             this.studentDataBindingSource.DataMember = "studentData";
             this.studentDataBindingSource.DataSource = this.dSDB;
             // 
+            // dSDB
+            // 
+            this.dSDB.DataSetName = "DSDB";
+            this.dSDB.Namespace = "http://tempuri.org/DSDB.xsd";
+            this.dSDB.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // studentDataTableAdapter
             // 
             this.studentDataTableAdapter.ClearBeforeFill = true;
+            // 
+            // studentPointsChart
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.studentPointsChart.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.studentPointsChart.Legends.Add(legend1);
+            this.studentPointsChart.Location = new System.Drawing.Point(13, 28);
+            this.studentPointsChart.Name = "studentPointsChart";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.studentPointsChart.Series.Add(series1);
+            this.studentPointsChart.Size = new System.Drawing.Size(300, 300);
+            this.studentPointsChart.TabIndex = 1;
+            this.studentPointsChart.Text = "chart1";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(341, 40);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "label1";
             // 
             // adminView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1260, 677);
-            this.Controls.Add(this.pointsChart1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.studentPointsChart);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "adminView";
             this.Text = " ";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.adminView_FormClosing_1);
             this.Load += new System.EventHandler(this.adminView_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pointsChart1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dSDB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentDataBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSDB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentPointsChart)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -144,9 +151,10 @@ namespace YearOneProjectOne
         private System.Windows.Forms.ToolStripMenuItem SessionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private System.Windows.Forms.DataVisualization.Charting.Chart pointsChart1;
         private DSDB dSDB;
         private System.Windows.Forms.BindingSource studentDataBindingSource;
         private DSDBTableAdapters.studentDataTableAdapter studentDataTableAdapter;
+        private System.Windows.Forms.DataVisualization.Charting.Chart studentPointsChart;
+        private System.Windows.Forms.Label label1;
     }
 }

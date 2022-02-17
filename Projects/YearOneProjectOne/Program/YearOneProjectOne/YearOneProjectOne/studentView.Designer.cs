@@ -49,6 +49,7 @@ namespace YearOneProjectOne
             this.Controls.Add(this.LBLDebug);
             this.Name = "studentView";
             this.Text = "Currently viewing as student";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.studentView_FormClosing);
             this.Load += new System.EventHandler(this.studentView_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

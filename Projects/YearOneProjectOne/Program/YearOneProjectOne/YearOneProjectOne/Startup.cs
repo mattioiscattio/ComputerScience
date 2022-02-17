@@ -28,18 +28,23 @@ namespace YearOneProjectOne
             {
                 if (TBUsername.Text == dSDB.userTable.Rows[i][1].ToString() && TBPassword.Text == dSDB.userTable.Rows[i][2].ToString())
                 {
-                    LBLloggedInUser.Text = TBUsername.Text;
                     switch (dSDB.userTable.Rows[i][3].ToString())//checks userTable data for inputted credentials, then uses case switch to find the login hierarchy to find the target page.
                     {
                         case "0":
+                            tempFileWrite(dSDB.userTable.Rows[i][1].ToString());
+                            logWrite("logged in as " + dSDB.userTable.Rows[i][1].ToString() + " at: " + DateTime.Now);
                             this.Hide();
                             new studentView().ShowDialog();
                             return true;
                         case "1":
+                            tempFileWrite(dSDB.userTable.Rows[i][1].ToString());
+                            logWrite("logged in as " + dSDB.userTable.Rows[i][1].ToString() + " at: " + DateTime.Now);
                             this.Hide();
                             new teacherView().ShowDialog();
                             return true;
                         case "2":
+                            tempFileWrite(dSDB.userTable.Rows[i][1].ToString());
+                            logWrite("logged in as " + dSDB.userTable.Rows[i][1].ToString() + " at: " + DateTime.Now);
                             this.Hide();
                             new adminView().ShowDialog();
                             return true;
@@ -51,7 +56,14 @@ namespace YearOneProjectOne
         }
 
 
-
+        private void tempFileWrite(string loginCode)
+        {
+            string path = Path.Combine(@"..\..\..\..\..\", @"userData\tempDataFile.txt");
+            using (StreamWriter sw = File.AppendText(path))
+            {
+                sw.WriteLine(loginCode);
+            }
+        }
 
         private void BTNLogIn_Click(object sender, EventArgs e)
         {
@@ -139,6 +151,7 @@ namespace YearOneProjectOne
 
         private void Startup_FormClosing(object sender, FormClosingEventArgs e)
         {
+            Application.Exit();
         }
     }
 }

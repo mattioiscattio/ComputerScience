@@ -22,5 +22,24 @@ namespace YearOneProjectOne
 
 
         }
+
+        private void studentView_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Startup frmMain = new Startup();
+            frmMain.Show();
+        }
+
+        private int getStudentRow()
+        {
+            for (int i = 0; i < dSDB.userTable.Rows.Count - 1; i++)//loops through userTable for credentials
+            {
+                if (dSDB.userTable.Rows[i][3].ToString() == File.ReadAllText(Path.Combine(@"..\..\..\..\..\", @"userData\tempDataFile.txt")))
+                {
+                    return i;
+                }
+            }
+            return 0;
+            label1.Text = File.ReadAllText(Path.Combine(@"..\..\..\..\..\", @"userData\tempDataFile.txt")).ToString();
+        }
     }
 }

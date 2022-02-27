@@ -33,3 +33,9 @@ C:\Temporary Workspace\Projects\YearOneProjectOne\Program\YearOneProjectOne\Year
 C:\Temporary Workspace\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\obj\Debug\YearOneProjectOne.adminView.resources
 C:\Temporary Workspace\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\obj\Debug\YearOneProjectOne.studentView.resources
 C:\Temporary Workspace\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\obj\Debug\YearOneProjectOne.teacherView.resources
+C:\Temporary Workspace\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\bin\Debug\yearOneProjectDatabase.accdb
+E:\Documents\school\College\Courses\Computer Science\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\bin\Debug\yearOneProjectDatabase.accdb
+E:\Documents\school\College\Courses\Computer Science\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\obj\Debug\YearOneProjectOne.adminView.resources
+E:\Documents\school\College\Courses\Computer Science\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\obj\Debug\YearOneProjectOne.studentView.resources
+E:\Documents\school\College\Courses\Computer Science\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\obj\Debug\YearOneProjectOne.teacherView.resources
+E:\Documents\school\College\Courses\Computer Science\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\obj\Debug\YearOneProjectOne.csproj.SuggestedBindingRedirects.cache

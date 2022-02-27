@@ -36,49 +36,60 @@ namespace YearOneProjectOne
             this.TBUsername = new System.Windows.Forms.TextBox();
             this.WMPScreensaver = new AxWMPLib.AxWindowsMediaPlayer();
             this.TBDebug = new System.Windows.Forms.TextBox();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.DGVUserTable = new System.Windows.Forms.DataGridView();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.schoolIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userLevelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.mainDatabase1 = new YearOneProjectOne.mainDatabase();
-            this.userTableTableAdapter = new YearOneProjectOne.mainDatabaseTableAdapters.userTableTableAdapter();
             this.BTNGuestLogin = new System.Windows.Forms.Button();
+            this.LBLloggedInUser = new System.Windows.Forms.Label();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.DSDB = new YearOneProjectOne.DSDB();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.userTableTableAdapter = new YearOneProjectOne.DSDBTableAdapters.userTableTableAdapter();
+            this.bindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.teacherDataTableAdapter = new YearOneProjectOne.DSDBTableAdapters.teacherDataTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.WMPScreensaver)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DGVUserTable)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userTableBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mainDatabase1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DSDB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // BTNLogIn
             // 
-            this.BTNLogIn.Location = new System.Drawing.Point(359, 379);
+            this.BTNLogIn.BackColor = System.Drawing.Color.LawnGreen;
+            this.BTNLogIn.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNLogIn.Location = new System.Drawing.Point(532, 518);
             this.BTNLogIn.Name = "BTNLogIn";
-            this.BTNLogIn.Size = new System.Drawing.Size(75, 23);
+            this.BTNLogIn.Size = new System.Drawing.Size(206, 37);
             this.BTNLogIn.TabIndex = 2;
             this.BTNLogIn.Text = "Log In";
-            this.BTNLogIn.UseVisualStyleBackColor = true;
+            this.BTNLogIn.UseVisualStyleBackColor = false;
             this.BTNLogIn.Click += new System.EventHandler(this.BTNLogIn_Click);
             // 
             // TBPassword
             // 
-            this.TBPassword.Location = new System.Drawing.Point(346, 353);
+            this.TBPassword.AcceptsReturn = true;
+            this.TBPassword.AcceptsTab = true;
+            this.TBPassword.BackColor = System.Drawing.Color.PowderBlue;
+            this.TBPassword.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TBPassword.Location = new System.Drawing.Point(532, 475);
             this.TBPassword.Name = "TBPassword";
-            this.TBPassword.Size = new System.Drawing.Size(100, 20);
+            this.TBPassword.Size = new System.Drawing.Size(206, 37);
             this.TBPassword.TabIndex = 3;
             this.TBPassword.Text = "Password";
+            this.TBPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.TBPassword.UseSystemPasswordChar = true;
             this.TBPassword.Click += new System.EventHandler(this.TBPassword_Click);
             // 
             // TBUsername
             // 
-            this.TBUsername.Location = new System.Drawing.Point(346, 327);
+            this.TBUsername.AcceptsReturn = true;
+            this.TBUsername.AcceptsTab = true;
+            this.TBUsername.BackColor = System.Drawing.Color.PowderBlue;
+            this.TBUsername.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TBUsername.Location = new System.Drawing.Point(532, 432);
             this.TBUsername.Name = "TBUsername";
-            this.TBUsername.Size = new System.Drawing.Size(100, 20);
+            this.TBUsername.Size = new System.Drawing.Size(206, 37);
             this.TBUsername.TabIndex = 4;
             this.TBUsername.Text = "Username";
+            this.TBUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.TBUsername.Click += new System.EventHandler(this.TBUsername_Click);
             // 
             // WMPScreensaver
@@ -88,98 +99,82 @@ namespace YearOneProjectOne
             this.WMPScreensaver.Location = new System.Drawing.Point(0, 0);
             this.WMPScreensaver.Name = "WMPScreensaver";
             this.WMPScreensaver.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("WMPScreensaver.OcxState")));
-            this.WMPScreensaver.Size = new System.Drawing.Size(800, 450);
+            this.WMPScreensaver.Size = new System.Drawing.Size(1264, 681);
             this.WMPScreensaver.TabIndex = 7;
             // 
             // TBDebug
             // 
-            this.TBDebug.Location = new System.Drawing.Point(665, 363);
+            this.TBDebug.Location = new System.Drawing.Point(1101, 578);
             this.TBDebug.Name = "TBDebug";
             this.TBDebug.Size = new System.Drawing.Size(100, 20);
             this.TBDebug.TabIndex = 8;
             // 
-            // DGVUserTable
+            // BTNGuestLogin
             // 
-            this.DGVUserTable.AutoGenerateColumns = false;
-            this.DGVUserTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGVUserTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDDataGridViewTextBoxColumn,
-            this.schoolIDDataGridViewTextBoxColumn,
-            this.passwordDataGridViewTextBoxColumn,
-            this.userLevelDataGridViewTextBoxColumn});
-            this.DGVUserTable.DataSource = this.userTableBindingSource;
-            this.DGVUserTable.Location = new System.Drawing.Point(12, 12);
-            this.DGVUserTable.Name = "DGVUserTable";
-            this.DGVUserTable.Size = new System.Drawing.Size(240, 150);
-            this.DGVUserTable.TabIndex = 9;
+            this.BTNGuestLogin.BackColor = System.Drawing.Color.MediumOrchid;
+            this.BTNGuestLogin.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNGuestLogin.Location = new System.Drawing.Point(515, 561);
+            this.BTNGuestLogin.Name = "BTNGuestLogin";
+            this.BTNGuestLogin.Size = new System.Drawing.Size(235, 52);
+            this.BTNGuestLogin.TabIndex = 10;
+            this.BTNGuestLogin.Text = "Login As Guest";
+            this.BTNGuestLogin.UseVisualStyleBackColor = false;
+            this.BTNGuestLogin.Click += new System.EventHandler(this.BTNGuestLogin_Click);
             // 
-            // iDDataGridViewTextBoxColumn
+            // LBLloggedInUser
             // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.LBLloggedInUser.AutoSize = true;
+            this.LBLloggedInUser.Location = new System.Drawing.Point(13, 169);
+            this.LBLloggedInUser.Name = "LBLloggedInUser";
+            this.LBLloggedInUser.Size = new System.Drawing.Size(0, 13);
+            this.LBLloggedInUser.TabIndex = 13;
+            this.LBLloggedInUser.Visible = false;
             // 
-            // schoolIDDataGridViewTextBoxColumn
+            // DSDB
             // 
-            this.schoolIDDataGridViewTextBoxColumn.DataPropertyName = "SchoolID";
-            this.schoolIDDataGridViewTextBoxColumn.HeaderText = "SchoolID";
-            this.schoolIDDataGridViewTextBoxColumn.Name = "schoolIDDataGridViewTextBoxColumn";
+            this.DSDB.DataSetName = "DSDB";
+            this.DSDB.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // passwordDataGridViewTextBoxColumn
+            // bindingSource1
             // 
-            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "Password";
-            this.passwordDataGridViewTextBoxColumn.HeaderText = "Password";
-            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
-            // 
-            // userLevelDataGridViewTextBoxColumn
-            // 
-            this.userLevelDataGridViewTextBoxColumn.DataPropertyName = "UserLevel";
-            this.userLevelDataGridViewTextBoxColumn.HeaderText = "UserLevel";
-            this.userLevelDataGridViewTextBoxColumn.Name = "userLevelDataGridViewTextBoxColumn";
-            // 
-            // userTableBindingSource
-            // 
-            this.userTableBindingSource.DataMember = "userTable";
-            this.userTableBindingSource.DataSource = this.mainDatabase1;
-            // 
-            // mainDatabase1
-            // 
-            this.mainDatabase1.DataSetName = "mainDatabase";
-            this.mainDatabase1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.bindingSource1.DataMember = "userTable";
+            this.bindingSource1.DataSource = this.DSDB;
             // 
             // userTableTableAdapter
             // 
             this.userTableTableAdapter.ClearBeforeFill = true;
             // 
-            // BTNGuestLogin
+            // bindingSource2
             // 
-            this.BTNGuestLogin.Location = new System.Drawing.Point(346, 408);
-            this.BTNGuestLogin.Name = "BTNGuestLogin";
-            this.BTNGuestLogin.Size = new System.Drawing.Size(102, 23);
-            this.BTNGuestLogin.TabIndex = 10;
-            this.BTNGuestLogin.Text = "Login As Guest";
-            this.BTNGuestLogin.UseVisualStyleBackColor = true;
-            this.BTNGuestLogin.Click += new System.EventHandler(this.BTNGuestLogin_Click);
+            this.bindingSource2.DataMember = "teacherData";
+            this.bindingSource2.DataSource = this.DSDB;
+            // 
+            // teacherDataTableAdapter
+            // 
+            this.teacherDataTableAdapter.ClearBeforeFill = true;
             // 
             // Startup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.LBLloggedInUser);
             this.Controls.Add(this.BTNGuestLogin);
-            this.Controls.Add(this.DGVUserTable);
             this.Controls.Add(this.TBDebug);
             this.Controls.Add(this.TBUsername);
             this.Controls.Add(this.TBPassword);
             this.Controls.Add(this.BTNLogIn);
             this.Controls.Add(this.WMPScreensaver);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Startup";
             this.Text = "Login To Continue";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Startup_FormClosing);
             this.Load += new System.EventHandler(this.Startup_Load);
             ((System.ComponentModel.ISupportInitialize)(this.WMPScreensaver)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DGVUserTable)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userTableBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mainDatabase1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DSDB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -191,17 +186,15 @@ namespace YearOneProjectOne
         private System.Windows.Forms.TextBox TBUsername;
         private AxWMPLib.AxWindowsMediaPlayer WMPScreensaver;
         private System.Windows.Forms.TextBox TBDebug;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private mainDatabase mainDatabase1;
-        private System.Windows.Forms.DataGridView DGVUserTable;
-        private System.Windows.Forms.BindingSource userTableBindingSource;
-        private mainDatabaseTableAdapters.userTableTableAdapter userTableTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn schoolIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn userTypeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn userLevelDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button BTNGuestLogin;
+        private System.Windows.Forms.Label LBLloggedInUser;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.ToolTip toolTip1;
+        internal System.Windows.Forms.BindingSource bindingSource1;
+        internal DSDBTableAdapters.userTableTableAdapter userTableTableAdapter;
+        internal System.Windows.Forms.BindingSource bindingSource2;
+        internal DSDBTableAdapters.teacherDataTableAdapter teacherDataTableAdapter;
+        internal DSDB DSDB;
     }
 }
 

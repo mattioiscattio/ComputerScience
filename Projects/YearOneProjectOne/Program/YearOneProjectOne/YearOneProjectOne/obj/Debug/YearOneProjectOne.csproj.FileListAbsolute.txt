@@ -34,11 +34,8 @@ C:\Temporary Workspace\Projects\YearOneProjectOne\Program\YearOneProjectOne\Year
 C:\Temporary Workspace\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\obj\Debug\YearOneProjectOne.studentView.resources
 C:\Temporary Workspace\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\obj\Debug\YearOneProjectOne.teacherView.resources
 C:\Temporary Workspace\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\bin\Debug\yearOneProjectDatabase.accdb
-<<<<<<< HEAD
 E:\Documents\school\College\Courses\Computer Science\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\bin\Debug\yearOneProjectDatabase.accdb
 E:\Documents\school\College\Courses\Computer Science\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\obj\Debug\YearOneProjectOne.adminView.resources
 E:\Documents\school\College\Courses\Computer Science\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\obj\Debug\YearOneProjectOne.studentView.resources
 E:\Documents\school\College\Courses\Computer Science\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\obj\Debug\YearOneProjectOne.teacherView.resources
 E:\Documents\school\College\Courses\Computer Science\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\obj\Debug\YearOneProjectOne.csproj.SuggestedBindingRedirects.cache
-=======
->>>>>>> b8ce23a831d19c982fb5cf2b52fc8245804a8d7b

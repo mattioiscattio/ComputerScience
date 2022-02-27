@@ -1,0 +1,10 @@
+E:\Documents\school\College\Courses\Computer Science\Homework\Week 5\Homework 5.2\Homework 5.2\obj\Debug\Homework 5.2.csproj.AssemblyReference.cache
+E:\Documents\school\College\Courses\Computer Science\Homework\Week 5\Homework 5.2\Homework 5.2\obj\Debug\Homework_5._2.HW5B.resources
+E:\Documents\school\College\Courses\Computer Science\Homework\Week 5\Homework 5.2\Homework 5.2\obj\Debug\Homework_5._2.Properties.Resources.resources
+E:\Documents\school\College\Courses\Computer Science\Homework\Week 5\Homework 5.2\Homework 5.2\obj\Debug\Homework 5.2.csproj.GenerateResource.cache
+E:\Documents\school\College\Courses\Computer Science\Homework\Week 5\Homework 5.2\Homework 5.2\obj\Debug\Homework 5.2.csproj.CoreCompileInputs.cache
+E:\Documents\school\College\Courses\Computer Science\Homework\Week 5\Homework 5.2\Homework 5.2\bin\Debug\Homework 5.2.exe.config
+E:\Documents\school\College\Courses\Computer Science\Homework\Week 5\Homework 5.2\Homework 5.2\bin\Debug\Homework 5.2.exe
+E:\Documents\school\College\Courses\Computer Science\Homework\Week 5\Homework 5.2\Homework 5.2\bin\Debug\Homework 5.2.pdb
+E:\Documents\school\College\Courses\Computer Science\Homework\Week 5\Homework 5.2\Homework 5.2\obj\Debug\Homework 5.2.exe
+E:\Documents\school\College\Courses\Computer Science\Homework\Week 5\Homework 5.2\Homework 5.2\obj\Debug\Homework 5.2.pdb

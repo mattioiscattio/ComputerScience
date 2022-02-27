@@ -33,15 +33,11 @@ namespace YearOneProjectOne
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-<<<<<<< HEAD
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(adminView));
-=======
->>>>>>> b8ce23a831d19c982fb5cf2b52fc8245804a8d7b
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.SessionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-<<<<<<< HEAD
             this.studentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewStudentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.awardDockPointsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -94,18 +90,6 @@ namespace YearOneProjectOne
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StudentDataViewBindingSource)).BeginInit();
-=======
-            this.studentDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dSDB = new YearOneProjectOne.DSDB();
-            this.studentDataTableAdapter = new YearOneProjectOne.DSDBTableAdapters.studentDataTableAdapter();
-            this.studentPointsChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.label1 = new System.Windows.Forms.Label();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.studentDataBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dSDB)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentPointsChart)).BeginInit();
->>>>>>> b8ce23a831d19c982fb5cf2b52fc8245804a8d7b
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -140,47 +124,7 @@ namespace YearOneProjectOne
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.exitToolStripMenuItem.Text = "Exit";
-            // 
-            // studentDataBindingSource
-            // 
-            this.studentDataBindingSource.DataMember = "studentData";
-            this.studentDataBindingSource.DataSource = this.dSDB;
-            // 
-            // dSDB
-            // 
-            this.dSDB.DataSetName = "DSDB";
-            this.dSDB.Namespace = "http://tempuri.org/DSDB.xsd";
-            this.dSDB.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // studentDataTableAdapter
-            // 
-            this.studentDataTableAdapter.ClearBeforeFill = true;
-            // 
-            // studentPointsChart
-            // 
-            chartArea1.Name = "ChartArea1";
-            this.studentPointsChart.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.studentPointsChart.Legends.Add(legend1);
-            this.studentPointsChart.Location = new System.Drawing.Point(13, 28);
-            this.studentPointsChart.Name = "studentPointsChart";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.studentPointsChart.Series.Add(series1);
-            this.studentPointsChart.Size = new System.Drawing.Size(300, 300);
-            this.studentPointsChart.TabIndex = 1;
-            this.studentPointsChart.Text = "chart1";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(341, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "label1";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // studentsToolStripMenuItem
             // 
@@ -595,7 +539,6 @@ namespace YearOneProjectOne
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< HEAD
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1260, 677);
@@ -617,9 +560,6 @@ namespace YearOneProjectOne
             this.Controls.Add(this.LBLStudentName);
             this.Controls.Add(this.bindingNavigator1);
             this.Controls.Add(this.LBStudents);
-=======
-            this.ClientSize = new System.Drawing.Size(1260, 677);
->>>>>>> b8ce23a831d19c982fb5cf2b52fc8245804a8d7b
             this.Controls.Add(this.label1);
             this.Controls.Add(this.studentPointsChart);
             this.Controls.Add(this.menuStrip1);
@@ -633,7 +573,6 @@ namespace YearOneProjectOne
             this.Load += new System.EventHandler(this.adminView_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-<<<<<<< HEAD
             ((System.ComponentModel.ISupportInitialize)(this.studentPointsChart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StudentBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSDB)).EndInit();
@@ -641,11 +580,6 @@ namespace YearOneProjectOne
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StudentDataViewBindingSource)).EndInit();
-=======
-            ((System.ComponentModel.ISupportInitialize)(this.studentDataBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dSDB)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentPointsChart)).EndInit();
->>>>>>> b8ce23a831d19c982fb5cf2b52fc8245804a8d7b
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -657,7 +591,6 @@ namespace YearOneProjectOne
         private System.Windows.Forms.ToolStripMenuItem SessionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-<<<<<<< HEAD
         private System.Windows.Forms.DataVisualization.Charting.Chart studentPointsChart;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Label label1;
@@ -703,13 +636,5 @@ namespace YearOneProjectOne
         private System.Windows.Forms.Button BTNAddPoints;
         private System.Windows.Forms.Button BTNDockPoints;
         private System.Windows.Forms.BindingSource StudentDataViewBindingSource;
-=======
-        private DSDB dSDB;
-        private System.Windows.Forms.BindingSource studentDataBindingSource;
-        private DSDBTableAdapters.studentDataTableAdapter studentDataTableAdapter;
-        private System.Windows.Forms.DataVisualization.Charting.Chart studentPointsChart;
-        private System.Windows.Forms.Label label1;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
->>>>>>> b8ce23a831d19c982fb5cf2b52fc8245804a8d7b
     }
 }

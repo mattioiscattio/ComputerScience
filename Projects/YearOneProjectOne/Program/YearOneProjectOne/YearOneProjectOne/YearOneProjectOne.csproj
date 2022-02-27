@@ -76,20 +76,14 @@
     <Compile Include="adminView.Designer.cs">
       <DependentUpon>adminView.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="DSDB.cs">
       <DependentUpon>DSDB.xsd</DependentUpon>
     </Compile>
-=======
->>>>>>> b8ce23a831d19c982fb5cf2b52fc8245804a8d7b
     <Compile Include="DSDB.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DSDB.xsd</DependentUpon>
-<<<<<<< HEAD
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-=======
->>>>>>> b8ce23a831d19c982fb5cf2b52fc8245804a8d7b
     </Compile>
     <Compile Include="guestView.cs">
       <SubType>Form</SubType>
@@ -97,17 +91,6 @@
     <Compile Include="guestView.Designer.cs">
       <DependentUpon>guestView.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
-=======
-    <Compile Include="MainDatabase.cs">
-      <DependentUpon>mainDatabase.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="mainDatabase.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>mainDatabase.xsd</DependentUpon>
-    </Compile>
->>>>>>> b8ce23a831d19c982fb5cf2b52fc8245804a8d7b
     <Compile Include="teacherView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,16 +111,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="yearOneProjectDatabaseDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>yearOneProjectDatabaseDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="yearOneProjectDatabaseDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>yearOneProjectDatabaseDataSet1.xsd</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="adminView.resx">
       <DependentUpon>adminView.cs</DependentUpon>
     </EmbeddedResource>
@@ -165,21 +138,7 @@
     </EmbeddedResource>
     <None Include="DSDB.xsc">
       <DependentUpon>DSDB.xsd</DependentUpon>
-<<<<<<< HEAD
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-=======
-    </None>
-    <None Include="DSDB.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DSDB.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DSDB.xss">
-      <DependentUpon>DSDB.xsd</DependentUpon>
-    </None>
-    <None Include="mainDatabase.xsc">
-      <DependentUpon>mainDatabase.xsd</DependentUpon>
->>>>>>> b8ce23a831d19c982fb5cf2b52fc8245804a8d7b
     </None>
     <None Include="DSDB.xsd">
       <Generator>MSDataSetGenerator</Generator>
@@ -200,28 +159,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="yearOneProjectDatabaseDataSet.xsc">
-      <DependentUpon>yearOneProjectDatabaseDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="yearOneProjectDatabaseDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>yearOneProjectDatabaseDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="yearOneProjectDatabaseDataSet.xss">
-      <DependentUpon>yearOneProjectDatabaseDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="yearOneProjectDatabaseDataSet1.xsc">
-      <DependentUpon>yearOneProjectDatabaseDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="yearOneProjectDatabaseDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>yearOneProjectDatabaseDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="yearOneProjectDatabaseDataSet1.xss">
-      <DependentUpon>yearOneProjectDatabaseDataSet1.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -253,11 +190,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="yearOneProjectDatabase.accdb">
-<<<<<<< HEAD
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
->>>>>>> b8ce23a831d19c982fb5cf2b52fc8245804a8d7b
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

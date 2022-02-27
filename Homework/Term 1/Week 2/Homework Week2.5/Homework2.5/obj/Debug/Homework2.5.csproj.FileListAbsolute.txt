@@ -1,0 +1,8 @@
+C:\Temporary Workspace\VisualBasic\Homework2.5\Homework2.5\bin\Debug\Homework2.5.exe
+C:\Temporary Workspace\VisualBasic\Homework2.5\Homework2.5\bin\Debug\Homework2.5.pdb
+C:\Temporary Workspace\VisualBasic\Homework2.5\Homework2.5\obj\Debug\Homework2._5.Form1.resources
+C:\Temporary Workspace\VisualBasic\Homework2.5\Homework2.5\obj\Debug\Homework2._5.Properties.Resources.resources
+C:\Temporary Workspace\VisualBasic\Homework2.5\Homework2.5\obj\Debug\Homework2.5.csproj.GenerateResource.cache
+C:\Temporary Workspace\VisualBasic\Homework2.5\Homework2.5\obj\Debug\Homework2.5.csproj.CoreCompileInputs.cache
+C:\Temporary Workspace\VisualBasic\Homework2.5\Homework2.5\obj\Debug\Homework2.5.exe
+C:\Temporary Workspace\VisualBasic\Homework2.5\Homework2.5\obj\Debug\Homework2.5.pdb

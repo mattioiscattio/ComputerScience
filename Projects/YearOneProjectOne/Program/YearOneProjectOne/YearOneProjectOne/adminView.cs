@@ -23,7 +23,6 @@ namespace YearOneProjectOne
 
         public void adminView_Load(object sender, EventArgs e)
         {
-<<<<<<< HEAD
             // TODO: This line of code loads data into the 'dSDB.teacherData' table. You can move, or remove it, as needed.
             this.teacherDataTableAdapter.Fill(this.dSDB.teacherData);
             // TODO: This line of code loads data into the 'dSDB.studentData' table. You can move, or remove it, as needed.
@@ -58,29 +57,14 @@ namespace YearOneProjectOne
             studentPointsChart.Series[0].Points[0].Color = Color.Green;
             studentPointsChart.Series[0].Points[1].Color = Color.Red;
 
-=======
-            // TODO: This line of code loads data into the 'dSDB.studentData' table. You can move, or remove it, as needed.
-            this.studentDataTableAdapter.Fill(this.dSDB.studentData);
-            loadPointsChart();//use total points awarded/docked, not specific users.
-            
->>>>>>> b8ce23a831d19c982fb5cf2b52fc8245804a8d7b
         }
 
-    private void loadPointsChart()
-        {
-            studentPointsChart.Legends.Add("Negative Points");
-            studentPointsChart.Legends[0].Title = "Negative Points";
-            string Negative = "negativePoints";
-            studentPointsChart.Series.Add(Negative);
-            studentPointsChart.Series[Negative].ChartType = SeriesChartType.Doughnut;
-        }
-    private void logoutToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void logoutToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Close();
         }
 
         private void adminView_FormClosing_1(object sender, FormClosingEventArgs e)
-<<<<<<< HEAD
         {
             Startup frmMain = new Startup();//when closing reopens the main form.
             frmMain.Show();
@@ -254,11 +238,5 @@ namespace YearOneProjectOne
             LBLstudentPointsCounter.Text = "Student Currently has " + Convert.ToInt32(dSDB.studentData.Rows[LBSearchedStudents.SelectedIndex][3]) + " points";//breaks on load, add watch no available
         }
 
-=======
-        {
-            Startup frmMain = new Startup();
-            frmMain.Show();
-        }
->>>>>>> b8ce23a831d19c982fb5cf2b52fc8245804a8d7b
     }
 }

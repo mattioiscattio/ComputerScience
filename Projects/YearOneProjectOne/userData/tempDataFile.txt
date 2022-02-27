@@ -1,5 +1,6 @@
 student1
 root
+<<<<<<< HEAD
 root
 root
 root
@@ -261,3 +262,5 @@ root
 root
 root
 root
+=======
+>>>>>>> b8ce23a831d19c982fb5cf2b52fc8245804a8d7b

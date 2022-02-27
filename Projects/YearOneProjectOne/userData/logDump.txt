@@ -157,6 +157,7 @@ logged in as student1 at: 17/02/2022 14:26:34
 Program Started At: 17/02/2022 14:26:46
 logged in as root at: 17/02/2022 14:26:50
 Program Started At: 17/02/2022 14:26:53
+<<<<<<< HEAD
 Program Started At: 20/02/2022 11:02:00
 Program Started At: 20/02/2022 11:02:12
 Program Started At: 21/02/2022 13:47:42
@@ -814,3 +815,5 @@ Program Started At: 27/02/2022 21:02:18
 logged in as root at: 27/02/2022 21:02:21
 Program Started At: 27/02/2022 21:03:48
 logged in as root at: 27/02/2022 21:03:53
+=======
+>>>>>>> b8ce23a831d19c982fb5cf2b52fc8245804a8d7b

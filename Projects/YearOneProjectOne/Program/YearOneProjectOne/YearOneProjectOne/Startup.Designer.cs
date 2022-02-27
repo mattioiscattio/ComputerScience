@@ -40,6 +40,7 @@ namespace YearOneProjectOne
             this.LBLloggedInUser = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+<<<<<<< HEAD
             this.DSDB = new YearOneProjectOne.DSDB();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.userTableTableAdapter = new YearOneProjectOne.DSDBTableAdapters.userTableTableAdapter();
@@ -49,6 +50,17 @@ namespace YearOneProjectOne
             ((System.ComponentModel.ISupportInitialize)(this.DSDB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).BeginInit();
+=======
+            this.BSUser = new System.Windows.Forms.BindingSource(this.components);
+            this.dSDB = new YearOneProjectOne.DSDB();
+            this.userTableTableAdapter = new YearOneProjectOne.DSDBTableAdapters.userTableTableAdapter();
+            this.BSTeacher = new System.Windows.Forms.BindingSource(this.components);
+            this.teacherDataTableAdapter = new YearOneProjectOne.DSDBTableAdapters.teacherDataTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.WMPScreensaver)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BSUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSDB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BSTeacher)).BeginInit();
+>>>>>>> b8ce23a831d19c982fb5cf2b52fc8245804a8d7b
             this.SuspendLayout();
             // 
             // BTNLogIn
@@ -65,7 +77,10 @@ namespace YearOneProjectOne
             // 
             // TBPassword
             // 
+<<<<<<< HEAD
             this.TBPassword.AcceptsReturn = true;
+=======
+>>>>>>> b8ce23a831d19c982fb5cf2b52fc8245804a8d7b
             this.TBPassword.AcceptsTab = true;
             this.TBPassword.BackColor = System.Drawing.Color.PowderBlue;
             this.TBPassword.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -80,7 +95,10 @@ namespace YearOneProjectOne
             // 
             // TBUsername
             // 
+<<<<<<< HEAD
             this.TBUsername.AcceptsReturn = true;
+=======
+>>>>>>> b8ce23a831d19c982fb5cf2b52fc8245804a8d7b
             this.TBUsername.AcceptsTab = true;
             this.TBUsername.BackColor = System.Drawing.Color.PowderBlue;
             this.TBUsername.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -101,6 +119,7 @@ namespace YearOneProjectOne
             this.WMPScreensaver.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("WMPScreensaver.OcxState")));
             this.WMPScreensaver.Size = new System.Drawing.Size(1264, 681);
             this.WMPScreensaver.TabIndex = 7;
+            this.WMPScreensaver.Enter += new System.EventHandler(this.WMPScreensaver_Enter);
             // 
             // TBDebug
             // 
@@ -130,6 +149,7 @@ namespace YearOneProjectOne
             this.LBLloggedInUser.TabIndex = 13;
             this.LBLloggedInUser.Visible = false;
             // 
+<<<<<<< HEAD
             // DSDB
             // 
             this.DSDB.DataSetName = "DSDB";
@@ -139,15 +159,33 @@ namespace YearOneProjectOne
             // 
             this.bindingSource1.DataMember = "userTable";
             this.bindingSource1.DataSource = this.DSDB;
+=======
+            // BSUser
+            // 
+            this.BSUser.DataMember = "userTable";
+            this.BSUser.DataSource = this.dSDB;
+            // 
+            // dSDB
+            // 
+            this.dSDB.DataSetName = "DSDB";
+            this.dSDB.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+>>>>>>> b8ce23a831d19c982fb5cf2b52fc8245804a8d7b
             // 
             // userTableTableAdapter
             // 
             this.userTableTableAdapter.ClearBeforeFill = true;
             // 
+<<<<<<< HEAD
             // bindingSource2
             // 
             this.bindingSource2.DataMember = "teacherData";
             this.bindingSource2.DataSource = this.DSDB;
+=======
+            // BSTeacher
+            // 
+            this.BSTeacher.DataMember = "teacherData";
+            this.BSTeacher.DataSource = this.dSDB;
+>>>>>>> b8ce23a831d19c982fb5cf2b52fc8245804a8d7b
             // 
             // teacherDataTableAdapter
             // 
@@ -172,9 +210,15 @@ namespace YearOneProjectOne
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Startup_FormClosing);
             this.Load += new System.EventHandler(this.Startup_Load);
             ((System.ComponentModel.ISupportInitialize)(this.WMPScreensaver)).EndInit();
+<<<<<<< HEAD
             ((System.ComponentModel.ISupportInitialize)(this.DSDB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).EndInit();
+=======
+            ((System.ComponentModel.ISupportInitialize)(this.BSUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSDB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BSTeacher)).EndInit();
+>>>>>>> b8ce23a831d19c982fb5cf2b52fc8245804a8d7b
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -190,11 +234,19 @@ namespace YearOneProjectOne
         private System.Windows.Forms.Label LBLloggedInUser;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.ToolTip toolTip1;
+<<<<<<< HEAD
         internal System.Windows.Forms.BindingSource bindingSource1;
         internal DSDBTableAdapters.userTableTableAdapter userTableTableAdapter;
         internal System.Windows.Forms.BindingSource bindingSource2;
         internal DSDBTableAdapters.teacherDataTableAdapter teacherDataTableAdapter;
         internal DSDB DSDB;
+=======
+        private System.Windows.Forms.BindingSource BSUser;
+        private DSDB dSDB;
+        private DSDBTableAdapters.userTableTableAdapter userTableTableAdapter;
+        private System.Windows.Forms.BindingSource BSTeacher;
+        private DSDBTableAdapters.teacherDataTableAdapter teacherDataTableAdapter;
+>>>>>>> b8ce23a831d19c982fb5cf2b52fc8245804a8d7b
     }
 }
 

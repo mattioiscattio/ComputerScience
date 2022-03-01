@@ -30,9 +30,9 @@ namespace YearOneProjectOne
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(adminView));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.SessionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -83,6 +83,8 @@ namespace YearOneProjectOne
             this.BTNAddPoints = new System.Windows.Forms.Button();
             this.BTNDockPoints = new System.Windows.Forms.Button();
             this.StudentDataViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.shopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editItemsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.studentPointsChart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StudentBindingSource)).BeginInit();
@@ -96,7 +98,8 @@ namespace YearOneProjectOne
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.SessionToolStripMenuItem,
-            this.studentsToolStripMenuItem});
+            this.studentsToolStripMenuItem,
+            this.shopToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1260, 24);
@@ -151,17 +154,17 @@ namespace YearOneProjectOne
             // 
             // studentPointsChart
             // 
-            chartArea1.Name = "ChartArea1";
-            this.studentPointsChart.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.studentPointsChart.Legends.Add(legend1);
+            chartArea3.Name = "ChartArea1";
+            this.studentPointsChart.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.studentPointsChart.Legends.Add(legend3);
             this.studentPointsChart.Location = new System.Drawing.Point(941, 47);
             this.studentPointsChart.Name = "studentPointsChart";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.studentPointsChart.Series.Add(series1);
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.studentPointsChart.Series.Add(series3);
             this.studentPointsChart.Size = new System.Drawing.Size(300, 221);
             this.studentPointsChart.TabIndex = 1;
             this.studentPointsChart.Text = "chart1";
@@ -183,7 +186,7 @@ namespace YearOneProjectOne
             this.LBStudents.DataSource = this.StudentBindingSource;
             this.LBStudents.DisplayMember = "studentName";
             this.LBStudents.FormattingEnabled = true;
-            this.LBStudents.Location = new System.Drawing.Point(45, 29);
+            this.LBStudents.Location = new System.Drawing.Point(71, 29);
             this.LBStudents.MultiColumn = true;
             this.LBStudents.Name = "LBStudents";
             this.LBStudents.Size = new System.Drawing.Size(223, 95);
@@ -535,6 +538,20 @@ namespace YearOneProjectOne
             this.BTNDockPoints.Visible = false;
             this.BTNDockPoints.Click += new System.EventHandler(this.BTNDockPoints_Click);
             // 
+            // shopToolStripMenuItem
+            // 
+            this.shopToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editItemsToolStripMenuItem});
+            this.shopToolStripMenuItem.Name = "shopToolStripMenuItem";
+            this.shopToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
+            this.shopToolStripMenuItem.Text = "Shop";
+            // 
+            // editItemsToolStripMenuItem
+            // 
+            this.editItemsToolStripMenuItem.Name = "editItemsToolStripMenuItem";
+            this.editItemsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editItemsToolStripMenuItem.Text = "Edit Items";
+            // 
             // adminView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -636,5 +653,7 @@ namespace YearOneProjectOne
         private System.Windows.Forms.Button BTNAddPoints;
         private System.Windows.Forms.Button BTNDockPoints;
         private System.Windows.Forms.BindingSource StudentDataViewBindingSource;
+        private System.Windows.Forms.ToolStripMenuItem shopToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editItemsToolStripMenuItem;
     }
 }

@@ -39,3 +39,7 @@ E:\Documents\school\College\Courses\Computer Science\Projects\YearOneProjectOne\
 E:\Documents\school\College\Courses\Computer Science\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\obj\Debug\YearOneProjectOne.studentView.resources
 E:\Documents\school\College\Courses\Computer Science\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\obj\Debug\YearOneProjectOne.teacherView.resources
 E:\Documents\school\College\Courses\Computer Science\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\obj\Debug\YearOneProjectOne.csproj.SuggestedBindingRedirects.cache
+C:\Temporary Workspace\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\bin\Debug\DSDB.Designer.cs
+C:\Temporary Workspace\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\bin\Debug\DSDB.xsc
+C:\Temporary Workspace\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\bin\Debug\DSDB.xsd
+C:\Temporary Workspace\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\bin\Debug\DSDB.xss

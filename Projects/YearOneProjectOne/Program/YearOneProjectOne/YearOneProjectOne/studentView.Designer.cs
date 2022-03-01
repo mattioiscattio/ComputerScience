@@ -37,7 +37,7 @@ namespace YearOneProjectOne
             // LBLDebug
             // 
             this.LBLDebug.AutoSize = true;
-            this.LBLDebug.Location = new System.Drawing.Point(13, 13);
+            this.LBLDebug.Location = new System.Drawing.Point(707, 412);
             this.LBLDebug.Name = "LBLDebug";
             this.LBLDebug.Size = new System.Drawing.Size(35, 13);
             this.LBLDebug.TabIndex = 0;
@@ -46,15 +46,17 @@ namespace YearOneProjectOne
             // dSDB
             // 
             this.dSDB.DataSetName = "DSDB";
-            this.dSDB.Namespace = "http://tempuri.org/DSDB.xsd";
             this.dSDB.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // studentView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::YearOneProjectOne.Properties.Resources.colorGradientGuestView;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.LBLDebug);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "studentView";
             this.Text = "Currently viewing as student";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.studentView_FormClosing);

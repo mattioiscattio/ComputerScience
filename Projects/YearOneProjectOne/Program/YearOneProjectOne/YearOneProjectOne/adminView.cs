@@ -56,7 +56,6 @@ namespace YearOneProjectOne
             studentPointsChart.ChartAreas[0].Area3DStyle.Enable3D = true;//gives 3d style to doughnut point chart
             studentPointsChart.Series[0].Points[0].Color = Color.Green;
             studentPointsChart.Series[0].Points[1].Color = Color.Red;
-
         }
 
         private void logoutToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -183,12 +182,7 @@ namespace YearOneProjectOne
                     dSDB.studentData.Rows[LBSearchedStudents.SelectedIndex][3] = currentPoints + Convert.ToInt32(TBPointsVaryVal.Text);
                     studentDataTableAdapter.Update(dSDB.studentData);
                     LBLstudentPointsCounter.Text = "Student Currently has " + Convert.ToInt32(dSDB.studentData.Rows[LBSearchedStudents.SelectedIndex][3]) + " points";
-                }
-
-                else if (Convert.ToInt32(TBPointsVaryVal.Text) > 0)
-                {
-                    dSDB.studentData.Rows[LBSearchedStudents.SelectedIndex][3] = 0;
-                    LBLstudentPointsCounter.Text = "Student Currently has " + Convert.ToInt32(dSDB.studentData.Rows[LBSearchedStudents.SelectedIndex][3]) + " points";
+                    loadPointsChart();
                 }
 
                 else if (Convert.ToInt32(TBPointsVaryVal.Text) <= 0)
@@ -235,8 +229,14 @@ namespace YearOneProjectOne
 
         private void LBSearchedStudents_SelectedIndexChanged(object sender, EventArgs e)
         {
-            LBLstudentPointsCounter.Text = "Student Currently has " + Convert.ToInt32(dSDB.studentData.Rows[LBSearchedStudents.SelectedIndex][3]) + " points";//breaks on load, add watch no available
-        }
+            try
+            {
+                LBLstudentPointsCounter.Text = "Student Currently has " + Convert.ToInt32(dSDB.studentData.Rows[LBSearchedStudents.SelectedIndex][3]) + " points";//breaks on load, add watch no available
+            }
+            catch
+            {
 
+            }
+       }
     }
 }

@@ -58,7 +58,7 @@ namespace YearOneProjectOne
 
         private void tempFileWrite(string loginCode)
         {
-            string path = Path.Combine(@"..\..\..\..\..\..\", @"userData\tempDataFile.txt");
+            string path = Path.Combine(@"..\..\..\..\..\", @"userData\tempDataFile.txt");
             using (StreamWriter sw = File.AppendText(path))
             {
                 sw.WriteLine(loginCode);
@@ -97,7 +97,7 @@ namespace YearOneProjectOne
             // TODO: This line of code loads data into the 'dSDB.userTable' table. You can move, or remove it, as needed.
             this.userTableTableAdapter.Fill(this.DSDB.userTable);
             WMPScreensaver.uiMode = "None";//removes ui from media player
-            WMPScreensaver.URL = Path.GetFullPath(Path.Combine(@"..\..\..\..\..\..\", @"Data\pipesScreensaver.mp4"));
+            WMPScreensaver.URL = Path.GetFullPath(Path.Combine(@"..\..\..\..\..\", @"Data\pipesScreensaver.mp4"));
             string var1 = "Program Started At: " + DateTime.Now;//string to be written to logs, datetime.now gives current time and date
             logWrite(var1);
             pointValueUpdater();//updates value of point, need fixing
@@ -105,7 +105,7 @@ namespace YearOneProjectOne
 
         private void logWrite(string var1)//writes startup info logs to logDump.txt
         {
-            string path = Path.Combine(@"..\..\..\..\..\..\", @"userData\logDump.txt");//merges path of logDump.txt with updirectory path.
+            string path = Path.Combine(@"..\..\..\..\..\", @"userData\logDump.txt");//merges path of logDump.txt with updirectory path.
             using (StreamWriter sw = File.AppendText(path))
             {
                 sw.WriteLine(var1);
@@ -121,7 +121,7 @@ namespace YearOneProjectOne
                 netDockedPoints += Convert.ToInt32(DSDB.teacherData.Rows[i][3]);
                 netAwardedPoints += Convert.ToInt32(DSDB.teacherData.Rows[i][4]);
                 double newPointValue = 5*Math.Abs(netAwardedPoints-netDockedPoints);
-                string path = Path.Combine(@"..\..\..\..\..\..\", @"userData\pointValueHistory.txt");
+                string path = Path.Combine(@"..\..\..\..\..\", @"userData\pointValueHistory.txt");
                 using (StreamWriter sw = File.AppendText(path))
                 {
                     sw.WriteLine(Math.Round(newPointValue, 1).ToString());

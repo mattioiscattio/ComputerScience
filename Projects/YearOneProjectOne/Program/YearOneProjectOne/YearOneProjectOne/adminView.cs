@@ -23,6 +23,8 @@ namespace YearOneProjectOne
 
         public void adminView_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dSDB.rewardTable' table. You can move, or remove it, as needed.
+            this.rewardTableTableAdapter.Fill(this.dSDB.rewardTable);
             // TODO: This line of code loads data into the 'dSDB.teacherData' table. You can move, or remove it, as needed.
             this.teacherDataTableAdapter.Fill(this.dSDB.teacherData);
             // TODO: This line of code loads data into the 'dSDB.studentData' table. You can move, or remove it, as needed.
@@ -74,6 +76,30 @@ namespace YearOneProjectOne
             Environment.Exit(1);  //closes everything.   
         }
 
+
+
+        private void editItemsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (LBRewardList.Visible == Visible)
+            {
+                dropDownComponentsHide();
+            }
+
+            else
+            {
+                LBLRewardName.Show();
+                LBLRewardPrice.Show();
+                LBLRewardStock.Show();
+                LBLRewardThreshold.Show();
+                LBRewardList.Show();
+                TBRewardName.Show();
+                TBRewardPrice.Show();
+                TBRewardStock.Show();
+                TBRewardThreshold.Show();
+                BindingNavigatorReward.Show();
+            }
+        }
+
         private void viewStudentsToolStripMenuItem_Click(object sender, EventArgs e)//toggles between showing or hiding the studentTable data screen.
         {
             if (LBLStudentName.Visible == Visible)
@@ -115,6 +141,16 @@ namespace YearOneProjectOne
                 LBLSelectStudent.Hide();
                 BTNAddPoints.Hide();
                 BTNDockPoints.Hide();
+                LBLRewardName.Hide();
+                LBLRewardPrice.Hide();
+                LBLRewardStock.Hide();
+                LBLRewardThreshold.Hide();
+                LBRewardList.Hide();
+                TBRewardName.Hide();
+                TBRewardPrice.Hide();
+                TBRewardStock.Hide();
+                TBRewardThreshold.Hide();
+            BindingNavigatorReward.Hide();
         }
         
 
@@ -238,5 +274,24 @@ namespace YearOneProjectOne
 
             }
        }
+
+        private void LBRewardList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void toolStripButton8_Click(object sender, EventArgs e)
+        {
+            studentDataTableAdapter.Update(dSDB.studentData);
+        }
+
+        private void toolStripButton7_Click(object sender, EventArgs e)
+        {
+            studentDataTableAdapter.Fill(dSDB.studentData);
+        }
+
+        private void toolStripButton9_Click(object sender, EventArgs e)
+        {
+            StudentBindingSource.CancelEdit();
+        }
     }
 }

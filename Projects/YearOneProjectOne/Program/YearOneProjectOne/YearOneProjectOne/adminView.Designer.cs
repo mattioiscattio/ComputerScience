@@ -30,9 +30,9 @@ namespace YearOneProjectOne
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(adminView));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.SessionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -41,6 +41,8 @@ namespace YearOneProjectOne
             this.studentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewStudentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.awardDockPointsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.shopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editItemsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.studentPointsChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.label1 = new System.Windows.Forms.Label();
@@ -83,8 +85,33 @@ namespace YearOneProjectOne
             this.BTNAddPoints = new System.Windows.Forms.Button();
             this.BTNDockPoints = new System.Windows.Forms.Button();
             this.StudentDataViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.shopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editItemsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.LBRewardList = new System.Windows.Forms.ListBox();
+            this.rewardTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.LBLRewardName = new System.Windows.Forms.Label();
+            this.LBLRewardThreshold = new System.Windows.Forms.Label();
+            this.LBLRewardStock = new System.Windows.Forms.Label();
+            this.LBLRewardPrice = new System.Windows.Forms.Label();
+            this.TBRewardName = new System.Windows.Forms.TextBox();
+            this.TBRewardThreshold = new System.Windows.Forms.TextBox();
+            this.TBRewardStock = new System.Windows.Forms.TextBox();
+            this.TBRewardPrice = new System.Windows.Forms.TextBox();
+            this.rewardTableTableAdapter = new YearOneProjectOne.DSDBTableAdapters.rewardTableTableAdapter();
+            this.BindingNavigatorReward = new System.Windows.Forms.BindingNavigator(this.components);
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.studentPointsChart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StudentBindingSource)).BeginInit();
@@ -92,6 +119,9 @@ namespace YearOneProjectOne
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StudentDataViewBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rewardTableBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BindingNavigatorReward)).BeginInit();
+            this.BindingNavigatorReward.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -152,19 +182,34 @@ namespace YearOneProjectOne
             this.awardDockPointsToolStripMenuItem.Text = "Award/Dock Points";
             this.awardDockPointsToolStripMenuItem.Click += new System.EventHandler(this.awardDockPointsToolStripMenuItem_Click);
             // 
+            // shopToolStripMenuItem
+            // 
+            this.shopToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editItemsToolStripMenuItem});
+            this.shopToolStripMenuItem.Name = "shopToolStripMenuItem";
+            this.shopToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
+            this.shopToolStripMenuItem.Text = "Shop";
+            // 
+            // editItemsToolStripMenuItem
+            // 
+            this.editItemsToolStripMenuItem.Name = "editItemsToolStripMenuItem";
+            this.editItemsToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
+            this.editItemsToolStripMenuItem.Text = "Edit Items";
+            this.editItemsToolStripMenuItem.Click += new System.EventHandler(this.editItemsToolStripMenuItem_Click);
+            // 
             // studentPointsChart
             // 
-            chartArea3.Name = "ChartArea1";
-            this.studentPointsChart.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.studentPointsChart.Legends.Add(legend3);
+            chartArea5.Name = "ChartArea1";
+            this.studentPointsChart.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.studentPointsChart.Legends.Add(legend5);
             this.studentPointsChart.Location = new System.Drawing.Point(941, 47);
             this.studentPointsChart.Name = "studentPointsChart";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.studentPointsChart.Series.Add(series3);
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series5.Legend = "Legend1";
+            series5.Name = "Series1";
+            this.studentPointsChart.Series.Add(series5);
             this.studentPointsChart.Size = new System.Drawing.Size(300, 221);
             this.studentPointsChart.TabIndex = 1;
             this.studentPointsChart.Text = "chart1";
@@ -372,6 +417,7 @@ namespace YearOneProjectOne
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -538,19 +584,266 @@ namespace YearOneProjectOne
             this.BTNDockPoints.Visible = false;
             this.BTNDockPoints.Click += new System.EventHandler(this.BTNDockPoints_Click);
             // 
-            // shopToolStripMenuItem
+            // LBRewardList
             // 
-            this.shopToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.editItemsToolStripMenuItem});
-            this.shopToolStripMenuItem.Name = "shopToolStripMenuItem";
-            this.shopToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
-            this.shopToolStripMenuItem.Text = "Shop";
+            this.LBRewardList.DataSource = this.rewardTableBindingSource;
+            this.LBRewardList.DisplayMember = "itemName";
+            this.LBRewardList.FormattingEnabled = true;
+            this.LBRewardList.Location = new System.Drawing.Point(50, 186);
+            this.LBRewardList.Name = "LBRewardList";
+            this.LBRewardList.Size = new System.Drawing.Size(181, 186);
+            this.LBRewardList.TabIndex = 35;
+            this.LBRewardList.Visible = false;
+            this.LBRewardList.SelectedIndexChanged += new System.EventHandler(this.LBRewardList_SelectedIndexChanged);
             // 
-            // editItemsToolStripMenuItem
+            // rewardTableBindingSource
             // 
-            this.editItemsToolStripMenuItem.Name = "editItemsToolStripMenuItem";
-            this.editItemsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.editItemsToolStripMenuItem.Text = "Edit Items";
+            this.rewardTableBindingSource.DataMember = "rewardTable";
+            this.rewardTableBindingSource.DataSource = this.dSDB;
+            // 
+            // LBLRewardName
+            // 
+            this.LBLRewardName.AutoSize = true;
+            this.LBLRewardName.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLRewardName.Location = new System.Drawing.Point(353, 90);
+            this.LBLRewardName.Name = "LBLRewardName";
+            this.LBLRewardName.Size = new System.Drawing.Size(147, 25);
+            this.LBLRewardName.TabIndex = 36;
+            this.LBLRewardName.Text = "Reward Name - ";
+            this.LBLRewardName.Visible = false;
+            // 
+            // LBLRewardThreshold
+            // 
+            this.LBLRewardThreshold.AutoSize = true;
+            this.LBLRewardThreshold.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLRewardThreshold.Location = new System.Drawing.Point(349, 360);
+            this.LBLRewardThreshold.Name = "LBLRewardThreshold";
+            this.LBLRewardThreshold.Size = new System.Drawing.Size(132, 25);
+            this.LBLRewardThreshold.TabIndex = 41;
+            this.LBLRewardThreshold.Text = "Buy Threshold";
+            this.LBLRewardThreshold.Visible = false;
+            // 
+            // LBLRewardStock
+            // 
+            this.LBLRewardStock.AutoSize = true;
+            this.LBLRewardStock.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLRewardStock.Location = new System.Drawing.Point(426, 270);
+            this.LBLRewardStock.Name = "LBLRewardStock";
+            this.LBLRewardStock.Size = new System.Drawing.Size(69, 25);
+            this.LBLRewardStock.TabIndex = 42;
+            this.LBLRewardStock.Text = "Stock -";
+            this.LBLRewardStock.Visible = false;
+            // 
+            // LBLRewardPrice
+            // 
+            this.LBLRewardPrice.AutoSize = true;
+            this.LBLRewardPrice.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLRewardPrice.Location = new System.Drawing.Point(429, 180);
+            this.LBLRewardPrice.Name = "LBLRewardPrice";
+            this.LBLRewardPrice.Size = new System.Drawing.Size(67, 25);
+            this.LBLRewardPrice.TabIndex = 43;
+            this.LBLRewardPrice.Text = "Price -";
+            this.LBLRewardPrice.Visible = false;
+            // 
+            // TBRewardName
+            // 
+            this.TBRewardName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.rewardTableBindingSource, "itemName", true));
+            this.TBRewardName.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TBRewardName.Location = new System.Drawing.Point(542, 87);
+            this.TBRewardName.Name = "TBRewardName";
+            this.TBRewardName.Size = new System.Drawing.Size(152, 31);
+            this.TBRewardName.TabIndex = 44;
+            this.TBRewardName.Visible = false;
+            // 
+            // TBRewardThreshold
+            // 
+            this.TBRewardThreshold.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.rewardTableBindingSource, "StockThreshold", true));
+            this.TBRewardThreshold.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TBRewardThreshold.Location = new System.Drawing.Point(542, 358);
+            this.TBRewardThreshold.Name = "TBRewardThreshold";
+            this.TBRewardThreshold.Size = new System.Drawing.Size(152, 31);
+            this.TBRewardThreshold.TabIndex = 45;
+            this.TBRewardThreshold.Visible = false;
+            // 
+            // TBRewardStock
+            // 
+            this.TBRewardStock.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.rewardTableBindingSource, "Stock", true));
+            this.TBRewardStock.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TBRewardStock.Location = new System.Drawing.Point(542, 271);
+            this.TBRewardStock.Name = "TBRewardStock";
+            this.TBRewardStock.Size = new System.Drawing.Size(152, 31);
+            this.TBRewardStock.TabIndex = 46;
+            this.TBRewardStock.Visible = false;
+            // 
+            // TBRewardPrice
+            // 
+            this.TBRewardPrice.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.rewardTableBindingSource, "price", true));
+            this.TBRewardPrice.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TBRewardPrice.Location = new System.Drawing.Point(542, 180);
+            this.TBRewardPrice.Name = "TBRewardPrice";
+            this.TBRewardPrice.Size = new System.Drawing.Size(152, 31);
+            this.TBRewardPrice.TabIndex = 47;
+            this.TBRewardPrice.Visible = false;
+            // 
+            // rewardTableTableAdapter
+            // 
+            this.rewardTableTableAdapter.ClearBeforeFill = true;
+            // 
+            // BindingNavigatorReward
+            // 
+            this.BindingNavigatorReward.AddNewItem = this.toolStripButton1;
+            this.BindingNavigatorReward.BindingSource = this.rewardTableBindingSource;
+            this.BindingNavigatorReward.CountItem = this.toolStripLabel1;
+            this.BindingNavigatorReward.DeleteItem = this.toolStripButton2;
+            this.BindingNavigatorReward.Dock = System.Windows.Forms.DockStyle.Left;
+            this.BindingNavigatorReward.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton3,
+            this.toolStripButton4,
+            this.toolStripSeparator2,
+            this.toolStripTextBox1,
+            this.toolStripLabel1,
+            this.toolStripSeparator3,
+            this.toolStripButton5,
+            this.toolStripButton6,
+            this.toolStripSeparator4,
+            this.toolStripButton1,
+            this.toolStripButton2,
+            this.toolStripSeparator5,
+            this.toolStripButton7,
+            this.toolStripButton8,
+            this.toolStripButton9});
+            this.BindingNavigatorReward.Location = new System.Drawing.Point(0, 24);
+            this.BindingNavigatorReward.MoveFirstItem = this.toolStripButton3;
+            this.BindingNavigatorReward.MoveLastItem = this.toolStripButton6;
+            this.BindingNavigatorReward.MoveNextItem = this.toolStripButton5;
+            this.BindingNavigatorReward.MovePreviousItem = this.toolStripButton4;
+            this.BindingNavigatorReward.Name = "BindingNavigatorReward";
+            this.BindingNavigatorReward.PositionItem = this.toolStripTextBox1;
+            this.BindingNavigatorReward.Size = new System.Drawing.Size(53, 653);
+            this.BindingNavigatorReward.TabIndex = 48;
+            this.BindingNavigatorReward.Text = "RewardBindingNavigator";
+            this.BindingNavigatorReward.Visible = false;
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton1.Size = new System.Drawing.Size(50, 20);
+            this.toolStripButton1.Text = "Add new";
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(50, 15);
+            this.toolStripLabel1.Text = "of {0}";
+            this.toolStripLabel1.ToolTipText = "Total number of items";
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton2.Size = new System.Drawing.Size(50, 20);
+            this.toolStripButton2.Text = "Delete";
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton3.Size = new System.Drawing.Size(50, 20);
+            this.toolStripButton3.Text = "Move first";
+            // 
+            // toolStripButton4
+            // 
+            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
+            this.toolStripButton4.Name = "toolStripButton4";
+            this.toolStripButton4.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton4.Size = new System.Drawing.Size(50, 20);
+            this.toolStripButton4.Text = "Move previous";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(50, 6);
+            // 
+            // toolStripTextBox1
+            // 
+            this.toolStripTextBox1.AccessibleName = "Position";
+            this.toolStripTextBox1.AutoSize = false;
+            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.toolStripTextBox1.Name = "toolStripTextBox1";
+            this.toolStripTextBox1.Size = new System.Drawing.Size(50, 23);
+            this.toolStripTextBox1.Text = "0";
+            this.toolStripTextBox1.ToolTipText = "Current position";
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(50, 6);
+            // 
+            // toolStripButton5
+            // 
+            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
+            this.toolStripButton5.Name = "toolStripButton5";
+            this.toolStripButton5.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton5.Size = new System.Drawing.Size(50, 20);
+            this.toolStripButton5.Text = "Move next";
+            // 
+            // toolStripButton6
+            // 
+            this.toolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
+            this.toolStripButton6.Name = "toolStripButton6";
+            this.toolStripButton6.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton6.Size = new System.Drawing.Size(50, 20);
+            this.toolStripButton6.Text = "Move last";
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(50, 6);
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(50, 6);
+            // 
+            // toolStripButton7
+            // 
+            this.toolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
+            this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton7.Name = "toolStripButton7";
+            this.toolStripButton7.Size = new System.Drawing.Size(50, 19);
+            this.toolStripButton7.Text = "Load";
+            this.toolStripButton7.Click += new System.EventHandler(this.toolStripButton7_Click);
+            // 
+            // toolStripButton8
+            // 
+            this.toolStripButton8.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton8.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton8.Image")));
+            this.toolStripButton8.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton8.Name = "toolStripButton8";
+            this.toolStripButton8.Size = new System.Drawing.Size(50, 19);
+            this.toolStripButton8.Text = "Save";
+            this.toolStripButton8.Click += new System.EventHandler(this.toolStripButton8_Click);
+            // 
+            // toolStripButton9
+            // 
+            this.toolStripButton9.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton9.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton9.Image")));
+            this.toolStripButton9.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton9.Name = "toolStripButton9";
+            this.toolStripButton9.Size = new System.Drawing.Size(50, 19);
+            this.toolStripButton9.Text = "Cancel";
+            this.toolStripButton9.Click += new System.EventHandler(this.toolStripButton9_Click);
             // 
             // adminView
             // 
@@ -559,6 +852,16 @@ namespace YearOneProjectOne
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1260, 677);
+            this.Controls.Add(this.BindingNavigatorReward);
+            this.Controls.Add(this.TBRewardPrice);
+            this.Controls.Add(this.TBRewardStock);
+            this.Controls.Add(this.TBRewardThreshold);
+            this.Controls.Add(this.TBRewardName);
+            this.Controls.Add(this.LBLRewardPrice);
+            this.Controls.Add(this.LBLRewardStock);
+            this.Controls.Add(this.LBLRewardThreshold);
+            this.Controls.Add(this.LBLRewardName);
+            this.Controls.Add(this.LBRewardList);
             this.Controls.Add(this.BTNDockPoints);
             this.Controls.Add(this.BTNAddPoints);
             this.Controls.Add(this.LBLSelectStudent);
@@ -597,6 +900,10 @@ namespace YearOneProjectOne
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StudentDataViewBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rewardTableBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BindingNavigatorReward)).EndInit();
+            this.BindingNavigatorReward.ResumeLayout(false);
+            this.BindingNavigatorReward.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -655,5 +962,32 @@ namespace YearOneProjectOne
         private System.Windows.Forms.BindingSource StudentDataViewBindingSource;
         private System.Windows.Forms.ToolStripMenuItem shopToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editItemsToolStripMenuItem;
+        private System.Windows.Forms.ListBox LBRewardList;
+        private System.Windows.Forms.Label LBLRewardName;
+        private System.Windows.Forms.Label LBLRewardThreshold;
+        private System.Windows.Forms.Label LBLRewardStock;
+        private System.Windows.Forms.Label LBLRewardPrice;
+        private System.Windows.Forms.TextBox TBRewardName;
+        private System.Windows.Forms.TextBox TBRewardThreshold;
+        private System.Windows.Forms.TextBox TBRewardStock;
+        private System.Windows.Forms.TextBox TBRewardPrice;
+        private System.Windows.Forms.BindingSource rewardTableBindingSource;
+        private DSDBTableAdapters.rewardTableTableAdapter rewardTableTableAdapter;
+        private System.Windows.Forms.BindingNavigator BindingNavigatorReward;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.ToolStripButton toolStripButton4;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripButton toolStripButton5;
+        private System.Windows.Forms.ToolStripButton toolStripButton6;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+        private System.Windows.Forms.ToolStripButton toolStripButton7;
+        private System.Windows.Forms.ToolStripButton toolStripButton8;
+        private System.Windows.Forms.ToolStripButton toolStripButton9;
     }
 }

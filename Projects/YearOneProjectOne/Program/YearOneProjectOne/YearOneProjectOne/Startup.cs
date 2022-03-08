@@ -124,6 +124,7 @@ namespace YearOneProjectOne
                 string path = Path.Combine(@"..\..\..\..\..\", @"userData\pointValueHistory.txt");
                 using (StreamWriter sw = File.AppendText(path))
                 {
+                    TBDebug.Text = Math.Round(newPointValue, 1).ToString();
                     sw.WriteLine(Math.Round(newPointValue, 1).ToString());
                 }
             }

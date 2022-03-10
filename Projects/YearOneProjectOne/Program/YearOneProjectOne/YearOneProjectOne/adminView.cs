@@ -1,15 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
-using System.Configuration;
 using System.Windows.Forms.DataVisualization.Charting;
 
 namespace YearOneProjectOne
@@ -30,6 +23,7 @@ namespace YearOneProjectOne
             // TODO: This line of code loads data into the 'dSDB.studentData' table. You can move, or remove it, as needed.
             this.studentDataTableAdapter.Fill(this.dSDB.studentData);
             loadPointsChart();//gets total point information and creats chart to display it.
+
 
         }
 
@@ -208,7 +202,7 @@ namespace YearOneProjectOne
             TBNameSearch.Text = "";
         }
 
-        private void BTNAddPoints_Click(object sender, EventArgs e)
+        private void BTNAddPoints_Click(object sender, EventArgs e)//add reason for points add/dock, student file generation + logs
         {
             try
             {
@@ -218,7 +212,7 @@ namespace YearOneProjectOne
                     dSDB.studentData.Rows[LBSearchedStudents.SelectedIndex][3] = currentPoints + Convert.ToInt32(TBPointsVaryVal.Text);
                     studentDataTableAdapter.Update(dSDB.studentData);
                     LBLstudentPointsCounter.Text = "Student Currently has " + Convert.ToInt32(dSDB.studentData.Rows[LBSearchedStudents.SelectedIndex][3]) + " points";
-                    loadPointsChart();
+
                 }
 
                 else if (Convert.ToInt32(TBPointsVaryVal.Text) <= 0)
@@ -281,17 +275,22 @@ namespace YearOneProjectOne
 
         private void toolStripButton8_Click(object sender, EventArgs e)
         {
-            studentDataTableAdapter.Update(dSDB.studentData);
+            rewardTableTableAdapter.Update(dSDB.rewardTable);
         }
 
         private void toolStripButton7_Click(object sender, EventArgs e)
         {
-            studentDataTableAdapter.Fill(dSDB.studentData);
+            rewardTableTableAdapter.Fill(dSDB.rewardTable);
         }
 
         private void toolStripButton9_Click(object sender, EventArgs e)
         {
-            StudentBindingSource.CancelEdit();
+            rewardTableBindingSource.CancelEdit();
+        }
+
+        private void bindingNavigator1_RefreshItems(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -30,9 +30,9 @@ namespace YearOneProjectOne
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(adminView));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.SessionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -199,17 +199,17 @@ namespace YearOneProjectOne
             // 
             // studentPointsChart
             // 
-            chartArea5.Name = "ChartArea1";
-            this.studentPointsChart.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.studentPointsChart.Legends.Add(legend5);
+            chartArea2.Name = "ChartArea1";
+            this.studentPointsChart.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.studentPointsChart.Legends.Add(legend2);
             this.studentPointsChart.Location = new System.Drawing.Point(941, 47);
             this.studentPointsChart.Name = "studentPointsChart";
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series5.Legend = "Legend1";
-            series5.Name = "Series1";
-            this.studentPointsChart.Series.Add(series5);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.studentPointsChart.Series.Add(series2);
             this.studentPointsChart.Size = new System.Drawing.Size(300, 221);
             this.studentPointsChart.TabIndex = 1;
             this.studentPointsChart.Text = "chart1";
@@ -364,6 +364,7 @@ namespace YearOneProjectOne
             this.bindingNavigator1.TabIndex = 23;
             this.bindingNavigator1.Text = "bindingNavigator1";
             this.bindingNavigator1.Visible = false;
+            this.bindingNavigator1.RefreshItems += new System.EventHandler(this.bindingNavigator1_RefreshItems);
             // 
             // bindingNavigatorAddNewItem
             // 

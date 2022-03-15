@@ -23,7 +23,7 @@ namespace YearOneProjectOne
             // TODO: This line of code loads data into the 'dSDB.studentData' table. You can move, or remove it, as needed.
             this.studentDataTableAdapter.Fill(this.dSDB.studentData);
             loadPointsChart();//gets total point information and creats chart to display it.
-
+            TBStudentPoints.DataBindings.Add(dSDB.studentData.studentPositivePointsColumn-dSDB.studentData.studentNegativePointsColumn)//fix this it no worky :(
 
         }
 
@@ -211,7 +211,7 @@ namespace YearOneProjectOne
                 {
                     dSDB.studentData.Rows[LBSearchedStudents.SelectedIndex][3] = currentPoints + Convert.ToInt32(TBPointsVaryVal.Text);
                     studentDataTableAdapter.Update(dSDB.studentData);
-                    LBLstudentPointsCounter.Text = "Student Currently has " + Convert.ToInt32(dSDB.studentData.Rows[LBSearchedStudents.SelectedIndex][3]) + " points";
+                    LBLstudentPointsCounter.Text = "Student Currently has " + (Convert.ToInt32(dSDB.studentData.Rows[LBSearchedStudents.SelectedIndex][4]) - Convert.ToInt32(dSDB.studentData.Rows[LBSearchedStudents.SelectedIndex][5])) + " points";
 
                 }
 
@@ -289,6 +289,11 @@ namespace YearOneProjectOne
         }
 
         private void bindingNavigator1_RefreshItems(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TBStudentName_TextChanged(object sender, EventArgs e)
         {
 
         }

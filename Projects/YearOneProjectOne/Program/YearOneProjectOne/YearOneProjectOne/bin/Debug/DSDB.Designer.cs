@@ -743,9 +743,13 @@ namespace YearOneProjectOne {
             
             private global::System.Data.DataColumn columnstudentDOB;
             
-            private global::System.Data.DataColumn columnstudentPoints;
-            
             private global::System.Data.DataColumn columntags;
+            
+            private global::System.Data.DataColumn columnyearGroup;
+            
+            private global::System.Data.DataColumn columnstudentPositivePoints;
+            
+            private global::System.Data.DataColumn columnstudentNegativePoints;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -806,17 +810,33 @@ namespace YearOneProjectOne {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn studentPointsColumn {
+            public global::System.Data.DataColumn tagsColumn {
                 get {
-                    return this.columnstudentPoints;
+                    return this.columntags;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn tagsColumn {
+            public global::System.Data.DataColumn yearGroupColumn {
                 get {
-                    return this.columntags;
+                    return this.columnyearGroup;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn studentPositivePointsColumn {
+                get {
+                    return this.columnstudentPositivePoints;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn studentNegativePointsColumn {
+                get {
+                    return this.columnstudentNegativePoints;
                 }
             }
             
@@ -857,14 +877,16 @@ namespace YearOneProjectOne {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public studentDataRow AddstudentDataRow(string studentName, System.DateTime studentDOB, int studentPoints, string tags) {
+            public studentDataRow AddstudentDataRow(string studentName, System.DateTime studentDOB, string tags, int yearGroup, int studentPositivePoints, int studentNegativePoints) {
                 studentDataRow rowstudentDataRow = ((studentDataRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         studentName,
                         studentDOB,
-                        studentPoints,
-                        tags};
+                        tags,
+                        yearGroup,
+                        studentPositivePoints,
+                        studentNegativePoints};
                 rowstudentDataRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowstudentDataRow);
                 return rowstudentDataRow;
@@ -897,8 +919,10 @@ namespace YearOneProjectOne {
                 this.columnID = base.Columns["ID"];
                 this.columnstudentName = base.Columns["studentName"];
                 this.columnstudentDOB = base.Columns["studentDOB"];
-                this.columnstudentPoints = base.Columns["studentPoints"];
                 this.columntags = base.Columns["tags"];
+                this.columnyearGroup = base.Columns["yearGroup"];
+                this.columnstudentPositivePoints = base.Columns["studentPositivePoints"];
+                this.columnstudentNegativePoints = base.Columns["studentNegativePoints"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -910,10 +934,14 @@ namespace YearOneProjectOne {
                 base.Columns.Add(this.columnstudentName);
                 this.columnstudentDOB = new global::System.Data.DataColumn("studentDOB", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnstudentDOB);
-                this.columnstudentPoints = new global::System.Data.DataColumn("studentPoints", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnstudentPoints);
                 this.columntags = new global::System.Data.DataColumn("tags", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntags);
+                this.columnyearGroup = new global::System.Data.DataColumn("yearGroup", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnyearGroup);
+                this.columnstudentPositivePoints = new global::System.Data.DataColumn("studentPositivePoints", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstudentPositivePoints);
+                this.columnstudentNegativePoints = new global::System.Data.DataColumn("studentNegativePoints", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstudentNegativePoints);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID}, true));
                 this.columnID.AutoIncrement = true;
@@ -2194,22 +2222,6 @@ namespace YearOneProjectOne {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int studentPoints {
-                get {
-                    try {
-                        return ((int)(this[this.tablestudentData.studentPointsColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'studentPoints\' in table \'studentData\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablestudentData.studentPointsColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string tags {
                 get {
                     try {
@@ -2221,6 +2233,54 @@ namespace YearOneProjectOne {
                 }
                 set {
                     this[this.tablestudentData.tagsColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int yearGroup {
+                get {
+                    try {
+                        return ((int)(this[this.tablestudentData.yearGroupColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'yearGroup\' in table \'studentData\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablestudentData.yearGroupColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int studentPositivePoints {
+                get {
+                    try {
+                        return ((int)(this[this.tablestudentData.studentPositivePointsColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'studentPositivePoints\' in table \'studentData\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablestudentData.studentPositivePointsColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int studentNegativePoints {
+                get {
+                    try {
+                        return ((int)(this[this.tablestudentData.studentNegativePointsColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'studentNegativePoints\' in table \'studentData\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablestudentData.studentNegativePointsColumn] = value;
                 }
             }
             
@@ -2250,18 +2310,6 @@ namespace YearOneProjectOne {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsstudentPointsNull() {
-                return this.IsNull(this.tablestudentData.studentPointsColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetstudentPointsNull() {
-                this[this.tablestudentData.studentPointsColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IstagsNull() {
                 return this.IsNull(this.tablestudentData.tagsColumn);
             }
@@ -2270,6 +2318,42 @@ namespace YearOneProjectOne {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SettagsNull() {
                 this[this.tablestudentData.tagsColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsyearGroupNull() {
+                return this.IsNull(this.tablestudentData.yearGroupColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetyearGroupNull() {
+                this[this.tablestudentData.yearGroupColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsstudentPositivePointsNull() {
+                return this.IsNull(this.tablestudentData.studentPositivePointsColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetstudentPositivePointsNull() {
+                this[this.tablestudentData.studentPositivePointsColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsstudentNegativePointsNull() {
+                return this.IsNull(this.tablestudentData.studentNegativePointsColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetstudentNegativePointsNull() {
+                this[this.tablestudentData.studentNegativePointsColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -3418,48 +3502,62 @@ namespace YearOneProjectOne.DSDBTableAdapters {
             tableMapping.ColumnMappings.Add("ID", "ID");
             tableMapping.ColumnMappings.Add("studentName", "studentName");
             tableMapping.ColumnMappings.Add("studentDOB", "studentDOB");
-            tableMapping.ColumnMappings.Add("studentPoints", "studentPoints");
             tableMapping.ColumnMappings.Add("tags", "tags");
+            tableMapping.ColumnMappings.Add("yearGroup", "yearGroup");
+            tableMapping.ColumnMappings.Add("studentPositivePoints", "studentPositivePoints");
+            tableMapping.ColumnMappings.Add("studentNegativePoints", "studentNegativePoints");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `studentData` WHERE ((`ID` = ?) AND ((? = 1 AND `studentName` IS NULL) OR (`studentName` = ?)) AND ((? = 1 AND `studentDOB` IS NULL) OR (`studentDOB` = ?)) AND ((? = 1 AND `studentPoints` IS NULL) OR (`studentPoints` = ?)) AND ((? = 1 AND `tags` IS NULL) OR (`tags` = ?)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `studentData` WHERE ((`ID` = ?) AND ((? = 1 AND `studentName` IS NULL) OR (`studentName` = ?)) AND ((? = 1 AND `studentDOB` IS NULL) OR (`studentDOB` = ?)) AND ((? = 1 AND `tags` IS NULL) OR (`tags` = ?)) AND ((? = 1 AND `studentNegativePoints` IS NULL) OR (`studentNegativePoints` = ?)) AND ((? = 1 AND `studentPositivePoints` IS NULL) OR (`studentPositivePoints` = ?)) AND ((? = 1 AND `yearGroup` IS NULL) OR (`yearGroup` = ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_studentName", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "studentName", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_studentName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "studentName", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_studentDOB", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "studentDOB", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_studentDOB", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "studentDOB", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_studentPoints", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "studentPoints", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_studentPoints", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "studentPoints", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_tags", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "tags", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_tags", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "tags", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_studentNegativePoints", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "studentNegativePoints", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_studentNegativePoints", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "studentNegativePoints", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_studentPositivePoints", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "studentPositivePoints", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_studentPositivePoints", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "studentPositivePoints", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_yearGroup", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "yearGroup", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_yearGroup", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "yearGroup", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `studentData` (`studentName`, `studentDOB`, `studentPoints`, `tags`) " +
-                "VALUES (?, ?, ?, ?)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `studentData` (`studentName`, `studentDOB`, `tags`, `studentNegativeP" +
+                "oints`, `studentPositivePoints`, `yearGroup`) VALUES (?, ?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("studentName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "studentName", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("studentDOB", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "studentDOB", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("studentPoints", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "studentPoints", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("tags", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "tags", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("studentNegativePoints", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "studentNegativePoints", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("studentPositivePoints", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "studentPositivePoints", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("yearGroup", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "yearGroup", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `studentData` SET `studentName` = ?, `studentDOB` = ?, `studentPoints` = ?, `tags` = ? WHERE ((`ID` = ?) AND ((? = 1 AND `studentName` IS NULL) OR (`studentName` = ?)) AND ((? = 1 AND `studentDOB` IS NULL) OR (`studentDOB` = ?)) AND ((? = 1 AND `studentPoints` IS NULL) OR (`studentPoints` = ?)) AND ((? = 1 AND `tags` IS NULL) OR (`tags` = ?)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `studentData` SET `studentName` = ?, `studentDOB` = ?, `tags` = ?, `studentNegativePoints` = ?, `studentPositivePoints` = ?, `yearGroup` = ? WHERE ((`ID` = ?) AND ((? = 1 AND `studentName` IS NULL) OR (`studentName` = ?)) AND ((? = 1 AND `studentDOB` IS NULL) OR (`studentDOB` = ?)) AND ((? = 1 AND `tags` IS NULL) OR (`tags` = ?)) AND ((? = 1 AND `studentNegativePoints` IS NULL) OR (`studentNegativePoints` = ?)) AND ((? = 1 AND `studentPositivePoints` IS NULL) OR (`studentPositivePoints` = ?)) AND ((? = 1 AND `yearGroup` IS NULL) OR (`yearGroup` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("studentName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "studentName", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("studentDOB", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "studentDOB", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("studentPoints", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "studentPoints", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("tags", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "tags", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("studentNegativePoints", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "studentNegativePoints", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("studentPositivePoints", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "studentPositivePoints", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("yearGroup", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "yearGroup", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_studentName", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "studentName", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_studentName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "studentName", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_studentDOB", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "studentDOB", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_studentDOB", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "studentDOB", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_studentPoints", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "studentPoints", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_studentPoints", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "studentPoints", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_tags", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "tags", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_tags", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "tags", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_studentNegativePoints", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "studentNegativePoints", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_studentNegativePoints", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "studentNegativePoints", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_studentPositivePoints", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "studentPositivePoints", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_studentPositivePoints", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "studentPositivePoints", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_yearGroup", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "yearGroup", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_yearGroup", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "yearGroup", global::System.Data.DataRowVersion.Original, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3475,7 +3573,8 @@ namespace YearOneProjectOne.DSDBTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID, studentName, studentDOB, studentPoints, tags FROM studentData";
+            this._commandCollection[0].CommandText = "SELECT ID, studentName, studentDOB, tags, studentNegativePoints, studentPositiveP" +
+                "oints, yearGroup FROM studentData";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -3536,7 +3635,7 @@ namespace YearOneProjectOne.DSDBTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_ID, string Original_studentName, global::System.Nullable<global::System.DateTime> Original_studentDOB, global::System.Nullable<int> Original_studentPoints, string Original_tags) {
+        public virtual int Delete(int Original_ID, string Original_studentName, global::System.Nullable<global::System.DateTime> Original_studentDOB, string Original_tags, global::System.Nullable<int> Original_studentNegativePoints, global::System.Nullable<int> Original_studentPositivePoints, global::System.Nullable<int> Original_yearGroup) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID));
             if ((Original_studentName == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -3554,21 +3653,37 @@ namespace YearOneProjectOne.DSDBTableAdapters {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((Original_studentPoints.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((int)(Original_studentPoints.Value));
-            }
-            else {
+            if ((Original_tags == null)) {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            if ((Original_tags == null)) {
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_tags));
+            }
+            if ((Original_studentNegativePoints.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((int)(Original_studentNegativePoints.Value));
+            }
+            else {
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
+            if ((Original_studentPositivePoints.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((int)(Original_studentPositivePoints.Value));
+            }
             else {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_tags));
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            if ((Original_yearGroup.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((int)(Original_yearGroup.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -3590,7 +3705,7 @@ namespace YearOneProjectOne.DSDBTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string studentName, global::System.Nullable<global::System.DateTime> studentDOB, global::System.Nullable<int> studentPoints, string tags) {
+        public virtual int Insert(string studentName, global::System.Nullable<global::System.DateTime> studentDOB, string tags, global::System.Nullable<int> studentNegativePoints, global::System.Nullable<int> studentPositivePoints, global::System.Nullable<int> yearGroup) {
             if ((studentName == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -3603,17 +3718,29 @@ namespace YearOneProjectOne.DSDBTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((studentPoints.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((int)(studentPoints.Value));
-            }
-            else {
+            if ((tags == null)) {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((tags == null)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(tags));
+            }
+            if ((studentNegativePoints.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((int)(studentNegativePoints.Value));
             }
             else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(tags));
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((studentPositivePoints.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((int)(studentPositivePoints.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((yearGroup.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((int)(yearGroup.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -3635,7 +3762,7 @@ namespace YearOneProjectOne.DSDBTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string studentName, global::System.Nullable<global::System.DateTime> studentDOB, global::System.Nullable<int> studentPoints, string tags, int Original_ID, string Original_studentName, global::System.Nullable<global::System.DateTime> Original_studentDOB, global::System.Nullable<int> Original_studentPoints, string Original_tags) {
+        public virtual int Update(string studentName, global::System.Nullable<global::System.DateTime> studentDOB, string tags, global::System.Nullable<int> studentNegativePoints, global::System.Nullable<int> studentPositivePoints, global::System.Nullable<int> yearGroup, int Original_ID, string Original_studentName, global::System.Nullable<global::System.DateTime> Original_studentDOB, string Original_tags, global::System.Nullable<int> Original_studentNegativePoints, global::System.Nullable<int> Original_studentPositivePoints, global::System.Nullable<int> Original_yearGroup) {
             if ((studentName == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -3648,38 +3775,42 @@ namespace YearOneProjectOne.DSDBTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((studentPoints.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(studentPoints.Value));
-            }
-            else {
+            if ((tags == null)) {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((tags == null)) {
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(tags));
+            }
+            if ((studentNegativePoints.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(studentNegativePoints.Value));
+            }
+            else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(tags));
+            if ((studentPositivePoints.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(studentPositivePoints.Value));
             }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_ID));
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((yearGroup.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(yearGroup.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_ID));
             if ((Original_studentName == null)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_studentName));
-            }
-            if ((Original_studentDOB.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((System.DateTime)(Original_studentDOB.Value));
-            }
-            else {
                 this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            if ((Original_studentPoints.HasValue == true)) {
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_studentName));
+            }
+            if ((Original_studentDOB.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_studentPoints.Value));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((System.DateTime)(Original_studentDOB.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
@@ -3692,6 +3823,30 @@ namespace YearOneProjectOne.DSDBTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
                 this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_tags));
+            }
+            if ((Original_studentNegativePoints.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(Original_studentNegativePoints.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            if ((Original_studentPositivePoints.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(Original_studentPositivePoints.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            if ((Original_yearGroup.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((int)(Original_yearGroup.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 

@@ -23,7 +23,6 @@ namespace YearOneProjectOne
             // TODO: This line of code loads data into the 'dSDB.studentData' table. You can move, or remove it, as needed.
             this.studentDataTableAdapter.Fill(this.dSDB.studentData);
             loadPointsChart();//gets total point information and creats chart to display it.
-            TBStudentPoints.DataBindings.Add(dSDB.studentData.studentPositivePointsColumn-dSDB.studentData.studentNegativePointsColumn)//fix this it no worky :(
 
         }
 
@@ -106,12 +105,15 @@ namespace YearOneProjectOne
                 dropDownComponentsHide();
                 TBStudentName.Show();
                 TBStudentDOB.Show();
-                TBStudentPoints.Show();
+                TBStudentPointsPos.Show();
                 LBLStudentName.Show();
                 LBLStudentDOB.Show();
-                LBLStudentPoints.Show();
+                LBLStudentPointsPos.Show();
+                LBLStudentPointsNeg.Show();
                 LBStudents.Show();
                 bindingNavigator1.Show();
+                TBStudentPointsNeg.Show();
+
             }
         }
 
@@ -119,10 +121,10 @@ namespace YearOneProjectOne
         {
                 TBStudentName.Hide();
                 TBStudentDOB.Hide();
-                TBStudentPoints.Hide();
+                TBStudentPointsPos.Hide();
                 LBLStudentName.Hide();
                 LBLStudentDOB.Hide();
-                LBLStudentPoints.Hide();
+                LBLStudentPointsPos.Hide();
                 LBStudents.Hide();
                 bindingNavigator1.Hide();
                 LBLPointsVaryVal.Hide();
@@ -144,9 +146,13 @@ namespace YearOneProjectOne
                 TBRewardPrice.Hide();
                 TBRewardStock.Hide();
                 TBRewardThreshold.Hide();
-            BindingNavigatorReward.Hide();
+                BindingNavigatorReward.Hide();
+                LBLStudentPointsNeg.Hide();
+                TBStudentPointsNeg.Hide();
+
+
         }
-        
+
 
 
 

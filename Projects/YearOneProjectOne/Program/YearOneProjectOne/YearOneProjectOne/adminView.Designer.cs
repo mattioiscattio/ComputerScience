@@ -30,9 +30,9 @@ namespace YearOneProjectOne
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(adminView));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.SessionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,9 +51,9 @@ namespace YearOneProjectOne
             this.dSDB = new YearOneProjectOne.DSDB();
             this.LBLStudentName = new System.Windows.Forms.Label();
             this.LBLStudentDOB = new System.Windows.Forms.Label();
-            this.LBLStudentPoints = new System.Windows.Forms.Label();
+            this.LBLStudentPointsPos = new System.Windows.Forms.Label();
             this.TBStudentName = new System.Windows.Forms.TextBox();
-            this.TBStudentPoints = new System.Windows.Forms.TextBox();
+            this.TBStudentPointsPos = new System.Windows.Forms.TextBox();
             this.TBStudentDOB = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.studentDataTableAdapter = new YearOneProjectOne.DSDBTableAdapters.studentDataTableAdapter();
@@ -112,6 +112,8 @@ namespace YearOneProjectOne
             this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
+            this.LBLStudentPointsNeg = new System.Windows.Forms.Label();
+            this.TBStudentPointsNeg = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.studentPointsChart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StudentBindingSource)).BeginInit();
@@ -199,17 +201,17 @@ namespace YearOneProjectOne
             // 
             // studentPointsChart
             // 
-            chartArea1.Name = "ChartArea1";
-            this.studentPointsChart.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.studentPointsChart.Legends.Add(legend1);
+            chartArea2.Name = "ChartArea1";
+            this.studentPointsChart.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.studentPointsChart.Legends.Add(legend2);
             this.studentPointsChart.Location = new System.Drawing.Point(941, 47);
             this.studentPointsChart.Name = "studentPointsChart";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.studentPointsChart.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.studentPointsChart.Series.Add(series2);
             this.studentPointsChart.Size = new System.Drawing.Size(300, 221);
             this.studentPointsChart.TabIndex = 1;
             this.studentPointsChart.Text = "chart1";
@@ -252,7 +254,7 @@ namespace YearOneProjectOne
             // 
             this.LBLStudentName.AutoSize = true;
             this.LBLStudentName.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBLStudentName.Location = new System.Drawing.Point(326, 28);
+            this.LBLStudentName.Location = new System.Drawing.Point(387, 28);
             this.LBLStudentName.Name = "LBLStudentName";
             this.LBLStudentName.Size = new System.Drawing.Size(63, 22);
             this.LBLStudentName.TabIndex = 4;
@@ -263,46 +265,47 @@ namespace YearOneProjectOne
             // 
             this.LBLStudentDOB.AutoSize = true;
             this.LBLStudentDOB.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBLStudentDOB.Location = new System.Drawing.Point(337, 60);
+            this.LBLStudentDOB.Location = new System.Drawing.Point(398, 59);
             this.LBLStudentDOB.Name = "LBLStudentDOB";
             this.LBLStudentDOB.Size = new System.Drawing.Size(52, 22);
             this.LBLStudentDOB.TabIndex = 5;
             this.LBLStudentDOB.Text = "DOB:";
             this.LBLStudentDOB.Visible = false;
             // 
-            // LBLStudentPoints
+            // LBLStudentPointsPos
             // 
-            this.LBLStudentPoints.AutoSize = true;
-            this.LBLStudentPoints.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBLStudentPoints.Location = new System.Drawing.Point(322, 92);
-            this.LBLStudentPoints.Name = "LBLStudentPoints";
-            this.LBLStudentPoints.Size = new System.Drawing.Size(67, 22);
-            this.LBLStudentPoints.TabIndex = 9;
-            this.LBLStudentPoints.Text = "Points:";
-            this.LBLStudentPoints.Visible = false;
+            this.LBLStudentPointsPos.AutoSize = true;
+            this.LBLStudentPointsPos.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLStudentPointsPos.Location = new System.Drawing.Point(313, 93);
+            this.LBLStudentPointsPos.Name = "LBLStudentPointsPos";
+            this.LBLStudentPointsPos.Size = new System.Drawing.Size(137, 22);
+            this.LBLStudentPointsPos.TabIndex = 9;
+            this.LBLStudentPointsPos.Text = "Positive Points:";
+            this.LBLStudentPointsPos.Visible = false;
             // 
             // TBStudentName
             // 
             this.TBStudentName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.StudentBindingSource, "studentName", true));
-            this.TBStudentName.Location = new System.Drawing.Point(396, 29);
+            this.TBStudentName.Location = new System.Drawing.Point(456, 31);
             this.TBStudentName.Name = "TBStudentName";
             this.TBStudentName.Size = new System.Drawing.Size(100, 20);
             this.TBStudentName.TabIndex = 10;
             this.TBStudentName.Visible = false;
             this.TBStudentName.TextChanged += new System.EventHandler(this.TBStudentName_TextChanged);
             // 
-            // TBStudentPoints
+            // TBStudentPointsPos
             // 
-            this.TBStudentPoints.Location = new System.Drawing.Point(395, 94);
-            this.TBStudentPoints.Name = "TBStudentPoints";
-            this.TBStudentPoints.Size = new System.Drawing.Size(100, 20);
-            this.TBStudentPoints.TabIndex = 11;
-            this.TBStudentPoints.Visible = false;
+            this.TBStudentPointsPos.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.StudentBindingSource, "studentPositivePoints", true));
+            this.TBStudentPointsPos.Location = new System.Drawing.Point(456, 97);
+            this.TBStudentPointsPos.Name = "TBStudentPointsPos";
+            this.TBStudentPointsPos.Size = new System.Drawing.Size(100, 20);
+            this.TBStudentPointsPos.TabIndex = 11;
+            this.TBStudentPointsPos.Visible = false;
             // 
             // TBStudentDOB
             // 
             this.TBStudentDOB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.StudentBindingSource, "studentDOB", true));
-            this.TBStudentDOB.Location = new System.Drawing.Point(396, 62);
+            this.TBStudentDOB.Location = new System.Drawing.Point(456, 62);
             this.TBStudentDOB.Name = "TBStudentDOB";
             this.TBStudentDOB.Size = new System.Drawing.Size(100, 20);
             this.TBStudentDOB.TabIndex = 13;
@@ -846,6 +849,26 @@ namespace YearOneProjectOne
             this.toolStripButton9.Text = "Cancel";
             this.toolStripButton9.Click += new System.EventHandler(this.toolStripButton9_Click);
             // 
+            // LBLStudentPointsNeg
+            // 
+            this.LBLStudentPointsNeg.AutoSize = true;
+            this.LBLStudentPointsNeg.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLStudentPointsNeg.Location = new System.Drawing.Point(305, 128);
+            this.LBLStudentPointsNeg.Name = "LBLStudentPointsNeg";
+            this.LBLStudentPointsNeg.Size = new System.Drawing.Size(145, 22);
+            this.LBLStudentPointsNeg.TabIndex = 49;
+            this.LBLStudentPointsNeg.Text = "Negative Points:";
+            this.LBLStudentPointsNeg.Visible = false;
+            // 
+            // TBStudentPointsNeg
+            // 
+            this.TBStudentPointsNeg.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.StudentBindingSource, "studentNegativePoints", true));
+            this.TBStudentPointsNeg.Location = new System.Drawing.Point(456, 131);
+            this.TBStudentPointsNeg.Name = "TBStudentPointsNeg";
+            this.TBStudentPointsNeg.Size = new System.Drawing.Size(100, 20);
+            this.TBStudentPointsNeg.TabIndex = 50;
+            this.TBStudentPointsNeg.Visible = false;
+            // 
             // adminView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -853,6 +876,9 @@ namespace YearOneProjectOne
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1260, 677);
+            this.Controls.Add(this.TBStudentPointsNeg);
+            this.Controls.Add(this.LBLStudentPointsNeg);
+            this.Controls.Add(this.LBLStudentPointsPos);
             this.Controls.Add(this.BindingNavigatorReward);
             this.Controls.Add(this.TBRewardPrice);
             this.Controls.Add(this.TBRewardStock);
@@ -865,7 +891,6 @@ namespace YearOneProjectOne
             this.Controls.Add(this.BTNDockPoints);
             this.Controls.Add(this.BTNAddPoints);
             this.Controls.Add(this.LBLSelectStudent);
-            this.Controls.Add(this.LBSearchedStudents);
             this.Controls.Add(this.TBNameSearch);
             this.Controls.Add(this.LBLNameSearch);
             this.Controls.Add(this.LBLstudentPointsCounter);
@@ -873,9 +898,8 @@ namespace YearOneProjectOne
             this.Controls.Add(this.LBLPointsVaryVal);
             this.Controls.Add(this.LBLDebug);
             this.Controls.Add(this.TBStudentDOB);
-            this.Controls.Add(this.TBStudentPoints);
+            this.Controls.Add(this.TBStudentPointsPos);
             this.Controls.Add(this.TBStudentName);
-            this.Controls.Add(this.LBLStudentPoints);
             this.Controls.Add(this.LBLStudentDOB);
             this.Controls.Add(this.LBLStudentName);
             this.Controls.Add(this.bindingNavigator1);
@@ -883,6 +907,7 @@ namespace YearOneProjectOne
             this.Controls.Add(this.label1);
             this.Controls.Add(this.studentPointsChart);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.LBSearchedStudents);
             this.Controls.Add(this.LBLRewardName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MainMenuStrip = this.menuStrip1;
@@ -921,14 +946,14 @@ namespace YearOneProjectOne
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label LBLStudentName;
         private System.Windows.Forms.Label LBLStudentDOB;
-        private System.Windows.Forms.Label LBLStudentPoints;
+        private System.Windows.Forms.Label LBLStudentPointsPos;
         private System.Windows.Forms.ToolStripMenuItem studentsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewStudentsToolStripMenuItem;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         internal System.Windows.Forms.BindingSource StudentBindingSource;
         internal System.Windows.Forms.ListBox LBStudents;
         internal System.Windows.Forms.TextBox TBStudentName;
-        internal System.Windows.Forms.TextBox TBStudentPoints;
+        internal System.Windows.Forms.TextBox TBStudentPointsPos;
         internal System.Windows.Forms.TextBox TBStudentDOB;
         internal DSDBTableAdapters.teacherDataTableAdapter teacherDataTableAdapter;
         internal DSDB dSDB;
@@ -990,5 +1015,7 @@ namespace YearOneProjectOne
         private System.Windows.Forms.ToolStripButton toolStripButton7;
         private System.Windows.Forms.ToolStripButton toolStripButton8;
         private System.Windows.Forms.ToolStripButton toolStripButton9;
+        private System.Windows.Forms.Label LBLStudentPointsNeg;
+        internal System.Windows.Forms.TextBox TBStudentPointsNeg;
     }
 }

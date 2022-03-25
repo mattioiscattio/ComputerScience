@@ -291,7 +291,6 @@ namespace YearOneProjectOne
             this.TBStudentName.Size = new System.Drawing.Size(100, 20);
             this.TBStudentName.TabIndex = 10;
             this.TBStudentName.Visible = false;
-            this.TBStudentName.TextChanged += new System.EventHandler(this.TBStudentName_TextChanged);
             // 
             // TBStudentPointsPos
             // 
@@ -367,7 +366,6 @@ namespace YearOneProjectOne
             this.bindingNavigator1.TabIndex = 23;
             this.bindingNavigator1.Text = "bindingNavigator1";
             this.bindingNavigator1.Visible = false;
-            this.bindingNavigator1.RefreshItems += new System.EventHandler(this.bindingNavigator1_RefreshItems);
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -598,7 +596,6 @@ namespace YearOneProjectOne
             this.LBRewardList.Size = new System.Drawing.Size(181, 186);
             this.LBRewardList.TabIndex = 35;
             this.LBRewardList.Visible = false;
-            this.LBRewardList.SelectedIndexChanged += new System.EventHandler(this.LBRewardList_SelectedIndexChanged);
             // 
             // rewardTableBindingSource
             // 

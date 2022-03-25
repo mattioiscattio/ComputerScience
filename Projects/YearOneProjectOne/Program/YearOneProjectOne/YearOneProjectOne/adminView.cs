@@ -212,12 +212,12 @@ namespace YearOneProjectOne
         {
             try
             {
-                int currentPoints = Convert.ToInt32(dSDB.studentData.Rows[LBSearchedStudents.SelectedIndex][3]);
+                int currentPoints = Convert.ToInt32(dSDB.studentData.Rows[LBSearchedStudents.SelectedIndex][5]);
                 if (Convert.ToInt32(TBPointsVaryVal.Text) > 0)
                 {
-                    dSDB.studentData.Rows[LBSearchedStudents.SelectedIndex][3] = currentPoints + Convert.ToInt32(TBPointsVaryVal.Text);
+                    dSDB.studentData.Rows[LBSearchedStudents.SelectedIndex][5] = currentPoints + Convert.ToInt32(TBPointsVaryVal.Text);
                     studentDataTableAdapter.Update(dSDB.studentData);
-                    LBLstudentPointsCounter.Text = "Student Currently has " + (Convert.ToInt32(dSDB.studentData.Rows[LBSearchedStudents.SelectedIndex][4]) - Convert.ToInt32(dSDB.studentData.Rows[LBSearchedStudents.SelectedIndex][5])) + " points";
+                    LBLstudentPointsCounter.Text = "Student Currently has " + (Convert.ToInt32(dSDB.studentData.Rows[LBSearchedStudents.SelectedIndex][5]) - Convert.ToInt32(dSDB.studentData.Rows[LBSearchedStudents.SelectedIndex][6]) - Convert.ToInt32(dSDB.studentData.Rows[LBSearchedStudents.SelectedIndex][7])) + " points";
 
                 }
 
@@ -237,18 +237,18 @@ namespace YearOneProjectOne
         {
             try
             {
-                int currentPoints = Convert.ToInt32(dSDB.studentData.Rows[LBSearchedStudents.SelectedIndex][3]);
+                int currentPoints = Convert.ToInt32(dSDB.studentData.Rows[LBSearchedStudents.SelectedIndex][5]);
                 if (Convert.ToInt32(TBPointsVaryVal.Text) > 0 && Convert.ToInt32(TBPointsVaryVal.Text) <= currentPoints)
                     {
-                    dSDB.studentData.Rows[LBSearchedStudents.SelectedIndex][3] = currentPoints - Convert.ToInt32(TBPointsVaryVal.Text);
+                    dSDB.studentData.Rows[LBSearchedStudents.SelectedIndex][5] = currentPoints - Convert.ToInt32(TBPointsVaryVal.Text);
                     studentDataTableAdapter.Update(dSDB.studentData);
-                    LBLstudentPointsCounter.Text = "Student Currently has " + Convert.ToInt32(dSDB.studentData.Rows[LBSearchedStudents.SelectedIndex][3]) + " points";
+                    LBLstudentPointsCounter.Text = "Student Currently has " + Convert.ToInt32(dSDB.studentData.Rows[LBSearchedStudents.SelectedIndex][5]) + " points";
                 }
 
                 else if (Convert.ToInt32(TBPointsVaryVal.Text) > 0 && Convert.ToInt32(TBPointsVaryVal.Text) > currentPoints)
                 {
-                    dSDB.studentData.Rows[LBSearchedStudents.SelectedIndex][3] = 0;
-                    LBLstudentPointsCounter.Text = "Student Currently has " + Convert.ToInt32(dSDB.studentData.Rows[LBSearchedStudents.SelectedIndex][3]) + " points";
+                    dSDB.studentData.Rows[LBSearchedStudents.SelectedIndex][5] = 0;
+                    LBLstudentPointsCounter.Text = "Student Currently has " + Convert.ToInt32(dSDB.studentData.Rows[LBSearchedStudents.SelectedIndex][5]) + " points";
                 }
 
                 else if (Convert.ToInt32(TBPointsVaryVal.Text) <= 0)
@@ -267,17 +267,13 @@ namespace YearOneProjectOne
         {
             try
             {
-                LBLstudentPointsCounter.Text = "Student Currently has " + Convert.ToInt32(dSDB.studentData.Rows[LBSearchedStudents.SelectedIndex][3]) + " points";//breaks on load, add watch no available
+                LBLstudentPointsCounter.Text = "Student Currently has " + Convert.ToInt32(dSDB.studentData.Rows[LBSearchedStudents.SelectedIndex][5]) + " points";//breaks on load, add watch no available
             }
             catch
             {
 
             }
        }
-
-        private void LBRewardList_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
 
         private void toolStripButton8_Click(object sender, EventArgs e)
         {
@@ -294,14 +290,6 @@ namespace YearOneProjectOne
             rewardTableBindingSource.CancelEdit();
         }
 
-        private void bindingNavigator1_RefreshItems(object sender, EventArgs e)
-        {
 
-        }
-
-        private void TBStudentName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

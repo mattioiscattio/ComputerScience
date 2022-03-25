@@ -35,7 +35,6 @@ namespace YearOneProjectOne
             this.TBPassword = new System.Windows.Forms.TextBox();
             this.TBUsername = new System.Windows.Forms.TextBox();
             this.WMPScreensaver = new AxWMPLib.AxWindowsMediaPlayer();
-            this.TBDebug = new System.Windows.Forms.TextBox();
             this.BTNGuestLogin = new System.Windows.Forms.Button();
             this.LBLloggedInUser = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
@@ -45,6 +44,7 @@ namespace YearOneProjectOne
             this.userTableTableAdapter = new YearOneProjectOne.DSDBTableAdapters.userTableTableAdapter();
             this.bindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.teacherDataTableAdapter = new YearOneProjectOne.DSDBTableAdapters.teacherDataTableAdapter();
+            this.LBLDebug = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.WMPScreensaver)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DSDB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
@@ -102,13 +102,6 @@ namespace YearOneProjectOne
             this.WMPScreensaver.Size = new System.Drawing.Size(1264, 681);
             this.WMPScreensaver.TabIndex = 7;
             // 
-            // TBDebug
-            // 
-            this.TBDebug.Location = new System.Drawing.Point(1101, 578);
-            this.TBDebug.Name = "TBDebug";
-            this.TBDebug.Size = new System.Drawing.Size(100, 20);
-            this.TBDebug.TabIndex = 8;
-            // 
             // BTNGuestLogin
             // 
             this.BTNGuestLogin.BackColor = System.Drawing.Color.MediumOrchid;
@@ -153,14 +146,23 @@ namespace YearOneProjectOne
             // 
             this.teacherDataTableAdapter.ClearBeforeFill = true;
             // 
+            // LBLDebug
+            // 
+            this.LBLDebug.AutoSize = true;
+            this.LBLDebug.Location = new System.Drawing.Point(148, 73);
+            this.LBLDebug.Name = "LBLDebug";
+            this.LBLDebug.Size = new System.Drawing.Size(35, 13);
+            this.LBLDebug.TabIndex = 14;
+            this.LBLDebug.Text = "label1";
+            // 
             // Startup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.LBLDebug);
             this.Controls.Add(this.LBLloggedInUser);
             this.Controls.Add(this.BTNGuestLogin);
-            this.Controls.Add(this.TBDebug);
             this.Controls.Add(this.TBUsername);
             this.Controls.Add(this.TBPassword);
             this.Controls.Add(this.BTNLogIn);
@@ -185,7 +187,6 @@ namespace YearOneProjectOne
         private System.Windows.Forms.TextBox TBPassword;
         private System.Windows.Forms.TextBox TBUsername;
         private AxWMPLib.AxWindowsMediaPlayer WMPScreensaver;
-        private System.Windows.Forms.TextBox TBDebug;
         private System.Windows.Forms.Button BTNGuestLogin;
         private System.Windows.Forms.Label LBLloggedInUser;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
@@ -195,6 +196,7 @@ namespace YearOneProjectOne
         internal System.Windows.Forms.BindingSource bindingSource2;
         internal DSDBTableAdapters.teacherDataTableAdapter teacherDataTableAdapter;
         internal DSDB DSDB;
+        private System.Windows.Forms.Label LBLDebug;
     }
 }
 

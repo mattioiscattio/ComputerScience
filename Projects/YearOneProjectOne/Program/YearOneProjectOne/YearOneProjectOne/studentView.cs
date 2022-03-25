@@ -24,10 +24,11 @@ namespace YearOneProjectOne
 
         private void studentView_Load(object sender, EventArgs e)
         {
-            this.studentDataTableAdapter.Fill(this.dSDB.studentData);
-            this.rewardTableTableAdapter.Fill(this.dSDB.rewardTable);
+            this.studentDataTableAdapter.Fill(this.DSDB.studentData);
+            this.rewardTableTableAdapter.Fill(this.DSDB.rewardTable);
             LBLDebug.Text = findStudentName();
             loadPointsChart();
+            stockCheck();
         }
 
         private void studentView_FormClosing(object sender, FormClosingEventArgs e)
@@ -35,6 +36,19 @@ namespace YearOneProjectOne
             Startup frmMain = new Startup();
             frmMain.Show();
         }
+
+        private void stockCheck()
+        {
+            for (int i = 0; i < DSDB.rewardTable.Rows.Count; i++)
+            {
+                if (Convert.ToInt32(DSDB.rewardTable.Rows[i][3]) < Convert.ToInt32(DSDB.rewardTable.Rows[i][4]))
+                {
+                    LBLDebug.Text = "ta";
+                }
+            }
+        }
+
+
 
         private string findStudentName()
         {
@@ -45,19 +59,22 @@ namespace YearOneProjectOne
         private void loadPointsChart()
         {
             List<string> titleList = new List<string>();//creats lists of values and titles (x,y respectively) then swaps to array to parse into chart with databindxy
-            titleList.Add("+" + Convert.ToInt32(dSDB.studentData.Rows[studentRowFind()][5]));
-            titleList.Add("-" + Convert.ToInt32(dSDB.studentData.Rows[studentRowFind()][6]));
+            titleList.Add("+" + Convert.ToInt32(DSDB.studentData.Rows[studentRowFind()][5]));
+            titleList.Add("-" + Convert.ToInt32(DSDB.studentData.Rows[studentRowFind()][6]));
+            titleList.Add("$ " + Convert.ToInt32(DSDB.studentData.Rows[studentRowFind()][7]));
             string[] x = titleList.ToArray();
 
             List<int> pointsList = new List<int>();
-            pointsList.Add(Convert.ToInt32(dSDB.studentData.Rows[studentRowFind()][5]));
-            pointsList.Add(Convert.ToInt32(dSDB.studentData.Rows[studentRowFind()][6]));
+            pointsList.Add(Convert.ToInt32(DSDB.studentData.Rows[studentRowFind()][5]));
+            pointsList.Add(Convert.ToInt32(DSDB.studentData.Rows[studentRowFind()][6]));
+            pointsList.Add(Convert.ToInt32(DSDB.studentData.Rows[studentRowFind()][7]));
             int[] y = pointsList.ToArray();
             ChrtStudentPoints.Series[0].ChartType = SeriesChartType.Doughnut;
             ChrtStudentPoints.Series[0].Points.DataBindXY(x, y);
             ChrtStudentPoints.ChartAreas[0].Area3DStyle.Enable3D = true;//gives 3d style to doughnut point chart
             ChrtStudentPoints.Series[0].Points[0].Color = Color.Green;
             ChrtStudentPoints.Series[0].Points[1].Color = Color.Red;
+            ChrtStudentPoints.Series[0].Points[2].Color = Color.Yellow;
 
 
 
@@ -65,10 +82,10 @@ namespace YearOneProjectOne
 
         private int studentRowFind()
         {
-            for (int i = 0; i <= dSDB.studentData.Rows.Count - 1; i++)
+            for (int i = 0; i <= DSDB.studentData.Rows.Count - 1; i++)
             {
 
-                if (dSDB.studentData.Rows[i][1].ToString() == findStudentName())
+                if (DSDB.studentData.Rows[i][1].ToString() == findStudentName())
                 {
                     return Convert.ToInt32(i);
                 }
@@ -113,10 +130,9 @@ namespace YearOneProjectOne
             BTNPurchase.Hide();
         }
 
-
-        private void LBRewards_SelectedIndexChanged(object sender, EventArgs e)
+        private void colourUpdate()
         {
-            if (Convert.ToInt32(dSDB.rewardTable.Rows[LBRewards.SelectedIndex][2]) > (Convert.ToInt32(dSDB.studentData.Rows[studentRowFind()][5]) - Convert.ToInt32(dSDB.studentData.Rows[studentRowFind()][6])))
+            if (Convert.ToInt32(DSDB.rewardTable.Rows[LBRewards.SelectedIndex][2]) > Convert.ToInt32(DSDB.studentData.Rows[studentRowFind()][5]) - Convert.ToInt32(DSDB.studentData.Rows[studentRowFind()][6]) - Convert.ToInt32(DSDB.studentData.Rows[studentRowFind()][7]))
             {
                 LBRewards.BackColor = Color.Red;
                 LBRewards.ForeColor = Color.White;
@@ -128,8 +144,20 @@ namespace YearOneProjectOne
                 LBLItemStock.ForeColor = Color.White;
             }
 
-            else
+            else if (Convert.ToInt32(DSDB.rewardTable.Rows[LBRewards.SelectedIndex][3]) == 0)
             {
+                LBRewards.BackColor = Color.Yellow;
+                LBRewards.ForeColor = Color.Black;
+                LBLItemPrice.BackColor = Color.Yellow;
+                LBLItemPrice.ForeColor = Color.Black;
+                LBLItemName.BackColor = Color.Yellow;
+                LBLItemName.ForeColor = Color.Black;
+                LBLItemStock.BackColor = Color.Yellow;
+                LBLItemStock.ForeColor = Color.Black;
+            }
+
+            else
+             {
                 LBRewards.BackColor = Color.Green;
                 LBRewards.ForeColor = Color.Black;
                 LBLItemPrice.BackColor = Color.Green;
@@ -139,6 +167,12 @@ namespace YearOneProjectOne
                 LBLItemStock.BackColor = Color.Green;
                 LBLItemStock.ForeColor = Color.Black;
             }
+        }
+
+
+        private void LBRewards_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            colourUpdate();
         }
 
         private void logoutToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -154,8 +188,26 @@ namespace YearOneProjectOne
 
         private void BTNPurchase_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Are you sure you want to purchase: " + TBItemName.Text.ToString() + " for: " + TBItemPrice.Text.ToString());
-            dSDB.studentData.Rows[studentRowFind()][]
+            if (Convert.ToInt32(DSDB.rewardTable.Rows[LBRewards.SelectedIndex][3]) > 0 & (Convert.ToInt32(DSDB.studentData.Rows[studentRowFind()][5]) - Convert.ToInt32(DSDB.studentData.Rows[studentRowFind()][7]) - Convert.ToInt32(DSDB.studentData.Rows[studentRowFind()][6])) > Convert.ToInt32(TBItemPrice.Text))
+                {
+                MessageBox.Show("Are you sure you want to purchase: " + TBItemName.Text.ToString() + " for: " + TBItemPrice.Text.ToString());
+                DSDB.studentData.Rows[studentRowFind()][7] = Convert.ToInt32(DSDB.studentData.Rows[studentRowFind()][7]) + Convert.ToInt32(TBItemPrice.Text);
+                DSDB.rewardTable.Rows[LBRewards.SelectedIndex][3] = Convert.ToInt32(DSDB.rewardTable.Rows[LBRewards.SelectedIndex][3]) - 1;
+                studentDataTableAdapter.Update(DSDB.studentData);
+                rewardTableTableAdapter.Update(DSDB.rewardTable);
+                colourUpdate();
+                loadPointsChart();
+            }
+
+            else if (!(Convert.ToInt32(DSDB.rewardTable.Rows[LBRewards.SelectedIndex][3]) > 0))
+            {
+                MessageBox.Show("There is not enough stock for this item, please wait for a restock");
+            }
+
+            else
+            {
+                MessageBox.Show("You do not have enough points to purchase this item.");
+            }
         }
     }
 

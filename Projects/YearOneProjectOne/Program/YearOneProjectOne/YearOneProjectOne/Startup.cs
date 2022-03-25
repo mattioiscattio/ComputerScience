@@ -101,6 +101,7 @@ namespace YearOneProjectOne
             string var1 = "Program Started At: " + DateTime.Now;//string to be written to logs, datetime.now gives current time and date
             logWrite(var1);
             pointValueUpdater();//updates value of point, need fixing
+            stockCheck();
         }
 
         private void logWrite(string var1)//writes startup info logs to logDump.txt
@@ -109,6 +110,18 @@ namespace YearOneProjectOne
             using (StreamWriter sw = File.AppendText(path))
             {
                 sw.WriteLine(var1);
+            }
+        }
+
+
+        private void stockCheck()
+        {
+            for (int i = 0; i < DSDB.rewardTable.Rows.Count; i++)
+            {
+                if (Convert.ToInt32(DSDB.rewardTable.Rows[i][3]) < Convert.ToInt32(DSDB.rewardTable.Rows[i][4]))
+                {
+                    LBLDebug.Text = "ta";
+                }
             }
         }
 
@@ -124,7 +137,7 @@ namespace YearOneProjectOne
                 string path = Path.Combine(@"..\..\..\..\..\", @"userData\pointValueHistory.txt");
                 using (StreamWriter sw = File.AppendText(path))
                 {
-                    TBDebug.Text = Math.Round(newPointValue, 1).ToString();
+                    //LBLDebug.Text = Math.Round(newPointValue, 1).ToString();
                     sw.WriteLine(Math.Round(newPointValue, 1).ToString());
                 }
             }

@@ -118,9 +118,9 @@ namespace YearOneProjectOne
         {
             for (int i = 0; i < DSDB.rewardTable.Rows.Count; i++)
             {
-                if (Convert.ToInt32(DSDB.rewardTable.Rows[i][3]) < Convert.ToInt32(DSDB.rewardTable.Rows[i][4]))
+                if (Convert.ToInt32(DSDB.rewardTable.Rows[i][3]) < Convert.ToInt32(DSDB.rewardTable.Rows[i][4]))//checks stock against stock limit
                 {
-                    LBLDebug.Text = "ta";
+                    //email admin
                 }
             }
         }

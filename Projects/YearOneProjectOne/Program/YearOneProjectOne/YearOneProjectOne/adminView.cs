@@ -111,7 +111,7 @@ namespace YearOneProjectOne
                 LBLStudentPointsPos.Show();
                 LBLStudentPointsNeg.Show();
                 LBStudents.Show();
-                bindingNavigator1.Show();
+                StudentBindingNavigator.Show();
                 TBStudentPointsNeg.Show();
 
             }
@@ -126,7 +126,7 @@ namespace YearOneProjectOne
                 LBLStudentDOB.Hide();
                 LBLStudentPointsPos.Hide();
                 LBStudents.Hide();
-                bindingNavigator1.Hide();
+                StudentBindingNavigator.Hide();
                 LBLPointsVaryVal.Hide();
                 TBPointsVaryVal.Hide();
                 LBLstudentPointsCounter.Hide();
@@ -163,7 +163,25 @@ namespace YearOneProjectOne
 
         private void BTNSave_Click(object sender, EventArgs e)
         {
+            bool found = false;
             studentDataTableAdapter.Update(dSDB.studentData);
+            for (int i = 0; i < dSDB.studentData.Rows.Count; i++)
+            {
+                for (int j = 0; i < dSDB.userTable.Rows.Count; i++)
+                {
+                    if (dSDB.studentData.Rows[i][1].ToString() != dSDB.userTable.Rows[j][1].ToString())
+                    {
+
+                    }
+                    else
+                    {
+                        dSDB.userTable.Rows.RemoveAt()//remove old listing for student and update with new ones through all usertable, dont ignore unchanged just brute force.
+                    }
+
+
+                }
+            }
+
         }
 
         private void BTNCancel_Click(object sender, EventArgs e)
@@ -277,9 +295,8 @@ namespace YearOneProjectOne
 
         private void toolStripButton8_Click(object sender, EventArgs e)
         {
-            rewardTableTableAdapter.Update(dSDB.rewardTable);
+            rewardTableTableAdapter.Update(dSDB.rewardTable);//add changes to usertable
         }
-
         private void toolStripButton7_Click(object sender, EventArgs e)
         {
             rewardTableTableAdapter.Fill(dSDB.rewardTable);
@@ -290,6 +307,9 @@ namespace YearOneProjectOne
             rewardTableBindingSource.CancelEdit();
         }
 
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

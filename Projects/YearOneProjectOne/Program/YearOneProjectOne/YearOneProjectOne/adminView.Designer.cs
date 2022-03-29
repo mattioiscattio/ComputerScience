@@ -30,9 +30,9 @@ namespace YearOneProjectOne
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(adminView));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.SessionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -59,7 +59,7 @@ namespace YearOneProjectOne
             this.studentDataTableAdapter = new YearOneProjectOne.DSDBTableAdapters.studentDataTableAdapter();
             this.teacherDataTableAdapter = new YearOneProjectOne.DSDBTableAdapters.teacherDataTableAdapter();
             this.LBLDebug = new System.Windows.Forms.Label();
-            this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.StudentBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
@@ -118,8 +118,8 @@ namespace YearOneProjectOne
             ((System.ComponentModel.ISupportInitialize)(this.studentPointsChart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StudentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSDB)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
-            this.bindingNavigator1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.StudentBindingNavigator)).BeginInit();
+            this.StudentBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StudentDataViewBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rewardTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BindingNavigatorReward)).BeginInit();
@@ -150,14 +150,14 @@ namespace YearOneProjectOne
             // logoutToolStripMenuItem1
             // 
             this.logoutToolStripMenuItem1.Name = "logoutToolStripMenuItem1";
-            this.logoutToolStripMenuItem1.Size = new System.Drawing.Size(112, 22);
+            this.logoutToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.logoutToolStripMenuItem1.Text = "Logout";
             this.logoutToolStripMenuItem1.Click += new System.EventHandler(this.logoutToolStripMenuItem1_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -201,17 +201,17 @@ namespace YearOneProjectOne
             // 
             // studentPointsChart
             // 
-            chartArea2.Name = "ChartArea1";
-            this.studentPointsChart.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.studentPointsChart.Legends.Add(legend2);
+            chartArea1.Name = "ChartArea1";
+            this.studentPointsChart.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.studentPointsChart.Legends.Add(legend1);
             this.studentPointsChart.Location = new System.Drawing.Point(941, 47);
             this.studentPointsChart.Name = "studentPointsChart";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.studentPointsChart.Series.Add(series2);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.studentPointsChart.Series.Add(series1);
             this.studentPointsChart.Size = new System.Drawing.Size(300, 221);
             this.studentPointsChart.TabIndex = 1;
             this.studentPointsChart.Text = "chart1";
@@ -332,14 +332,14 @@ namespace YearOneProjectOne
             this.LBLDebug.TabIndex = 20;
             this.LBLDebug.Text = "label2";
             // 
-            // bindingNavigator1
+            // StudentBindingNavigator
             // 
-            this.bindingNavigator1.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.bindingNavigator1.BindingSource = this.StudentBindingSource;
-            this.bindingNavigator1.CountItem = this.bindingNavigatorCountItem;
-            this.bindingNavigator1.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.bindingNavigator1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.StudentBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.StudentBindingNavigator.BindingSource = this.StudentBindingSource;
+            this.StudentBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.StudentBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.StudentBindingNavigator.Dock = System.Windows.Forms.DockStyle.Left;
+            this.StudentBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
             this.bindingNavigatorSeparator,
@@ -355,17 +355,17 @@ namespace YearOneProjectOne
             this.BTNLoad,
             this.BTNSave,
             this.BTNCancel});
-            this.bindingNavigator1.Location = new System.Drawing.Point(0, 24);
-            this.bindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.bindingNavigator1.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.bindingNavigator1.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.bindingNavigator1.Name = "bindingNavigator1";
-            this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(53, 653);
-            this.bindingNavigator1.TabIndex = 23;
-            this.bindingNavigator1.Text = "bindingNavigator1";
-            this.bindingNavigator1.Visible = false;
+            this.StudentBindingNavigator.Location = new System.Drawing.Point(0, 24);
+            this.StudentBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.StudentBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.StudentBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.StudentBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.StudentBindingNavigator.Name = "StudentBindingNavigator";
+            this.StudentBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.StudentBindingNavigator.Size = new System.Drawing.Size(53, 653);
+            this.StudentBindingNavigator.TabIndex = 23;
+            this.StudentBindingNavigator.Text = "bindingNavigator1";
+            this.StudentBindingNavigator.Visible = false;
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -733,6 +733,7 @@ namespace YearOneProjectOne
             this.toolStripButton1.RightToLeftAutoMirrorImage = true;
             this.toolStripButton1.Size = new System.Drawing.Size(50, 20);
             this.toolStripButton1.Text = "Add new";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // toolStripLabel1
             // 
@@ -899,7 +900,7 @@ namespace YearOneProjectOne
             this.Controls.Add(this.TBStudentName);
             this.Controls.Add(this.LBLStudentDOB);
             this.Controls.Add(this.LBLStudentName);
-            this.Controls.Add(this.bindingNavigator1);
+            this.Controls.Add(this.StudentBindingNavigator);
             this.Controls.Add(this.LBStudents);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.studentPointsChart);
@@ -919,9 +920,9 @@ namespace YearOneProjectOne
             ((System.ComponentModel.ISupportInitialize)(this.studentPointsChart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StudentBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSDB)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
-            this.bindingNavigator1.ResumeLayout(false);
-            this.bindingNavigator1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.StudentBindingNavigator)).EndInit();
+            this.StudentBindingNavigator.ResumeLayout(false);
+            this.StudentBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StudentDataViewBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rewardTableBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BindingNavigatorReward)).EndInit();
@@ -956,7 +957,7 @@ namespace YearOneProjectOne
         internal DSDB dSDB;
         internal DSDBTableAdapters.studentDataTableAdapter studentDataTableAdapter;
         private System.Windows.Forms.Label LBLDebug;
-        private System.Windows.Forms.BindingNavigator bindingNavigator1;
+        private System.Windows.Forms.BindingNavigator StudentBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;

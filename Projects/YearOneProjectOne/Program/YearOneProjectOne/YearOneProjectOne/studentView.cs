@@ -26,9 +26,15 @@ namespace YearOneProjectOne
         {
             this.studentDataTableAdapter.Fill(this.DSDB.studentData);
             this.rewardTableTableAdapter.Fill(this.DSDB.rewardTable);
+            this.userTableTableAdapter.Fill(this.DSDB.userTable);
             LBLDebug.Text = findStudentName();
             loadPointsChart();
             stockCheck();
+            userTableRowFind();
+            if ((DSDB.userTable.Rows[userTableRowFind()][1].ToString() == findStudentName()) & (DSDB.userTable.Rows[userTableRowFind()][2].ToString() == "123"))
+            {
+                MessageBox.Show("Your password is currently at default, please change it.");
+            }
         }
 
         private void studentView_FormClosing(object sender, FormClosingEventArgs e)
@@ -48,11 +54,26 @@ namespace YearOneProjectOne
             }
         }
 
+        private int userTableRowFind()
+        {
+            int studentRow = 0;
+            for (int i = 0; i < DSDB.userTable.Rows.Count;i++)
+            {
 
+                if (DSDB.userTable.Rows[i][1].ToString() == findStudentName())
+                {
+                    studentRow = i;
+                    return studentRow;
+                }
+
+            }
+            return studentRow;
+
+        }
 
         private string findStudentName()
         {
-            return File.ReadLines(Path.Combine(@"..\..\..\..\..\", @"userData\tempDataFile.txt")).First();
+            return File.ReadLines(Path.Combine(@"..\..\..\..\..\", @"userData\tempDataFile.txt")).Last();
         }
 
         
@@ -89,10 +110,6 @@ namespace YearOneProjectOne
                 {
                     return Convert.ToInt32(i);
                 }
-                else
-                {
-                    return 1;
-                }
             }
             return 1;
         }
@@ -128,6 +145,13 @@ namespace YearOneProjectOne
             TBItemPrice.Hide();
             TBItemStock.Hide();
             BTNPurchase.Hide();
+            BTNChangePass.Hide();
+            TBConfirmPass.Hide();
+            TBOldPass.Hide();
+            TBNewPass.Hide();
+            LBLConfirmPass.Hide();
+            LBLNewPass.Hide();
+            LBLOldPass.Hide();
         }
 
         private void colourUpdate()
@@ -208,6 +232,40 @@ namespace YearOneProjectOne
             {
                 MessageBox.Show("You do not have enough points to purchase this item.");
             }
+        }
+
+        private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TBOldPass.Text = DSDB.userTable.Rows[userTableRowFind()][2].ToString();
+            menuComponentsHide();
+            BTNChangePass.Show();
+            TBConfirmPass.Show();
+            TBOldPass.Show();
+            TBNewPass.Show();
+            LBLConfirmPass.Show();
+            LBLNewPass.Show();
+            LBLOldPass.Show();
+        }
+
+        private void BTNChangePass_Click(object sender, EventArgs e)
+        {
+            if (TBConfirmPass.ToString() == TBNewPass.ToString())
+            {
+                DSDB.userTable.Rows[userTableRowFind()][2] = TBConfirmPass.Text;
+                MessageBox.Show("Password updated successfully!");
+                userTableTableAdapter.Update(DSDB.userTable);
+                DSDB.AcceptChanges();
+
+            }
+            else
+            {
+                MessageBox.Show("Passwords do not match.");
+            }
+        }
+
+        private void purchaseHistoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

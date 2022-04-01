@@ -114,6 +114,7 @@ namespace YearOneProjectOne
             this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
             this.LBLStudentPointsNeg = new System.Windows.Forms.Label();
             this.TBStudentPointsNeg = new System.Windows.Forms.TextBox();
+            this.userTableTableAdapter = new YearOneProjectOne.DSDBTableAdapters.userTableTableAdapter();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.studentPointsChart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StudentBindingSource)).BeginInit();
@@ -150,14 +151,14 @@ namespace YearOneProjectOne
             // logoutToolStripMenuItem1
             // 
             this.logoutToolStripMenuItem1.Name = "logoutToolStripMenuItem1";
-            this.logoutToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.logoutToolStripMenuItem1.Size = new System.Drawing.Size(112, 22);
             this.logoutToolStripMenuItem1.Text = "Logout";
             this.logoutToolStripMenuItem1.Click += new System.EventHandler(this.logoutToolStripMenuItem1_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -867,6 +868,10 @@ namespace YearOneProjectOne
             this.TBStudentPointsNeg.TabIndex = 50;
             this.TBStudentPointsNeg.Visible = false;
             // 
+            // userTableTableAdapter
+            // 
+            this.userTableTableAdapter.ClearBeforeFill = true;
+            // 
             // adminView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1015,5 +1020,6 @@ namespace YearOneProjectOne
         private System.Windows.Forms.ToolStripButton toolStripButton9;
         private System.Windows.Forms.Label LBLStudentPointsNeg;
         internal System.Windows.Forms.TextBox TBStudentPointsNeg;
+        private DSDBTableAdapters.userTableTableAdapter userTableTableAdapter;
     }
 }

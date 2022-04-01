@@ -18,6 +18,7 @@ namespace YearOneProjectOne
         {
             // TODO: This line of code loads data into the 'dSDB.rewardTable' table. You can move, or remove it, as needed.
             this.rewardTableTableAdapter.Fill(this.dSDB.rewardTable);
+            this.userTableTableAdapter.Fill(this.dSDB.userTable);
             // TODO: This line of code loads data into the 'dSDB.teacherData' table. You can move, or remove it, as needed.
             this.teacherDataTableAdapter.Fill(this.dSDB.teacherData);
             // TODO: This line of code loads data into the 'dSDB.studentData' table. You can move, or remove it, as needed.
@@ -154,7 +155,17 @@ namespace YearOneProjectOne
         }
 
 
-
+        private int findUserTableEmptyRow()
+        {
+            for (int i = 0;i < dSDB.userTable.Rows.Count;i++)
+            {
+                if (dSDB.userTable.Rows[i][1] == DBNull.Value)
+                {
+                    return i;
+                }
+            }
+            return 0;
+        }
 
         private void BTNLoad_Click(object sender, EventArgs e)
         {
@@ -163,24 +174,37 @@ namespace YearOneProjectOne
 
         private void BTNSave_Click(object sender, EventArgs e)
         {
-            bool found = false;
             studentDataTableAdapter.Update(dSDB.studentData);
+            MessageBox.Show("saved");
+
             for (int i = 0; i < dSDB.studentData.Rows.Count; i++)
             {
-                for (int j = 0; i < dSDB.userTable.Rows.Count; i++)
+                bool found = false;
+                for (int j = 0; j < dSDB.userTable.Rows.Count; j++)
                 {
-                    if (dSDB.studentData.Rows[i][1].ToString() != dSDB.userTable.Rows[j][1].ToString())
+
+                    if (dSDB.studentData.Rows[i][1].ToString() == dSDB.userTable.Rows[j][1].ToString())
                     {
+                        found = true;
 
                     }
-                    else
-                    {
-                        dSDB.userTable.Rows.RemoveAt()//remove old listing for student and update with new ones through all usertable, dont ignore unchanged just brute force.
-                    }
-
 
                 }
+                MessageBox.Show("found = " + found.ToString() + " for user " + dSDB.studentData.Rows[i][1].ToString());
+                if (found == false)
+                {
+                    MessageBox.Show("found = false ");
+                    DataRow row = dSDB.userTable.NewRow();
+                    dSDB.userTable.Rows.Add(row);
+                    int rowIndex = findUserTableEmptyRow();
+                    dSDB.userTable.Rows[rowIndex][1] = dSDB.studentData.Rows[i][1].ToString();
+                    dSDB.userTable.Rows[rowIndex][2] = 123;
+                    dSDB.userTable.Rows[rowIndex][3] = 0;
+                    userTableTableAdapter.Update(dSDB.userTable);
+                }
             }
+            userTableTableAdapter.Update(dSDB.userTable);
+            dSDB.AcceptChanges();
 
         }
 

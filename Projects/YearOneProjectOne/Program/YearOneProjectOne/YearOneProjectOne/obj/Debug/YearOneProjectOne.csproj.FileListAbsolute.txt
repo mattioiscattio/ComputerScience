@@ -43,3 +43,27 @@ C:\Temporary Workspace\Projects\YearOneProjectOne\Program\YearOneProjectOne\Year
 C:\Temporary Workspace\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\bin\Debug\DSDB.xsc
 C:\Temporary Workspace\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\bin\Debug\DSDB.xsd
 C:\Temporary Workspace\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\bin\Debug\DSDB.xss
+C:\Temporary Workspace\Computer Science\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\obj\Debug\YearOneProjectOne.csproj.AssemblyReference.cache
+C:\Temporary Workspace\Computer Science\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\obj\Debug\Interop.WMPLib.dll
+C:\Temporary Workspace\Computer Science\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\obj\Debug\AxInterop.WMPLib.dll
+C:\Temporary Workspace\Computer Science\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\obj\Debug\YearOneProjectOne.csproj.ResolveComReference.cache
+C:\Temporary Workspace\Computer Science\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\obj\Debug\YearOneProjectOne.adminView.resources
+C:\Temporary Workspace\Computer Science\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\obj\Debug\YearOneProjectOne.guestView.resources
+C:\Temporary Workspace\Computer Science\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\obj\Debug\YearOneProjectOne.Startup.resources
+C:\Temporary Workspace\Computer Science\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\obj\Debug\YearOneProjectOne.Properties.Resources.resources
+C:\Temporary Workspace\Computer Science\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\obj\Debug\YearOneProjectOne.studentView.resources
+C:\Temporary Workspace\Computer Science\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\obj\Debug\YearOneProjectOne.teacherView.resources
+C:\Temporary Workspace\Computer Science\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\obj\Debug\YearOneProjectOne.csproj.GenerateResource.cache
+C:\Temporary Workspace\Computer Science\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\obj\Debug\YearOneProjectOne.csproj.CoreCompileInputs.cache
+C:\Temporary Workspace\Computer Science\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\obj\Debug\YearOneProjectOne.exe
+C:\Temporary Workspace\Computer Science\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\obj\Debug\YearOneProjectOne.pdb
+C:\Temporary Workspace\Computer Science\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\bin\Debug\yearOneProjectDatabase.accdb
+C:\Temporary Workspace\Computer Science\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\bin\Debug\DSDB.Designer.cs
+C:\Temporary Workspace\Computer Science\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\bin\Debug\DSDB.xsc
+C:\Temporary Workspace\Computer Science\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\bin\Debug\DSDB.xsd
+C:\Temporary Workspace\Computer Science\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\bin\Debug\DSDB.xss
+C:\Temporary Workspace\Computer Science\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\bin\Debug\YearOneProjectOne.exe.config
+C:\Temporary Workspace\Computer Science\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\bin\Debug\YearOneProjectOne.exe
+C:\Temporary Workspace\Computer Science\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\bin\Debug\YearOneProjectOne.pdb
+C:\Temporary Workspace\Computer Science\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\bin\Debug\Interop.WMPLib.dll
+C:\Temporary Workspace\Computer Science\Projects\YearOneProjectOne\Program\YearOneProjectOne\YearOneProjectOne\bin\Debug\AxInterop.WMPLib.dll

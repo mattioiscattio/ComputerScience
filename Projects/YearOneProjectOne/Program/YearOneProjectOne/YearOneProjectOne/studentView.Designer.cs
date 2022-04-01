@@ -30,9 +30,9 @@ namespace YearOneProjectOne
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.LBLDebug = new System.Windows.Forms.Label();
             this.studentDataTableAdapter = new YearOneProjectOne.DSDBTableAdapters.studentDataTableAdapter();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -54,10 +54,22 @@ namespace YearOneProjectOne
             this.LBLItemPrice = new System.Windows.Forms.Label();
             this.LBLItemName = new System.Windows.Forms.Label();
             this.BTNPurchase = new System.Windows.Forms.Button();
+            this.userTableTableAdapter = new YearOneProjectOne.DSDBTableAdapters.userTableTableAdapter();
+            this.studentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.LBLNewPass = new System.Windows.Forms.Label();
+            this.TBOldPass = new System.Windows.Forms.TextBox();
+            this.TBNewPass = new System.Windows.Forms.TextBox();
+            this.LBLOldPass = new System.Windows.Forms.Label();
+            this.LBLConfirmPass = new System.Windows.Forms.Label();
+            this.TBConfirmPass = new System.Windows.Forms.TextBox();
+            this.BTNChangePass = new System.Windows.Forms.Button();
+            this.userTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rewardTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DSDB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChrtStudentPoints)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userTableBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // LBLDebug
@@ -77,7 +89,8 @@ namespace YearOneProjectOne
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.SessionToolStripMenuItem,
-            this.shopToolStripMenuItem});
+            this.shopToolStripMenuItem,
+            this.studentToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -126,8 +139,9 @@ namespace YearOneProjectOne
             // purchaseHistoryToolStripMenuItem
             // 
             this.purchaseHistoryToolStripMenuItem.Name = "purchaseHistoryToolStripMenuItem";
-            this.purchaseHistoryToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.purchaseHistoryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.purchaseHistoryToolStripMenuItem.Text = "Purchase History";
+            this.purchaseHistoryToolStripMenuItem.Click += new System.EventHandler(this.purchaseHistoryToolStripMenuItem_Click);
             // 
             // LBRewards
             // 
@@ -158,16 +172,16 @@ namespace YearOneProjectOne
             // 
             // ChrtStudentPoints
             // 
-            chartArea1.Name = "ChartArea1";
-            this.ChrtStudentPoints.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.ChrtStudentPoints.Legends.Add(legend1);
+            chartArea6.Name = "ChartArea1";
+            this.ChrtStudentPoints.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.ChrtStudentPoints.Legends.Add(legend6);
             this.ChrtStudentPoints.Location = new System.Drawing.Point(614, 40);
             this.ChrtStudentPoints.Name = "ChrtStudentPoints";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.ChrtStudentPoints.Series.Add(series1);
+            series6.ChartArea = "ChartArea1";
+            series6.Legend = "Legend1";
+            series6.Name = "Series1";
+            this.ChrtStudentPoints.Series.Add(series6);
             this.ChrtStudentPoints.Size = new System.Drawing.Size(174, 141);
             this.ChrtStudentPoints.TabIndex = 1;
             this.ChrtStudentPoints.Text = "chart1";
@@ -246,12 +260,111 @@ namespace YearOneProjectOne
             this.BTNPurchase.Visible = false;
             this.BTNPurchase.Click += new System.EventHandler(this.BTNPurchase_Click);
             // 
+            // userTableTableAdapter
+            // 
+            this.userTableTableAdapter.ClearBeforeFill = true;
+            // 
+            // studentToolStripMenuItem
+            // 
+            this.studentToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.changePasswordToolStripMenuItem});
+            this.studentToolStripMenuItem.Name = "studentToolStripMenuItem";
+            this.studentToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.studentToolStripMenuItem.Text = "Student";
+            // 
+            // changePasswordToolStripMenuItem
+            // 
+            this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
+            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.changePasswordToolStripMenuItem.Text = "Change Password";
+            this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
+            // 
+            // LBLNewPass
+            // 
+            this.LBLNewPass.AutoSize = true;
+            this.LBLNewPass.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLNewPass.Location = new System.Drawing.Point(234, 84);
+            this.LBLNewPass.Name = "LBLNewPass";
+            this.LBLNewPass.Size = new System.Drawing.Size(131, 22);
+            this.LBLNewPass.TabIndex = 59;
+            this.LBLNewPass.Text = "New Password";
+            this.LBLNewPass.Visible = false;
+            // 
+            // TBOldPass
+            // 
+            this.TBOldPass.Location = new System.Drawing.Point(371, 52);
+            this.TBOldPass.Name = "TBOldPass";
+            this.TBOldPass.Size = new System.Drawing.Size(100, 20);
+            this.TBOldPass.TabIndex = 61;
+            this.TBOldPass.Visible = false;
+            // 
+            // TBNewPass
+            // 
+            this.TBNewPass.Location = new System.Drawing.Point(371, 87);
+            this.TBNewPass.Name = "TBNewPass";
+            this.TBNewPass.Size = new System.Drawing.Size(100, 20);
+            this.TBNewPass.TabIndex = 60;
+            this.TBNewPass.Visible = false;
+            // 
+            // LBLOldPass
+            // 
+            this.LBLOldPass.AutoSize = true;
+            this.LBLOldPass.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLOldPass.Location = new System.Drawing.Point(242, 49);
+            this.LBLOldPass.Name = "LBLOldPass";
+            this.LBLOldPass.Size = new System.Drawing.Size(123, 22);
+            this.LBLOldPass.TabIndex = 58;
+            this.LBLOldPass.Text = "Old Password";
+            this.LBLOldPass.Visible = false;
+            // 
+            // LBLConfirmPass
+            // 
+            this.LBLConfirmPass.AutoSize = true;
+            this.LBLConfirmPass.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLConfirmPass.Location = new System.Drawing.Point(289, 118);
+            this.LBLConfirmPass.Name = "LBLConfirmPass";
+            this.LBLConfirmPass.Size = new System.Drawing.Size(76, 22);
+            this.LBLConfirmPass.TabIndex = 62;
+            this.LBLConfirmPass.Text = "Confirm";
+            this.LBLConfirmPass.Visible = false;
+            // 
+            // TBConfirmPass
+            // 
+            this.TBConfirmPass.Location = new System.Drawing.Point(371, 121);
+            this.TBConfirmPass.Name = "TBConfirmPass";
+            this.TBConfirmPass.Size = new System.Drawing.Size(100, 20);
+            this.TBConfirmPass.TabIndex = 63;
+            this.TBConfirmPass.Visible = false;
+            // 
+            // BTNChangePass
+            // 
+            this.BTNChangePass.Location = new System.Drawing.Point(487, 52);
+            this.BTNChangePass.Name = "BTNChangePass";
+            this.BTNChangePass.Size = new System.Drawing.Size(74, 89);
+            this.BTNChangePass.TabIndex = 64;
+            this.BTNChangePass.Text = "Change Password";
+            this.BTNChangePass.UseVisualStyleBackColor = true;
+            this.BTNChangePass.Visible = false;
+            this.BTNChangePass.Click += new System.EventHandler(this.BTNChangePass_Click);
+            // 
+            // userTableBindingSource
+            // 
+            this.userTableBindingSource.DataMember = "userTable";
+            this.userTableBindingSource.DataSource = this.DSDB;
+            // 
             // studentView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::YearOneProjectOne.Properties.Resources.colorGradientGuestView;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.BTNChangePass);
+            this.Controls.Add(this.LBLConfirmPass);
+            this.Controls.Add(this.TBConfirmPass);
+            this.Controls.Add(this.LBLNewPass);
+            this.Controls.Add(this.TBOldPass);
+            this.Controls.Add(this.TBNewPass);
+            this.Controls.Add(this.LBLOldPass);
             this.Controls.Add(this.BTNPurchase);
             this.Controls.Add(this.LBLItemStock);
             this.Controls.Add(this.TBItemPrice);
@@ -274,6 +387,7 @@ namespace YearOneProjectOne
             ((System.ComponentModel.ISupportInitialize)(this.rewardTableBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DSDB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChrtStudentPoints)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userTableBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -301,5 +415,16 @@ namespace YearOneProjectOne
         private System.Windows.Forms.Label LBLItemPrice;
         private System.Windows.Forms.Label LBLItemName;
         private System.Windows.Forms.Button BTNPurchase;
+        private DSDBTableAdapters.userTableTableAdapter userTableTableAdapter;
+        private System.Windows.Forms.ToolStripMenuItem studentToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;
+        private System.Windows.Forms.Label LBLNewPass;
+        internal System.Windows.Forms.TextBox TBOldPass;
+        private System.Windows.Forms.BindingSource userTableBindingSource;
+        internal System.Windows.Forms.TextBox TBNewPass;
+        private System.Windows.Forms.Label LBLOldPass;
+        private System.Windows.Forms.Label LBLConfirmPass;
+        internal System.Windows.Forms.TextBox TBConfirmPass;
+        private System.Windows.Forms.Button BTNChangePass;
     }
 }

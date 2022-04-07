@@ -335,5 +335,10 @@ namespace YearOneProjectOne
         {
 
         }
+
+        private void studentPointsChart_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

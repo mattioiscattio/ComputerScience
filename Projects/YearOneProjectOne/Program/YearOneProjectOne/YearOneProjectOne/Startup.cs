@@ -145,7 +145,7 @@ namespace YearOneProjectOne
 
         private void BTNGuestLogin_Click(object sender, EventArgs e)
         {
-            this.Close();//hides startup.cs and then opens guestview
+            this.Hide();
             new guestView().ShowDialog();
         }
 

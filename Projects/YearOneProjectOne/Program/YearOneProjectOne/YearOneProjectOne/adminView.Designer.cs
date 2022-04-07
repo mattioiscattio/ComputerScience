@@ -216,6 +216,7 @@ namespace YearOneProjectOne
             this.studentPointsChart.Size = new System.Drawing.Size(300, 221);
             this.studentPointsChart.TabIndex = 1;
             this.studentPointsChart.Text = "chart1";
+            this.studentPointsChart.Click += new System.EventHandler(this.studentPointsChart_Click);
             // 
             // label1
             // 
@@ -249,6 +250,7 @@ namespace YearOneProjectOne
             // dSDB
             // 
             this.dSDB.DataSetName = "DSDB";
+            this.dSDB.Namespace = "http://tempuri.org/DSDB.xsd";
             this.dSDB.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // LBLStudentName

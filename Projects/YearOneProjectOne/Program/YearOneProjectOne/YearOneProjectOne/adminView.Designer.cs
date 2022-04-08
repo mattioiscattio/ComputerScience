@@ -115,6 +115,8 @@ namespace YearOneProjectOne
             this.LBLStudentPointsNeg = new System.Windows.Forms.Label();
             this.TBStudentPointsNeg = new System.Windows.Forms.TextBox();
             this.userTableTableAdapter = new YearOneProjectOne.DSDBTableAdapters.userTableTableAdapter();
+            this.teacherToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editTeacherDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.studentPointsChart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StudentBindingSource)).BeginInit();
@@ -132,7 +134,8 @@ namespace YearOneProjectOne
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.SessionToolStripMenuItem,
             this.studentsToolStripMenuItem,
-            this.shopToolStripMenuItem});
+            this.shopToolStripMenuItem,
+            this.teacherToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1260, 24);
@@ -250,7 +253,6 @@ namespace YearOneProjectOne
             // dSDB
             // 
             this.dSDB.DataSetName = "DSDB";
-            this.dSDB.Namespace = "http://tempuri.org/DSDB.xsd";
             this.dSDB.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // LBLStudentName
@@ -422,7 +424,6 @@ namespace YearOneProjectOne
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -781,7 +782,6 @@ namespace YearOneProjectOne
             // 
             this.toolStripTextBox1.AccessibleName = "Position";
             this.toolStripTextBox1.AutoSize = false;
-            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox1.Name = "toolStripTextBox1";
             this.toolStripTextBox1.Size = new System.Drawing.Size(50, 23);
             this.toolStripTextBox1.Text = "0";
@@ -873,6 +873,20 @@ namespace YearOneProjectOne
             // userTableTableAdapter
             // 
             this.userTableTableAdapter.ClearBeforeFill = true;
+            // 
+            // teacherToolStripMenuItem
+            // 
+            this.teacherToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editTeacherDataToolStripMenuItem});
+            this.teacherToolStripMenuItem.Name = "teacherToolStripMenuItem";
+            this.teacherToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.teacherToolStripMenuItem.Text = "Teacher";
+            // 
+            // editTeacherDataToolStripMenuItem
+            // 
+            this.editTeacherDataToolStripMenuItem.Name = "editTeacherDataToolStripMenuItem";
+            this.editTeacherDataToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editTeacherDataToolStripMenuItem.Text = "Edit Teacher Data";
             // 
             // adminView
             // 
@@ -1023,5 +1037,7 @@ namespace YearOneProjectOne
         private System.Windows.Forms.Label LBLStudentPointsNeg;
         internal System.Windows.Forms.TextBox TBStudentPointsNeg;
         private DSDBTableAdapters.userTableTableAdapter userTableTableAdapter;
+        private System.Windows.Forms.ToolStripMenuItem teacherToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editTeacherDataToolStripMenuItem;
     }
 }

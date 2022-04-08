@@ -25,8 +25,8 @@ namespace YearOneProjectOne
 
         private void guestView_FormClosing(object sender, FormClosingEventArgs e)
         {
-            this.Close();
-            new Startup().ShowDialog();
+            Startup frmMain = new Startup();//when closing reopens the main form.
+            frmMain.Show();
 
         }
 
@@ -62,6 +62,15 @@ namespace YearOneProjectOne
             return dSDB.studentData.Rows.Count.ToString();
         }
 
+        private void logoutToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
 
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(1);  //closes everything.   
+
+        }
     }
 }

@@ -30,9 +30,9 @@ namespace YearOneProjectOne
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.LBLDebug = new System.Windows.Forms.Label();
             this.studentDataTableAdapter = new YearOneProjectOne.DSDBTableAdapters.studentDataTableAdapter();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -42,6 +42,8 @@ namespace YearOneProjectOne
             this.shopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.useTheShopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.purchaseHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.studentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.LBRewards = new System.Windows.Forms.ListBox();
             this.rewardTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.DSDB = new YearOneProjectOne.DSDB();
@@ -55,8 +57,6 @@ namespace YearOneProjectOne
             this.LBLItemName = new System.Windows.Forms.Label();
             this.BTNPurchase = new System.Windows.Forms.Button();
             this.userTableTableAdapter = new YearOneProjectOne.DSDBTableAdapters.userTableTableAdapter();
-            this.studentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.LBLNewPass = new System.Windows.Forms.Label();
             this.TBOldPass = new System.Windows.Forms.TextBox();
             this.TBNewPass = new System.Windows.Forms.TextBox();
@@ -65,6 +65,8 @@ namespace YearOneProjectOne
             this.TBConfirmPass = new System.Windows.Forms.TextBox();
             this.BTNChangePass = new System.Windows.Forms.Button();
             this.userTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.teacherToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editTeacherDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rewardTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DSDB)).BeginInit();
@@ -90,7 +92,8 @@ namespace YearOneProjectOne
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.SessionToolStripMenuItem,
             this.shopToolStripMenuItem,
-            this.studentToolStripMenuItem});
+            this.studentToolStripMenuItem,
+            this.teacherToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -139,9 +142,24 @@ namespace YearOneProjectOne
             // purchaseHistoryToolStripMenuItem
             // 
             this.purchaseHistoryToolStripMenuItem.Name = "purchaseHistoryToolStripMenuItem";
-            this.purchaseHistoryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.purchaseHistoryToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.purchaseHistoryToolStripMenuItem.Text = "Purchase History";
             this.purchaseHistoryToolStripMenuItem.Click += new System.EventHandler(this.purchaseHistoryToolStripMenuItem_Click);
+            // 
+            // studentToolStripMenuItem
+            // 
+            this.studentToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.changePasswordToolStripMenuItem});
+            this.studentToolStripMenuItem.Name = "studentToolStripMenuItem";
+            this.studentToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.studentToolStripMenuItem.Text = "Student";
+            // 
+            // changePasswordToolStripMenuItem
+            // 
+            this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
+            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.changePasswordToolStripMenuItem.Text = "Change Password";
+            this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
             // 
             // LBRewards
             // 
@@ -172,16 +190,16 @@ namespace YearOneProjectOne
             // 
             // ChrtStudentPoints
             // 
-            chartArea6.Name = "ChartArea1";
-            this.ChrtStudentPoints.ChartAreas.Add(chartArea6);
-            legend6.Name = "Legend1";
-            this.ChrtStudentPoints.Legends.Add(legend6);
+            chartArea1.Name = "ChartArea1";
+            this.ChrtStudentPoints.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.ChrtStudentPoints.Legends.Add(legend1);
             this.ChrtStudentPoints.Location = new System.Drawing.Point(614, 40);
             this.ChrtStudentPoints.Name = "ChrtStudentPoints";
-            series6.ChartArea = "ChartArea1";
-            series6.Legend = "Legend1";
-            series6.Name = "Series1";
-            this.ChrtStudentPoints.Series.Add(series6);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.ChrtStudentPoints.Series.Add(series1);
             this.ChrtStudentPoints.Size = new System.Drawing.Size(174, 141);
             this.ChrtStudentPoints.TabIndex = 1;
             this.ChrtStudentPoints.Text = "chart1";
@@ -264,21 +282,6 @@ namespace YearOneProjectOne
             // 
             this.userTableTableAdapter.ClearBeforeFill = true;
             // 
-            // studentToolStripMenuItem
-            // 
-            this.studentToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.changePasswordToolStripMenuItem});
-            this.studentToolStripMenuItem.Name = "studentToolStripMenuItem";
-            this.studentToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
-            this.studentToolStripMenuItem.Text = "Student";
-            // 
-            // changePasswordToolStripMenuItem
-            // 
-            this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.changePasswordToolStripMenuItem.Text = "Change Password";
-            this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
-            // 
             // LBLNewPass
             // 
             this.LBLNewPass.AutoSize = true;
@@ -351,6 +354,20 @@ namespace YearOneProjectOne
             // 
             this.userTableBindingSource.DataMember = "userTable";
             this.userTableBindingSource.DataSource = this.DSDB;
+            // 
+            // teacherToolStripMenuItem
+            // 
+            this.teacherToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editTeacherDataToolStripMenuItem});
+            this.teacherToolStripMenuItem.Name = "teacherToolStripMenuItem";
+            this.teacherToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.teacherToolStripMenuItem.Text = "Teacher";
+            // 
+            // editTeacherDataToolStripMenuItem
+            // 
+            this.editTeacherDataToolStripMenuItem.Name = "editTeacherDataToolStripMenuItem";
+            this.editTeacherDataToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editTeacherDataToolStripMenuItem.Text = "EditTeacher Data";
             // 
             // studentView
             // 
@@ -426,5 +443,7 @@ namespace YearOneProjectOne
         private System.Windows.Forms.Label LBLConfirmPass;
         internal System.Windows.Forms.TextBox TBConfirmPass;
         private System.Windows.Forms.Button BTNChangePass;
+        private System.Windows.Forms.ToolStripMenuItem teacherToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editTeacherDataToolStripMenuItem;
     }
 }

@@ -53,7 +53,6 @@ namespace YearOneProjectOne
             // 
             this.dSDB.DataSetName = "DSDB";
             this.dSDB.EnforceConstraints = false;
-            this.dSDB.Namespace = "http://tempuri.org/DSDB.xsd";
             this.dSDB.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // totalPointsChart
@@ -123,12 +122,14 @@ namespace YearOneProjectOne
             this.logoutToolStripMenuItem1.Name = "logoutToolStripMenuItem1";
             this.logoutToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.logoutToolStripMenuItem1.Text = "Logout";
+            this.logoutToolStripMenuItem1.Click += new System.EventHandler(this.logoutToolStripMenuItem1_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // label2
             // 

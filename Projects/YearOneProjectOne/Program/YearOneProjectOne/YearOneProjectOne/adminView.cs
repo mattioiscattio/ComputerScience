@@ -16,12 +16,9 @@ namespace YearOneProjectOne
 
         public void adminView_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'dSDB.rewardTable' table. You can move, or remove it, as needed.
             this.rewardTableTableAdapter.Fill(this.dSDB.rewardTable);
             this.userTableTableAdapter.Fill(this.dSDB.userTable);
-            // TODO: This line of code loads data into the 'dSDB.teacherData' table. You can move, or remove it, as needed.
             this.teacherDataTableAdapter.Fill(this.dSDB.teacherData);
-            // TODO: This line of code loads data into the 'dSDB.studentData' table. You can move, or remove it, as needed.
             this.studentDataTableAdapter.Fill(this.dSDB.studentData);
             loadPointsChart();//gets total point information and creats chart to display it.
 
@@ -29,29 +26,36 @@ namespace YearOneProjectOne
 
         private void loadPointsChart()
         {
-            int netPosPoints = 0;
-            int netNegPoints = 0;
-
-            for (int i = 0; i <= dSDB.teacherData.Rows.Count - 1; i++)//polls all teacher points/root points to get total docked/awarded
+            try
             {
-                netPosPoints += Convert.ToInt32(dSDB.teacherData.Rows[i][3]);
-                netNegPoints += Convert.ToInt32(dSDB.teacherData.Rows[i][4]);
+                int netPosPoints = 0;
+                int netNegPoints = 0;
+
+                for (int i = 0; i <= dSDB.teacherData.Rows.Count - 1; i++)//polls all teacher points/root points to get total docked/awarded
+                {
+                    netPosPoints += Convert.ToInt32(dSDB.teacherData.Rows[i][3]);
+                    netNegPoints += Convert.ToInt32(dSDB.teacherData.Rows[i][4]);
+                }
+
+                List<string> titleList = new List<string>();//creats lists of values and titles (x,y respectively) then swaps to array to parse into chart with databindxy
+                titleList.Add("+" + netPosPoints.ToString());
+                titleList.Add("-" + netNegPoints.ToString());
+                string[] x = titleList.ToArray();
+
+                List<int> pointsList = new List<int>();
+                pointsList.Add(netPosPoints);
+                pointsList.Add(netNegPoints);
+                int[] y = pointsList.ToArray();
+                studentPointsChart.Series[0].ChartType = SeriesChartType.Doughnut;
+                studentPointsChart.Series[0].Points.DataBindXY(x, y);
+                studentPointsChart.ChartAreas[0].Area3DStyle.Enable3D = true;//gives 3d style to doughnut point chart
+                studentPointsChart.Series[0].Points[0].Color = Color.Green;
+                studentPointsChart.Series[0].Points[1].Color = Color.Red;
             }
-
-            List<string> titleList = new List<string>();//creats lists of values and titles (x,y respectively) then swaps to array to parse into chart with databindxy
-            titleList.Add("+" + netPosPoints.ToString());
-            titleList.Add("-" + netNegPoints.ToString());
-            string[] x = titleList.ToArray();
-
-            List<int> pointsList = new List<int>();
-            pointsList.Add(netPosPoints);
-            pointsList.Add(netNegPoints);
-            int[] y = pointsList.ToArray();
-            studentPointsChart.Series[0].ChartType = SeriesChartType.Doughnut;
-            studentPointsChart.Series[0].Points.DataBindXY(x, y);
-            studentPointsChart.ChartAreas[0].Area3DStyle.Enable3D = true;//gives 3d style to doughnut point chart
-            studentPointsChart.Series[0].Points[0].Color = Color.Green;
-            studentPointsChart.Series[0].Points[1].Color = Color.Red;
+            catch (Exception except)
+            {
+                MessageBox.Show(except.ToString());
+            }
         }
 
         private void logoutToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -174,37 +178,45 @@ namespace YearOneProjectOne
 
         private void BTNSave_Click(object sender, EventArgs e)
         {
-            studentDataTableAdapter.Update(dSDB.studentData);
-            MessageBox.Show("saved");
-
-            for (int i = 0; i < dSDB.studentData.Rows.Count; i++)
+            try
             {
-                bool found = false;
-                for (int j = 0; j < dSDB.userTable.Rows.Count; j++)
-                {
+                LBStudents.SetSelected(1, true);
+                LBStudents.SetSelected(0, true);
+                studentDataTableAdapter.Update(dSDB.studentData);
+                MessageBox.Show("saved");
 
-                    if (dSDB.studentData.Rows[i][1].ToString() == dSDB.userTable.Rows[j][1].ToString())
+                for (int i = 0; i < dSDB.studentData.Rows.Count; i++)
+                {
+                    bool found = false;
+                    for (int j = 0; j < dSDB.userTable.Rows.Count; j++)
                     {
-                        found = true;
+
+                        if (dSDB.studentData.Rows[i][1].ToString() == dSDB.userTable.Rows[j][1].ToString())
+                        {
+                            found = true;
+
+                        }
 
                     }
-
+                    if (found == false)
+                    {
+                        DataRow row = dSDB.userTable.NewRow();
+                        dSDB.userTable.Rows.Add(row);
+                        int rowIndex = findUserTableEmptyRow();
+                        dSDB.userTable.Rows[rowIndex][1] = dSDB.studentData.Rows[i][1].ToString();
+                        dSDB.userTable.Rows[rowIndex][2] = 123;
+                        dSDB.userTable.Rows[rowIndex][3] = 0;
+                        userTableTableAdapter.Update(dSDB.userTable);
+                    }
                 }
-                MessageBox.Show("found = " + found.ToString() + " for user " + dSDB.studentData.Rows[i][1].ToString());
-                if (found == false)
-                {
-                    MessageBox.Show("found = false ");
-                    DataRow row = dSDB.userTable.NewRow();
-                    dSDB.userTable.Rows.Add(row);
-                    int rowIndex = findUserTableEmptyRow();
-                    dSDB.userTable.Rows[rowIndex][1] = dSDB.studentData.Rows[i][1].ToString();
-                    dSDB.userTable.Rows[rowIndex][2] = 123;
-                    dSDB.userTable.Rows[rowIndex][3] = 0;
-                    userTableTableAdapter.Update(dSDB.userTable);
-                }
+                userTableTableAdapter.Update(dSDB.userTable);
+                dSDB.AcceptChanges();
             }
-            userTableTableAdapter.Update(dSDB.userTable);
-            dSDB.AcceptChanges();
+
+            catch (Exception except)
+            {
+                MessageBox.Show(except.ToString());
+            }
 
         }
 
@@ -215,25 +227,32 @@ namespace YearOneProjectOne
 
         private void awardDockPointsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (LBLNameSearch.Visible == Visible)
+            try
             {
-                dropDownComponentsHide();
-            }
+                if (LBLNameSearch.Visible == Visible)
+                {
+                    dropDownComponentsHide();
+                }
 
-            else
+                else
+                {
+                    dropDownComponentsHide();
+                    LBLPointsVaryVal.Show();
+                    TBPointsVaryVal.Show();
+                    LBLstudentPointsCounter.Show();
+                    LBLNameSearch.Show();
+                    TBNameSearch.Show();
+                    LBLPointsVaryVal.Show();
+                    TBPointsVaryVal.Show();
+                    LBSearchedStudents.Show();
+                    LBLSelectStudent.Show();
+                    BTNDockPoints.Show();
+                    BTNAddPoints.Show();
+                }
+            }
+            catch (Exception except)
             {
-                dropDownComponentsHide();
-                LBLPointsVaryVal.Show();
-                TBPointsVaryVal.Show();
-                LBLstudentPointsCounter.Show();
-                LBLNameSearch.Show();
-                TBNameSearch.Show();
-                LBLPointsVaryVal.Show();
-                TBPointsVaryVal.Show();
-                LBSearchedStudents.Show();
-                LBLSelectStudent.Show();
-                BTNDockPoints.Show();
-                BTNAddPoints.Show();
+                MessageBox.Show(except.ToString());
             }
         }
 

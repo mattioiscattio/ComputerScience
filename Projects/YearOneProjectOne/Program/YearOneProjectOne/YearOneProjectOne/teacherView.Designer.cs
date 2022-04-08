@@ -79,14 +79,14 @@ namespace YearOneProjectOne
             // logoutToolStripMenuItem1
             // 
             this.logoutToolStripMenuItem1.Name = "logoutToolStripMenuItem1";
-            this.logoutToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.logoutToolStripMenuItem1.Size = new System.Drawing.Size(112, 22);
             this.logoutToolStripMenuItem1.Text = "Logout";
             this.logoutToolStripMenuItem1.Click += new System.EventHandler(this.logoutToolStripMenuItem1_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -101,7 +101,7 @@ namespace YearOneProjectOne
             // awardDockPointsToolStripMenuItem
             // 
             this.awardDockPointsToolStripMenuItem.Name = "awardDockPointsToolStripMenuItem";
-            this.awardDockPointsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.awardDockPointsToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.awardDockPointsToolStripMenuItem.Text = "Award/Dock Points";
             // 
             // BTNDockPoints
@@ -191,14 +191,14 @@ namespace YearOneProjectOne
             this.teacherRatioChart.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.teacherRatioChart.Legends.Add(legend1);
-            this.teacherRatioChart.Location = new System.Drawing.Point(473, 27);
+            this.teacherRatioChart.Location = new System.Drawing.Point(510, 27);
             this.teacherRatioChart.Name = "teacherRatioChart";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.teacherRatioChart.Series.Add(series1);
-            this.teacherRatioChart.Size = new System.Drawing.Size(300, 221);
+            this.teacherRatioChart.Size = new System.Drawing.Size(263, 198);
             this.teacherRatioChart.TabIndex = 64;
             this.teacherRatioChart.Text = "chart1";
             // 

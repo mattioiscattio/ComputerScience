@@ -65,8 +65,6 @@ namespace YearOneProjectOne
             this.TBConfirmPass = new System.Windows.Forms.TextBox();
             this.BTNChangePass = new System.Windows.Forms.Button();
             this.userTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.teacherToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editTeacherDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rewardTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DSDB)).BeginInit();
@@ -92,8 +90,7 @@ namespace YearOneProjectOne
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.SessionToolStripMenuItem,
             this.shopToolStripMenuItem,
-            this.studentToolStripMenuItem,
-            this.teacherToolStripMenuItem});
+            this.studentToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -112,14 +109,14 @@ namespace YearOneProjectOne
             // logoutToolStripMenuItem1
             // 
             this.logoutToolStripMenuItem1.Name = "logoutToolStripMenuItem1";
-            this.logoutToolStripMenuItem1.Size = new System.Drawing.Size(112, 22);
+            this.logoutToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.logoutToolStripMenuItem1.Text = "Logout";
             this.logoutToolStripMenuItem1.Click += new System.EventHandler(this.logoutToolStripMenuItem1_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -157,7 +154,7 @@ namespace YearOneProjectOne
             // changePasswordToolStripMenuItem
             // 
             this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.changePasswordToolStripMenuItem.Text = "Change Password";
             this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
             // 
@@ -355,20 +352,6 @@ namespace YearOneProjectOne
             this.userTableBindingSource.DataMember = "userTable";
             this.userTableBindingSource.DataSource = this.DSDB;
             // 
-            // teacherToolStripMenuItem
-            // 
-            this.teacherToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.editTeacherDataToolStripMenuItem});
-            this.teacherToolStripMenuItem.Name = "teacherToolStripMenuItem";
-            this.teacherToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
-            this.teacherToolStripMenuItem.Text = "Teacher";
-            // 
-            // editTeacherDataToolStripMenuItem
-            // 
-            this.editTeacherDataToolStripMenuItem.Name = "editTeacherDataToolStripMenuItem";
-            this.editTeacherDataToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.editTeacherDataToolStripMenuItem.Text = "EditTeacher Data";
-            // 
             // studentView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -443,7 +426,5 @@ namespace YearOneProjectOne
         private System.Windows.Forms.Label LBLConfirmPass;
         internal System.Windows.Forms.TextBox TBConfirmPass;
         private System.Windows.Forms.Button BTNChangePass;
-        private System.Windows.Forms.ToolStripMenuItem teacherToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editTeacherDataToolStripMenuItem;
     }
 }
